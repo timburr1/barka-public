@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://UI/File overlay 4.png" type="Texture" id=1]
+[ext_resource path="res://UI/MenuButtons.tscn" type="PackedScene" id=2]
+[ext_resource path="res://UI/QuestMenu/QuestMenu.gd" type="Script" id=3]
+[ext_resource path="res://Font/Copse_64.tres" type="DynamicFont" id=4]
+
+[node name="QuestMenu" type="CanvasLayer"]
+layer = 128
+script = ExtResource( 3 )
+
+[node name="FileOverlay4" type="Sprite" parent="."]
+position = Vector2( 480, 269 )
+z_index = 2
+texture = ExtResource( 1 )
+
+[node name="Label" type="Label" parent="FileOverlay4"]
+visible = false
+margin_left = -184.0
+margin_top = -56.0
+margin_right = 205.0
+margin_bottom = 105.0
+custom_fonts/font = ExtResource( 4 )
+text = "Quest Menu
+Coming Soon"
+align = 1
+
+[node name="Buttons" parent="FileOverlay4" instance=ExtResource( 2 )]
+
+[node name="ScrollContainer" type="ScrollContainer" parent="FileOverlay4"]
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -902.0
+margin_top = -129.0
+margin_right = -55.0
+margin_bottom = -309.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="FileOverlay4/ScrollContainer"]
+margin_bottom = 360.0
+size_flags_vertical = 3
+custom_constants/separation = 140

@@ -1,0 +1,989 @@
+[gd_scene load_steps=105 format=2]
+
+[ext_resource path="res://World/PlayerDetectionZone.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://SceneTransition.tscn" type="PackedScene" id=3]
+[ext_resource path="res://World/_Resources/04_Bedroom/Rug.png" type="Texture" id=4]
+[ext_resource path="res://World/_Resources/Room_Builder/TileFloor.tres" type="TileSet" id=5]
+[ext_resource path="res://World/_Resources/Room_Builder/DarkBlueWalls.tres" type="TileSet" id=6]
+[ext_resource path="res://World/_Resources/Room_Builder/RedStriped3D.png" type="Texture" id=7]
+[ext_resource path="res://World/_Resources/Room_Builder/RedStriped.png" type="Texture" id=8]
+[ext_resource path="res://World/_Resources/Room_Builder/BeigeFloorSprite.png" type="Texture" id=9]
+[ext_resource path="res://World/_Resources/01_Generic/BlueRug.tres" type="TileSet" id=10]
+[ext_resource path="res://World/_Resources/03_Bathroom/PlungerRed.png" type="Texture" id=11]
+[ext_resource path="res://World/_Resources/03_Bathroom/Toilet3.png" type="Texture" id=12]
+[ext_resource path="res://World/_Resources/03_Bathroom/ToiletPaper.png" type="Texture" id=13]
+[ext_resource path="res://World/_Resources/01_Generic/ChairLeft.png" type="Texture" id=14]
+[ext_resource path="res://World/_Resources/05_Classroom_and_Library/BookshelfVertical1.png" type="Texture" id=15]
+[ext_resource path="res://World/_Resources/01_Generic/Window07.png" type="Texture" id=16]
+[ext_resource path="res://World/_Resources/02_Living_Room/LampBlue.png" type="Texture" id=17]
+[ext_resource path="res://World/_Resources/04_Bedroom/Bedroom_Singles_32x32_429.png" type="Texture" id=18]
+[ext_resource path="res://World/_Resources/03_Bathroom/Bathroom_Singles_32x32_95.png" type="Texture" id=19]
+[ext_resource path="res://World/_Resources/08_Gym/Dumbbell1.png" type="Texture" id=20]
+[ext_resource path="res://World/_Resources/04_Bedroom/Bed3.png" type="Texture" id=21]
+[ext_resource path="res://World/_Resources/08_Gym/Kettlebell2.png" type="Texture" id=22]
+[ext_resource path="res://World/_Resources/01_Generic/Window10.png" type="Texture" id=23]
+[ext_resource path="res://World/_Resources/14_Basement/CouchBack1.png" type="Texture" id=24]
+[ext_resource path="res://World/_Resources/04_Bedroom/Blanket.png" type="Texture" id=25]
+[ext_resource path="res://World/_Resources/02_Living_Room/Chair.png" type="Texture" id=26]
+[ext_resource path="res://World/_Resources/03_Bathroom/Bathroom_Singles_32x32_96.png" type="Texture" id=27]
+[ext_resource path="res://World/_Resources/02_Living_Room/Mirror.png" type="Texture" id=28]
+[ext_resource path="res://World/_Resources/02_Living_Room/LampRed.png" type="Texture" id=29]
+[ext_resource path="res://World/_Resources/14_Basement/Chair2Up.png" type="Texture" id=30]
+[ext_resource path="res://World/_Resources/12_Kitchen/StoveOff.png" type="Texture" id=31]
+[ext_resource path="res://World/_Resources/03_Bathroom/TowelRack1.png" type="Texture" id=32]
+[ext_resource path="res://World/_Resources/14_Basement/CouchRightTop.png" type="Texture" id=33]
+[ext_resource path="res://World/_Resources/03_Bathroom/BathtubDucky.png" type="Texture" id=34]
+[ext_resource path="res://World/_Resources/05_Classroom_and_Library/Bookshelf2.png" type="Texture" id=35]
+[ext_resource path="res://World/_Resources/03_Bathroom/Sink5.png" type="Texture" id=36]
+[ext_resource path="res://World/_Resources/03_Bathroom/TrashCan1.png" type="Texture" id=37]
+[ext_resource path="res://World/_Resources/14_Basement/CouchRightBottom.png" type="Texture" id=38]
+[ext_resource path="res://World/_Resources/01_Generic/ChairRight.png" type="Texture" id=39]
+[ext_resource path="res://World/_Resources/14_Basement/CouchBack3.png" type="Texture" id=40]
+[ext_resource path="res://World/_Resources/14_Basement/CouchBack2.png" type="Texture" id=41]
+[ext_resource path="res://World/_Resources/14_Basement/Stool.png" type="Texture" id=42]
+[ext_resource path="res://World/_Resources/14_Basement/Chair1Right.png" type="Texture" id=43]
+[ext_resource path="res://World/_Resources/14_Basement/Tv.png" type="Texture" id=44]
+[ext_resource path="res://World/_Resources/01_Generic/Table1.png" type="Texture" id=45]
+[ext_resource path="res://World/_Resources/12_Kitchen/FridgeLeft.png" type="Texture" id=46]
+[ext_resource path="res://World/_Resources/12_Kitchen/Counter.png" type="Texture" id=47]
+[ext_resource path="res://World/_Resources/12_Kitchen/Counter2.png" type="Texture" id=48]
+[ext_resource path="res://World/_Resources/12_Kitchen/Plate.png" type="Texture" id=49]
+[ext_resource path="res://World/_Resources/12_Kitchen/CounterTop.png" type="Texture" id=50]
+[ext_resource path="res://World/_Resources/12_Kitchen/CoffeeMaker.png" type="Texture" id=51]
+[ext_resource path="res://World/_Resources/07_Art/Painting6.png" type="Texture" id=52]
+[ext_resource path="res://World/_Resources/12_Kitchen/Sink3.png" type="Texture" id=53]
+[ext_resource path="res://World/_Resources/03_Bathroom/Washer.png" type="Texture" id=54]
+[ext_resource path="res://World/_Resources/ModernOffice/DeskLeft.png" type="Texture" id=55]
+[ext_resource path="res://World/_Resources/ModernOffice/DeskMid.png" type="Texture" id=56]
+[ext_resource path="res://World/_Resources/01_Generic/Stool.png" type="Texture" id=57]
+[ext_resource path="res://World/_Resources/ModernOffice/DeskRight.png" type="Texture" id=58]
+[ext_resource path="res://World/_Resources/ModernOffice/Monitor1.png" type="Texture" id=59]
+[ext_resource path="res://World/_Resources/ModernOffice/DeskLamp.png" type="Texture" id=60]
+[ext_resource path="res://World/_Resources/ModernOffice/Monitor2.png" type="Texture" id=61]
+[ext_resource path="res://World/_Resources/ModernOffice/MouseKeyboard.png" type="Texture" id=62]
+[ext_resource path="res://World/_Resources/02_Living_Room/Plant.png" type="Texture" id=63]
+[ext_resource path="res://World/_Resources/12_Kitchen/Microwave.png" type="Texture" id=64]
+[ext_resource path="res://World/_Resources/ModernOffice/Chair.png" type="Texture" id=65]
+[ext_resource path="res://World/_Resources/02_Living_Room/Plant2.png" type="Texture" id=66]
+[ext_resource path="res://World/Apartment/303/Home.gd" type="Script" id=67]
+[ext_resource path="res://World/_Resources/Room_Builder/VerticalWalls.tres" type="TileSet" id=68]
+[ext_resource path="res://World/_Resources/Room_Builder/FloorShadow.png" type="Texture" id=69]
+[ext_resource path="res://World/ClickableObject.tscn" type="PackedScene" id=70]
+[ext_resource path="res://Audio/SFX/ToiletFlush.mp3" type="AudioStream" id=71]
+[ext_resource path="res://World/ClickableNoisemaker.tscn" type="PackedScene" id=72]
+[ext_resource path="res://World/Apartment/303/ArrowFrames.png" type="Texture" id=73]
+[ext_resource path="res://World/Apartment/303/ClickableTrophy.tscn" type="PackedScene" id=74]
+[ext_resource path="res://NPCs/NPC.tscn" type="PackedScene" id=75]
+
+[sub_resource type="TileSet" id=16]
+0/name = "RedStriped.png 0"
+0/texture = ExtResource( 8 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 32, 64 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "RedStriped.png 1"
+1/texture = ExtResource( 8 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 32, 0, 32, 64 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "RedStriped.png 2"
+2/texture = ExtResource( 8 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 64, 0, 32, 64 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "RedStriped3D.png 3"
+3/texture = ExtResource( 7 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 64, 0, 32, 64 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "RedStriped3D.png 4"
+4/texture = ExtResource( 7 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 64, 64, 32, 32 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "RedStriped3D.png 5"
+5/texture = ExtResource( 7 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 96, 64, 32, 64 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+
+[sub_resource type="Animation" id=1]
+resource_name = "Blink"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 18, 1 ), Vector2( 19, 1 ), Vector2( 20, 1 ), Vector2( 21, 1 ), Vector2( 22, 1 ), Vector2( 23, 1 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath("..")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.6 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "blink_animation_finished"
+} ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "CheckPhone"
+length = 0.6
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 336, 337, 338, 339, 340, 341, 342, 343, 344, 345, 346, 347 ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath("..")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.6 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "phone_animation_finished"
+} ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "IdleDown"
+length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 3 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "IdleLeft"
+length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 2 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "IdleRight"
+length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "IdleUp"
+length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+
+[sub_resource type="Animation" id=7]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 336 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:frame_coords")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ Vector2( 0, 3 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "Sleep"
+length = 1.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 0, 3 ), Vector2( 1, 3 ), Vector2( 2, 3 ), Vector2( 3, 3 ), Vector2( 4, 3 ), Vector2( 5, 3 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "WalkDown"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 18, 2 ), Vector2( 19, 2 ), Vector2( 20, 2 ), Vector2( 21, 2 ), Vector2( 22, 2 ), Vector2( 23, 2 ) ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "WalkLeft"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 12, 2 ), Vector2( 13, 2 ), Vector2( 14, 2 ), Vector2( 15, 2 ), Vector2( 16, 2 ), Vector2( 17, 2 ) ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "WalkRight"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 0, 2 ), Vector2( 1, 2 ), Vector2( 2, 2 ), Vector2( 3, 2 ), Vector2( 4, 2 ), Vector2( 5, 2 ) ]
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "WalkUp"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 6, 2 ), Vector2( 7, 2 ), Vector2( 8, 2 ), Vector2( 9, 2 ), Vector2( 10, 2 ), Vector2( 11, 2 ) ]
+}
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=13]
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 481.25, 10 )
+
+[sub_resource type="RectangleShape2D" id=17]
+extents = Vector2( 58, 12 )
+
+[sub_resource type="RectangleShape2D" id=18]
+extents = Vector2( 31.5, 22 )
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 31, 13 )
+
+[sub_resource type="RectangleShape2D" id=19]
+extents = Vector2( 34, 33.5 )
+
+[sub_resource type="RectangleShape2D" id=20]
+extents = Vector2( 59.5, 24.5 )
+
+[sub_resource type="RectangleShape2D" id=21]
+extents = Vector2( 15, 35 )
+
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 73 )
+region = Rect2( 0, 0, 48, 64 )
+
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 73 )
+region = Rect2( 48, 0, 48, 64 )
+
+[sub_resource type="AtlasTexture" id=24]
+atlas = ExtResource( 73 )
+region = Rect2( 96, 0, 48, 64 )
+
+[sub_resource type="AtlasTexture" id=25]
+atlas = ExtResource( 73 )
+region = Rect2( 144, 0, 48, 64 )
+
+[sub_resource type="SpriteFrames" id=26]
+animations = [ {
+"frames": [ SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=27]
+extents = Vector2( 29, 17 )
+
+[sub_resource type="RectangleShape2D" id=28]
+extents = Vector2( 32, 24 )
+
+[sub_resource type="RectangleShape2D" id=29]
+extents = Vector2( 18.5, 30 )
+
+[node name="Apt303" type="Node2D"]
+script = ExtResource( 67 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Floor" type="Sprite" parent="."]
+position = Vector2( 472, 320 )
+scale = Vector2( 29.5, 20 )
+texture = ExtResource( 9 )
+
+[node name="Tiles" type="TileMap" parent="Floor"]
+position = Vector2( 5.9661, -8 )
+scale = Vector2( 0.0338984, 0.05 )
+tile_set = ExtResource( 5 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( -327689, 2, 0, -327688, 3, 0, -327687, 3, 0, -327686, 3, 0, -327685, 3, 0, -327684, 3, 0, -327683, 3, 0, -327682, 3, 0, -327681, 3, 0, -393216, 3, 0, -393215, 3, 0, -393214, 3, 0, -393213, 3, 0, -393212, 3, 0, -393211, 3, 0, -393210, 3, 0, -393209, 3, 0, -393208, 3, 0, -262153, 2, 0, -262152, 3, 0, -262151, 3, 0, -262150, 3, 0, -262149, 3, 0, -262148, 3, 0, -262147, 3, 0, -262146, 3, 0, -262145, 3, 0, -327680, 3, 0, -327679, 3, 0, -327678, 3, 0, -327677, 3, 0, -327676, 3, 0, -327675, 3, 0, -327674, 3, 0, -327673, 3, 0, -327672, 3, 0, -196617, 2, 0, -196616, 3, 0, -196615, 3, 0, -196614, 3, 0, -196613, 3, 0, -196612, 3, 0, -196611, 3, 0, -196610, 3, 0, -196609, 3, 0, -262144, 3, 0, -262143, 3, 0, -262142, 3, 0, -262141, 3, 0, -262140, 3, 0, -262139, 3, 0, -262138, 3, 0, -262137, 3, 0, -262136, 3, 0, -131081, 2, 0, -131080, 3, 0, -131079, 3, 0, -131078, 3, 0, -131077, 3, 0, -131076, 3, 0, -131075, 3, 0, -131074, 3, 0, -131073, 3, 0, -196608, 3, 0, -196607, 3, 0, -196606, 3, 0, -196605, 3, 0, -196604, 3, 0, -196603, 3, 0, -196602, 3, 0, -196601, 3, 0, -196600, 3, 0, -65545, 2, 0, -65544, 3, 0, -65543, 3, 0, -65542, 3, 0, -65541, 3, 0, -65540, 3, 0, -65539, 3, 0, -65538, 3, 0, -65537, 3, 0, -131072, 3, 0, -131071, 3, 0, -131070, 3, 0, -131069, 3, 0, -131068, 3, 0, -131067, 3, 0, -131066, 3, 0, -131065, 3, 0, -131064, 3, 0, -9, 2, 0, -8, 3, 0, -7, 3, 0, -6, 3, 0, -5, 3, 0, -4, 3, 0, -3, 3, 0, -2, 3, 0, -1, 3, 0, -65536, 3, 0, -65535, 3, 0, -65534, 3, 0, -65533, 3, 0, -65532, 3, 0, -65531, 3, 0, -65530, 3, 0, -65529, 3, 0, -65528, 3, 0, 65527, 0, 0, 65528, 1, 0, 65529, 1, 0, 65530, 1, 0, 65531, 1, 0, 65532, 1, 0, 65533, 1, 0, 65534, 1, 0, 65535, 3, 0, 0, 3, 0, 1, 3, 0, 2, 3, 0, 3, 3, 0, 4, 3, 0, 5, 3, 0, 6, 3, 0, 7, 3, 0, 8, 3, 0, 131071, 3, 0, 65536, 3, 0, 65537, 3, 0, 65538, 3, 0, 65539, 3, 0, 65540, 3, 0, 65541, 3, 0, 65542, 3, 0, 65543, 3, 0, 65544, 3, 0, 131074, 1, 0, 131075, 1, 0, 131076, 1, 0 )
+
+[node name="BigRug" type="TileMap" parent="Floor"]
+position = Vector2( 0.271185, 1.64999 )
+scale = Vector2( 0.0338984, 0.05 )
+tile_set = ExtResource( 10 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 262131, 10, 0, 262132, 11, 0, 262133, 11, 0, 262134, 11, 0, 262135, 11, 0, 262136, 13, 0, 327667, 4, 0, 327668, 8, 0, 327669, 8, 0, 327670, 8, 0, 327671, 8, 0, 327672, 5, 0, 393203, 4, 0, 393204, 8, 0, 393205, 8, 0, 393206, 8, 0, 393207, 8, 0, 393208, 5, 0, 458739, 4, 0, 458740, 8, 0, 458741, 8, 0, 458742, 8, 0, 458743, 8, 0, 458744, 5, 0, 524275, 14, 0, 524276, 12, 0, 524277, 12, 0, 524278, 12, 0, 524279, 12, 0, 524280, 15, 0 )
+
+[node name="SmallRug" type="Sprite" parent="Floor"]
+position = Vector2( 10.8474, 6 )
+scale = Vector2( 0.0677966, 0.1 )
+texture = ExtResource( 4 )
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="RedWalls" type="TileMap" parent="YSort"]
+tile_set = SubResource( 16 )
+cell_size = Vector2( 32, 32 )
+cell_tile_origin = 1
+cell_y_sort = true
+format = 1
+tile_data = PoolIntArray( -131072, 3, 0, -131071, 5, 0, -131070, 5, 0, -131069, 5, 0, -131068, 5, 0, -131067, 5, 0, -131066, 5, 0, -131065, 5, 0, -131064, 5, 0, -131063, 5, 0, -131062, 5, 0, -131061, 5, 0, -131060, 5, 0, -131059, 5, 0, -131058, 5, 0, -131057, 5, 0, -131056, 5, 0, -131055, 5, 0, -131054, 5, 0, 0, 4, 0, 65536, 4, 0, 131072, 4, 0, 196608, 4, 0, 262144, 4, 0, 327680, 4, 0, 393216, 4, 0, 458752, 4, 0, 524288, 4, 0, 589824, 4, 0, 655360, 4, 0, 720896, 4, 0, 786432, 4, 0, 851968, 4, 0, 917504, 4, 0, 983040, 4, 0, 1048576, 4, 0, 1114112, 4, 0, 1179648, 4, 0, 1245184, 4, 0 )
+
+[node name="BlueWalls" type="TileMap" parent="YSort"]
+tile_set = ExtResource( 6 )
+cell_size = Vector2( 32, 32 )
+cell_tile_origin = 1
+cell_y_sort = true
+format = 1
+tile_data = PoolIntArray( -131053, 1, 0, -131052, 1, 0, -131051, 1, 0, -131050, 1, 0, -131049, 1, 0, -131048, 1, 0, -131047, 1, 0, -131046, 1, 0, -131045, 1, 0, -131044, 1, 0, -131043, 3, 0, 29, 4, 0, 65565, 4, 0, 131101, 4, 0, 196637, 4, 0, 262173, 4, 0, 327709, 4, 0, 393235, 0, 0, 393236, 1, 0, 393237, 1, 0, 393238, 2, 0, 393241, 0, 0, 393242, 1, 0, 393243, 1, 0, 393244, 1, 0, 393245, 3, 0, 458781, 4, 0, 524317, 4, 0, 589853, 4, 0, 655389, 4, 0, 720925, 4, 0, 786461, 4, 0, 851997, 4, 0, 917533, 4, 0, 983069, 4, 0, 1048605, 4, 0, 1114141, 4, 0, 1179677, 4, 0, 1245213, 4, 0 )
+
+[node name="WhiteWalls" type="TileMap" parent="YSort/BlueWalls"]
+tile_set = ExtResource( 68 )
+cell_size = Vector2( 14, 16 )
+format = 1
+tile_data = PoolIntArray( -262101, 1, 0, -196565, 2, 0, -131029, 2, 0, -65493, 1, 0, 43, 2, 0, 65579, 2, 0, 131115, 2, 0, 458795, 1, 0, 524331, 2, 0, 589867, 2, 0, 655403, 2, 0, 720939, 2, 0, 1048619, 2, 0, 1114155, 2, 0, 1179691, 2, 0, 1245227, 2, 0, 1310763, 2, 0, 1376299, 2, 0, 1441835, 2, 0, 1507371, 1, 0, 1572907, 2, 0, 1638443, 2, 0, 1703979, 2, 0, 2031659, 1, 0, 2097195, 2, 0, 2162731, 2, 0, 2228267, 2, 0, 2293803, 2, 0, 2359339, 2, 0, 2424875, 2, 0, 2490411, 2, 0, 2555947, 2, 0 )
+
+[node name="Player" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 480, 603 )
+
+[node name="AnimationPlayer" parent="YSort/Player" index="4"]
+anims/Blink = SubResource( 1 )
+anims/CheckPhone = SubResource( 2 )
+anims/IdleDown = SubResource( 3 )
+anims/IdleLeft = SubResource( 4 )
+anims/IdleRight = SubResource( 5 )
+anims/IdleUp = SubResource( 6 )
+anims/RESET = SubResource( 7 )
+anims/Sleep = SubResource( 8 )
+anims/WalkDown = SubResource( 9 )
+anims/WalkLeft = SubResource( 10 )
+anims/WalkRight = SubResource( 11 )
+anims/WalkUp = SubResource( 12 )
+
+[node name="AnimationTree" parent="YSort/Player" index="5"]
+parameters/playback = SubResource( 13 )
+
+[node name="AudioStreamPlayer" parent="YSort/Player" index="6"]
+volume_db = -15.0
+
+[node name="Toilet3" type="Sprite" parent="YSort"]
+position = Vector2( 866, 0 )
+texture = ExtResource( 12 )
+
+[node name="PlungerRed" type="Sprite" parent="YSort"]
+position = Vector2( 903, 10 )
+texture = ExtResource( 11 )
+
+[node name="ToiletPaper" type="Sprite" parent="YSort"]
+position = Vector2( 903, -26 )
+texture = ExtResource( 13 )
+
+[node name="Window07" type="Sprite" parent="YSort"]
+position = Vector2( 120, -26 )
+texture = ExtResource( 16 )
+
+[node name="Window08" type="Sprite" parent="YSort"]
+position = Vector2( 241, -26 )
+texture = ExtResource( 16 )
+
+[node name="LampBlue" type="Sprite" parent="YSort"]
+position = Vector2( 903, 256 )
+texture = ExtResource( 17 )
+
+[node name="LampBlue2" type="Sprite" parent="YSort"]
+position = Vector2( 641, 594 )
+texture = ExtResource( 17 )
+
+[node name="LampRed" type="Sprite" parent="YSort"]
+position = Vector2( 59, 175 )
+texture = ExtResource( 29 )
+
+[node name="LampRed2" type="Sprite" parent="YSort"]
+position = Vector2( 64, 576 )
+texture = ExtResource( 29 )
+
+[node name="Mirror" type="Sprite" parent="YSort"]
+position = Vector2( 688, 248 )
+texture = ExtResource( 28 )
+
+[node name="BedroomSingles32X32429" type="Sprite" parent="YSort"]
+position = Vector2( 832, 240 )
+texture = ExtResource( 18 )
+
+[node name="BedroomSingles32X32430" type="Sprite" parent="YSort"]
+position = Vector2( 856, 240 )
+texture = ExtResource( 18 )
+
+[node name="BedroomSingles32X32220" type="Sprite" parent="YSort"]
+position = Vector2( 824, 376 )
+texture = ExtResource( 21 )
+
+[node name="BedroomSingles32X32297" type="Sprite" parent="YSort/BedroomSingles32X32220"]
+position = Vector2( 0, -3 )
+texture = ExtResource( 25 )
+
+[node name="GymSingles32X32156" type="Sprite" parent="YSort"]
+position = Vector2( 912, 584 )
+texture = ExtResource( 22 )
+
+[node name="GymSingles32X32133" type="Sprite" parent="YSort"]
+position = Vector2( 903, 610 )
+texture = ExtResource( 20 )
+
+[node name="GymSingles32X32134" type="Sprite" parent="YSort"]
+position = Vector2( 903, 625 )
+texture = ExtResource( 20 )
+
+[node name="BathroomSingles32X3295" type="Sprite" parent="YSort"]
+position = Vector2( 673, 156 )
+texture = ExtResource( 19 )
+
+[node name="BathroomSingles32X3296" type="Sprite" parent="YSort"]
+position = Vector2( 673, 160 )
+texture = ExtResource( 27 )
+
+[node name="BasementSingles32X32206" type="Sprite" parent="YSort"]
+position = Vector2( 689, 594 )
+texture = ExtResource( 30 )
+
+[node name="BathtubDucky" type="Sprite" parent="YSort"]
+position = Vector2( 896, 131 )
+texture = ExtResource( 34 )
+
+[node name="Sink5" type="Sprite" parent="YSort"]
+position = Vector2( 752, -8 )
+texture = ExtResource( 36 )
+
+[node name="TrashCan1" type="Sprite" parent="YSort"]
+position = Vector2( 697, 3 )
+texture = ExtResource( 37 )
+
+[node name="TrashCan2" type="Sprite" parent="YSort"]
+position = Vector2( 903, 498 )
+texture = ExtResource( 37 )
+
+[node name="LivingRoomSingles32X32123" type="Sprite" parent="YSort"]
+position = Vector2( 160, 88 )
+texture = ExtResource( 26 )
+
+[node name="ChairL" type="Sprite" parent="YSort"]
+position = Vector2( 200, 136 )
+texture = ExtResource( 14 )
+
+[node name="ChairR" type="Sprite" parent="YSort"]
+position = Vector2( 119, 128 )
+texture = ExtResource( 39 )
+
+[node name="BookshelfV1" type="Sprite" parent="YSort"]
+position = Vector2( 48, 337 )
+texture = ExtResource( 15 )
+
+[node name="BookshelfH2" type="Sprite" parent="YSort"]
+position = Vector2( 328, 288 )
+texture = ExtResource( 35 )
+
+[node name="BasementSingles32X3236" type="Sprite" parent="YSort"]
+position = Vector2( 69, 504 )
+texture = ExtResource( 33 )
+
+[node name="BasementSingles32X3238" type="Sprite" parent="YSort"]
+position = Vector2( 69, 552 )
+texture = ExtResource( 38 )
+
+[node name="BasementSingles32X3252" type="Sprite" parent="YSort"]
+position = Vector2( 166, 592 )
+texture = ExtResource( 41 )
+
+[node name="BasementSingles32X3254" type="Sprite" parent="YSort"]
+position = Vector2( 134, 592 )
+texture = ExtResource( 41 )
+
+[node name="BasementSingles32X3253" type="Sprite" parent="YSort"]
+position = Vector2( 198, 592 )
+texture = ExtResource( 40 )
+
+[node name="BasementSingles32X3251" type="Sprite" parent="YSort"]
+position = Vector2( 104, 592 )
+texture = ExtResource( 24 )
+
+[node name="Window10" type="Sprite" parent="YSort"]
+position = Vector2( 680, -32 )
+texture = ExtResource( 23 )
+
+[node name="TowelRack1" type="Sprite" parent="YSort"]
+position = Vector2( 808, -24 )
+texture = ExtResource( 32 )
+
+[node name="StoveOff" type="Sprite" parent="YSort"]
+position = Vector2( 400, 0 )
+texture = ExtResource( 31 )
+
+[node name="Chair1r" type="Sprite" parent="YSort"]
+position = Vector2( 59, 224 )
+texture = ExtResource( 43 )
+
+[node name="Tv" type="Sprite" parent="YSort"]
+position = Vector2( 164, 460 )
+texture = ExtResource( 44 )
+
+[node name="Stool" type="Sprite" parent="YSort"]
+position = Vector2( 102, 536 )
+texture = ExtResource( 42 )
+
+[node name="Fridge" type="Sprite" parent="YSort"]
+position = Vector2( 585, 140 )
+texture = ExtResource( 46 )
+
+[node name="Table1" type="Sprite" parent="YSort"]
+position = Vector2( 160, 136 )
+texture = ExtResource( 45 )
+
+[node name="Counter2" type="Sprite" parent="YSort"]
+position = Vector2( 480, 16 )
+texture = ExtResource( 48 )
+
+[node name="CounterTop" type="Sprite" parent="YSort/Counter2"]
+position = Vector2( 0, -16 )
+scale = Vector2( 1.33333, 1 )
+texture = ExtResource( 50 )
+
+[node name="Sink3" type="Sprite" parent="YSort/Counter2"]
+position = Vector2( 35, -18 )
+texture = ExtResource( 53 )
+
+[node name="Counter" type="Sprite" parent="YSort"]
+position = Vector2( 456, 96 )
+texture = ExtResource( 47 )
+
+[node name="CounterTop" type="Sprite" parent="YSort/Counter"]
+position = Vector2( 0, -16 )
+texture = ExtResource( 50 )
+
+[node name="Plate" type="Sprite" parent="YSort/Counter"]
+position = Vector2( 32, -24 )
+texture = ExtResource( 49 )
+
+[node name="CoffeeMaker" type="Sprite" parent="YSort/Counter"]
+position = Vector2( 8, -112 )
+texture = ExtResource( 51 )
+
+[node name="Microwave" type="Sprite" parent="YSort/Counter"]
+position = Vector2( -9, -26 )
+texture = ExtResource( 64 )
+
+[node name="Stool2" type="Sprite" parent="YSort"]
+position = Vector2( 488, 104 )
+texture = ExtResource( 57 )
+
+[node name="Stool3" type="Sprite" parent="YSort"]
+position = Vector2( 456, 104 )
+texture = ExtResource( 57 )
+
+[node name="Washer" type="Sprite" parent="YSort"]
+position = Vector2( 568, 5 )
+texture = ExtResource( 54 )
+
+[node name="Washer" type="Sprite" parent="YSort/Washer"]
+position = Vector2( 0, -40 )
+texture = ExtResource( 54 )
+
+[node name="BathroomSingles32X3295" type="Sprite" parent="YSort/Washer"]
+position = Vector2( 16, 27 )
+texture = ExtResource( 19 )
+
+[node name="DeskLeft" type="Sprite" parent="YSort"]
+position = Vector2( 376, 288 )
+texture = ExtResource( 55 )
+
+[node name="DeskMid" type="Sprite" parent="YSort/DeskLeft"]
+position = Vector2( 32, 0 )
+texture = ExtResource( 56 )
+
+[node name="DeskMid2" type="Sprite" parent="YSort/DeskLeft"]
+position = Vector2( 64, 0 )
+texture = ExtResource( 56 )
+
+[node name="DeskRight" type="Sprite" parent="YSort/DeskLeft"]
+position = Vector2( 96, 0 )
+texture = ExtResource( 58 )
+
+[node name="DeskLamp" type="Sprite" parent="YSort/DeskLeft"]
+position = Vector2( 8, -16 )
+texture = ExtResource( 60 )
+
+[node name="Monitor1" type="Sprite" parent="YSort/DeskLeft"]
+position = Vector2( 40, -16 )
+texture = ExtResource( 59 )
+
+[node name="Monitor2" type="Sprite" parent="YSort/DeskLeft"]
+position = Vector2( 79, -8 )
+texture = ExtResource( 61 )
+
+[node name="MouseKeyboard" type="Sprite" parent="YSort/DeskLeft"]
+position = Vector2( 40, 8 )
+texture = ExtResource( 62 )
+
+[node name="Plant" type="Sprite" parent="YSort"]
+position = Vector2( 53, 5 )
+texture = ExtResource( 63 )
+
+[node name="Painting6" type="Sprite" parent="YSort"]
+position = Vector2( 344, -49 )
+texture = ExtResource( 52 )
+
+[node name="Chair" type="Sprite" parent="YSort"]
+position = Vector2( 392, 328 )
+texture = ExtResource( 65 )
+
+[node name="Plant2" type="Sprite" parent="YSort"]
+position = Vector2( 580, 600 )
+texture = ExtResource( 66 )
+
+[node name="BookshelfV2" type="Sprite" parent="YSort"]
+position = Vector2( 591, 304 )
+texture = ExtResource( 15 )
+
+[node name="Poster" type="Sprite" parent="YSort"]
+position = Vector2( 338, -26 )
+scale = Vector2( 0.75, 0.75 )
+
+[node name="Juan" parent="YSort" instance=ExtResource( 75 )]
+visible = false
+position = Vector2( 433, 609 )
+
+[node name="AnimatedSprite" parent="YSort/Juan" index="1"]
+animation = "JuanIdleDown"
+
+[node name="Lucas" parent="YSort" instance=ExtResource( 75 )]
+visible = false
+position = Vector2( 448, 600 )
+
+[node name="AnimatedSprite" parent="YSort/Lucas" index="1"]
+animation = "LucasIdleDown"
+
+[node name="Barriers" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Barriers"]
+position = Vector2( 0, 1 )
+polygon = PoolVector2Array( 35, 639, -1, 640, 2, -62, 960, -62, 963, 643, 930, 639, 928, 591, 901, 591, 901, 578, 924, 579, 928, 571.256, 928, 513.793, 914, 508, 889, 508, 887, 490, 917, 491, 928, 484.839, 928, 289.447, 889, 282, 894, 270, 912, 271, 927, 277, 928, 245, 853, 245, 853, 265, 800, 265, 798, 202, 928, 202, 928, 90, 927, -9, 876, -9, 877, 25, 851, 25, 849, -11, 785, -12, 781, 18, 726, 19, 708, 7, 686, 8, 680, -10, 616, -11, 616, 36, 582, 44, 570, 27, 550, 27, 549, 16, 385, 16, 384, -10, 58, -11, 65, 21, 34, 23, 33, 191, 69, 195, 75, 216, 74, 237, 32, 243, 32, 297, 56, 297, 57, 384, 35, 383 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 480.75, 649 )
+shape = SubResource( 14 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Barriers"]
+polygon = PoolVector2Array( 670, 265, 706, 264, 708, 249, 737, 249, 738, 202, 619, 203, 616, 114, 603, 114, 601, 125, 569, 126, 569, 178, 602, 178, 602, 214, 602, 264, 580, 266, 580, 344, 602, 345, 602, 417, 616, 419, 617, 249, 668, 249 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Barriers"]
+polygon = PoolVector2Array( 104, 127, 121, 125, 122, 105, 139, 103, 146, 92, 175, 92, 179, 104, 198, 105, 198, 134, 213, 135, 213, 153, 196, 153, 195, 164, 122, 165, 121, 145, 104, 144 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 164, 469 )
+shape = SubResource( 17 )
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Barriers"]
+polygon = PoolVector2Array( 296, 268, 359, 267, 365, 280, 478, 280, 478, 313, 405, 314, 408, 337, 375, 337, 378, 313, 296, 314 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 824.5, 368 )
+shape = SubResource( 18 )
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Barriers"]
+polygon = PoolVector2Array( 602, 637, 575, 630, 569, 621, 570, 609, 601, 608, 602, 589, 602, 496, 616, 496, 617, 609, 631, 606, 645, 606, 650, 613, 654, 625, 618, 627, 617, 641 )
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="Barriers"]
+polygon = PoolVector2Array( 40, 503, 81, 504, 83, 520, 117, 525, 118, 542, 84, 544, 82, 576, 91, 584, 215, 584, 215, 635, 80, 635, 40, 559 )
+
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="Barriers"]
+polygon = PoolVector2Array( 668, 586, 711, 587, 707, 606, 671, 605 )
+
+[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="Barriers"]
+polygon = PoolVector2Array( 910, 129, 871, 130, 874, 170, 910, 171 )
+
+[node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="Barriers"]
+polygon = PoolVector2Array( 659, 149, 687, 149, 685, 162, 673, 163, 668, 170, 669, 181, 644, 182, 641, 170, 659, 167 )
+
+[node name="CollisionPolygon2D10" type="CollisionPolygon2D" parent="Barriers"]
+polygon = PoolVector2Array( 408, 74, 503, 75, 503, 108, 441, 110, 439, 97, 408, 98 )
+
+[node name="Exit" parent="." instance=ExtResource( 1 )]
+
+[node name="CollisionShape2D" parent="Exit" index="0"]
+position = Vector2( 480, 640 )
+shape = SubResource( 15 )
+
+[node name="FloorShadow" type="Sprite" parent="Exit"]
+position = Vector2( 480, 629 )
+scale = Vector2( 2.1875, 1 )
+texture = ExtResource( 69 )
+
+[node name="SceneTransition" parent="." instance=ExtResource( 3 )]
+visible = false
+
+[node name="MoreWalls" type="TileMap" parent="."]
+tile_set = ExtResource( 68 )
+cell_size = Vector2( 14, 16 )
+format = 1
+tile_data = PoolIntArray( 786475, 2, 0, 852011, 2, 0, 917547, 2, 0, 983083, 2, 0 )
+
+[node name="ClickableObject" parent="." instance=ExtResource( 70 )]
+position = Vector2( 824, 372 )
+item_name = "La cama"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickableObject/ClickableArea" index="0"]
+position = Vector2( 0, -5.5 )
+shape = SubResource( 19 )
+
+[node name="ClickableObject2" parent="." instance=ExtResource( 70 )]
+position = Vector2( 422, 297 )
+item_name = "El escritorio"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickableObject2/ClickableArea" index="0"]
+position = Vector2( -1.5, -0.5 )
+shape = SubResource( 20 )
+
+[node name="ClickableNoisemaker" parent="." instance=ExtResource( 72 )]
+position = Vector2( 865, 18 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickableNoisemaker/ClickableArea" index="0"]
+position = Vector2( 1, -13 )
+shape = SubResource( 21 )
+
+[node name="AudioStreamPlayer" parent="ClickableNoisemaker" index="3"]
+stream = ExtResource( 71 )
+
+[node name="ExitArrow" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 478, 600 )
+frames = SubResource( 26 )
+
+[node name="ClickableObject3" parent="." instance=ExtResource( 70 )]
+position = Vector2( 181, 440 )
+item_name = "La televisión"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickableObject3/ClickableArea" index="0"]
+position = Vector2( 1, 3 )
+shape = SubResource( 27 )
+
+[node name="ClickableObject4" parent="." instance=ExtResource( 70 )]
+position = Vector2( 238, -29 )
+item_name = "La ventana"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickableObject4/ClickableArea" index="0"]
+position = Vector2( 3, 3 )
+shape = SubResource( 28 )
+
+[node name="ClickableObject5" parent="." instance=ExtResource( 70 )]
+position = Vector2( 688, 242 )
+item_name = "El espejo"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickableObject5/ClickableArea" index="0"]
+position = Vector2( -1.5, 6 )
+shape = SubResource( 29 )
+
+[node name="Node2D" parent="." instance=ExtResource( 74 )]
+position = Vector2( 335, 254 )
+
+[connection signal="input_event" from="ClickableObject/ClickableArea" to="ClickableObject" method="_on_ClickableArea_input_event"]
+[connection signal="input_event" from="ClickableObject2/ClickableArea" to="ClickableObject2" method="_on_ClickableArea_input_event"]
+[connection signal="input_event" from="ClickableNoisemaker/ClickableArea" to="ClickableNoisemaker" method="_on_ClickableArea_input_event"]
+[connection signal="input_event" from="ClickableObject3/ClickableArea" to="ClickableObject3" method="_on_ClickableArea_input_event"]
+[connection signal="input_event" from="ClickableObject4/ClickableArea" to="ClickableObject4" method="_on_ClickableArea_input_event"]
+[connection signal="input_event" from="ClickableObject5/ClickableArea" to="ClickableObject5" method="_on_ClickableArea_input_event"]
+
+[editable path="YSort/Player"]
+[editable path="YSort/Player/Carlos"]
+[editable path="YSort/Player/Camera2D/HUD/FriendsMenu"]
+[editable path="YSort/Player/Camera2D/HUD/FriendsMenu/FileOverlay1/Node2D"]
+[editable path="YSort/Player/Camera2D/HUD/Dictionary"]
+[editable path="YSort/Player/Camera2D/HUD/Dictionary/FileOverlay2/Buttons"]
+[editable path="YSort/Player/Camera2D/HUD/Inventory"]
+[editable path="YSort/Player/Camera2D/HUD/Inventory/FileOverlay3/ColorRect/CenterContainer/InventoryDisplay"]
+[editable path="YSort/Player/Camera2D/HUD/Inventory/FileOverlay3/ColorRect/CenterContainer/InventoryDisplay/InventorySlotDisplay"]
+[editable path="YSort/Player/Camera2D/HUD/Inventory/FileOverlay3/ColorRect/CenterContainer/InventoryDisplay/InventorySlotDisplay2"]
+[editable path="YSort/Player/Camera2D/HUD/Inventory/FileOverlay3/ColorRect/CenterContainer/InventoryDisplay/InventorySlotDisplay6"]
+[editable path="YSort/Player/Camera2D/HUD/Inventory/FileOverlay3/Buttons"]
+[editable path="YSort/Player/Camera2D/HUD/QuestMenu"]
+[editable path="YSort/Player/Camera2D/HUD/QuestMenu/FileOverlay4/Buttons"]
+[editable path="YSort/Player/Camera2D/HUD/GameMenu"]
+[editable path="YSort/Player/Camera2D/HUD/GameMenu/FileOverlay5/Buttons"]
+[editable path="YSort/Juan"]
+[editable path="YSort/Lucas"]
+[editable path="Exit"]
+[editable path="ClickableObject"]
+[editable path="ClickableObject2"]
+[editable path="ClickableNoisemaker"]
+[editable path="ClickableObject3"]
+[editable path="ClickableObject4"]
+[editable path="ClickableObject5"]

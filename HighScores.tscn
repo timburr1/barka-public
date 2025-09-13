@@ -1,0 +1,76 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Font/Copse_38.tres" type="DynamicFont" id=1]
+[ext_resource path="res://World/Apartment/303/Trophies.png" type="Texture" id=2]
+[ext_resource path="res://World/Apartment/303/HighScores.gd" type="Script" id=3]
+[ext_resource path="res://Font/Copse_48.tres" type="DynamicFont" id=4]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource( 3 )
+
+[node name="Trophies" type="Sprite" parent="."]
+position = Vector2( 700, 376 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 2 )
+
+[node name="HighScores" type="GridContainer" parent="."]
+margin_left = 86.0
+margin_top = 43.0
+margin_right = 506.0
+margin_bottom = 303.0
+
+[node name="NameGameScore" type="RichTextLabel" parent="HighScores"]
+margin_right = 420.0
+margin_bottom = 48.0
+rect_min_size = Vector2( 420, 48 )
+custom_fonts/normal_font = ExtResource( 1 )
+text = "Name Game: 69"
+
+[node name="NumberCruncherScore" type="RichTextLabel" parent="HighScores"]
+margin_top = 52.0
+margin_right = 420.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 0, 48 )
+custom_fonts/normal_font = ExtResource( 1 )
+text = "Number Cruncher: 69"
+
+[node name="SortingGameScore" type="RichTextLabel" parent="HighScores"]
+margin_top = 104.0
+margin_right = 420.0
+margin_bottom = 152.0
+custom_fonts/normal_font = ExtResource( 1 )
+text = "Sorting Scramble: 69"
+
+[node name="SwimmingGameScore" type="RichTextLabel" parent="HighScores"]
+margin_top = 156.0
+margin_right = 420.0
+margin_bottom = 204.0
+rect_min_size = Vector2( 0, 48 )
+custom_fonts/normal_font = ExtResource( 1 )
+text = "Swim Time: 69"
+
+[node name="KickoffGameScore" type="RichTextLabel" parent="HighScores"]
+margin_top = 208.0
+margin_right = 420.0
+margin_bottom = 256.0
+rect_min_size = Vector2( 0, 48 )
+custom_fonts/normal_font = ExtResource( 1 )
+text = "Kickoff: 69"
+
+[node name="SimonSaysScore" type="RichTextLabel" parent="HighScores"]
+margin_top = 260.0
+margin_right = 420.0
+margin_bottom = 308.0
+rect_min_size = Vector2( 0, 48 )
+custom_fonts/normal_font = ExtResource( 1 )
+text = "Simón Dice: 69"
+
+[node name="Button" type="Button" parent="."]
+margin_left = 278.0
+margin_top = 410.0
+margin_right = 406.0
+margin_bottom = 475.0
+custom_fonts/font = ExtResource( 4 )
+text = "Done"
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://World/Museum/PaintingOverlay.gd" type="Script" id=1]
+[ext_resource path="res://World/Museum/Art/Coolidge A-Friend-in-Need.jpg" type="Texture" id=2]
+[ext_resource path="res://Font/Copse_32.tres" type="DynamicFont" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 480, 270 )
+
+[node name="Control" type="Control"]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+z_index = 1
+texture = ExtResource( 2 )
+
+[node name="Title" type="Label" parent="Sprite"]
+margin_left = -289.0
+margin_top = -267.0
+margin_right = 329.0
+margin_bottom = -227.0
+custom_fonts/font = ExtResource( 3 )
+text = "Ur Title Here"
+
+[node name="ArtistYear" type="Label" parent="Sprite"]
+margin_left = -291.0
+margin_top = -228.0
+margin_right = 326.0
+margin_bottom = -188.0
+custom_fonts/font = ExtResource( 3 )
+text = "Artist Name, Year"
+
+[node name="Clickable" type="Area2D" parent="Sprite"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/Clickable"]
+shape = SubResource( 1 )
+
+[connection signal="input_event" from="Sprite/Clickable" to="." method="_on_Clickable_input_event"]

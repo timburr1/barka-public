@@ -1,0 +1,552 @@
+[gd_scene load_steps=51 format=2]
+
+[ext_resource path="res://Player/Sprites/Katie.png" type="Texture" id=1]
+[ext_resource path="res://UI/QuestMenu/QuestMenu.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Shadows/MediumShadow.png" type="Texture" id=3]
+[ext_resource path="res://Player/Player.gd" type="Script" id=4]
+[ext_resource path="res://Player/MissionsIconSmall.png" type="Texture" id=5]
+[ext_resource path="res://Player/OptionsIconSmall.png" type="Texture" id=6]
+[ext_resource path="res://Player/DictionaryIconSmall.png" type="Texture" id=7]
+[ext_resource path="res://Player/Carlos.tscn" type="PackedScene" id=8]
+[ext_resource path="res://UI/Dictionary/Dictionary.tscn" type="PackedScene" id=9]
+[ext_resource path="res://UI/CarlosHead.png" type="Texture" id=10]
+[ext_resource path="res://Player/FriendsIconSmall.png" type="Texture" id=11]
+[ext_resource path="res://UI/FriendsMenu.tscn" type="PackedScene" id=12]
+[ext_resource path="res://UI/InventoryMenu.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Player/InventoryIconSmall.png" type="Texture" id=14]
+[ext_resource path="res://UI/GameMenu.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Audio/SFX/Footsteps/Concrete 2.wav" type="AudioStream" id=16]
+[ext_resource path="res://UI/DirectionButtons.tscn" type="PackedScene" id=17]
+
+[sub_resource type="CapsuleShape2D" id=73]
+radius = 12.0
+height = 0.0
+
+[sub_resource type="Animation" id=102]
+resource_name = "Blink"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 18, 1 ), Vector2( 19, 1 ), Vector2( 20, 1 ), Vector2( 21, 1 ), Vector2( 22, 1 ), Vector2( 23, 1 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath("..")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.6 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "blink_animation_finished"
+} ]
+}
+
+[sub_resource type="Animation" id=74]
+resource_name = "CheckPhone"
+length = 0.6
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 336, 337, 338, 339, 340, 341, 342, 343, 344, 345, 346, 347 ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath("..")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.6 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "phone_animation_finished"
+} ]
+}
+
+[sub_resource type="Animation" id=75]
+resource_name = "IdleDown"
+length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 3 ]
+}
+
+[sub_resource type="Animation" id=76]
+resource_name = "IdleLeft"
+length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 2 ]
+}
+
+[sub_resource type="Animation" id=77]
+resource_name = "IdleRight"
+length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=78]
+resource_name = "IdleUp"
+length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+
+[sub_resource type="Animation" id=79]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 336 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:frame_coords")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ Vector2( 0, 3 ) ]
+}
+
+[sub_resource type="Animation" id=80]
+resource_name = "Sleep"
+length = 1.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 0, 3 ), Vector2( 1, 3 ), Vector2( 2, 3 ), Vector2( 3, 3 ), Vector2( 4, 3 ), Vector2( 5, 3 ) ]
+}
+
+[sub_resource type="Animation" id=81]
+resource_name = "WalkDown"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 18, 2 ), Vector2( 19, 2 ), Vector2( 20, 2 ), Vector2( 21, 2 ), Vector2( 22, 2 ), Vector2( 23, 2 ) ]
+}
+
+[sub_resource type="Animation" id=82]
+resource_name = "WalkLeft"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 12, 2 ), Vector2( 13, 2 ), Vector2( 14, 2 ), Vector2( 15, 2 ), Vector2( 16, 2 ), Vector2( 17, 2 ) ]
+}
+
+[sub_resource type="Animation" id=83]
+resource_name = "WalkRight"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 0, 2 ), Vector2( 1, 2 ), Vector2( 2, 2 ), Vector2( 3, 2 ), Vector2( 4, 2 ), Vector2( 5, 2 ) ]
+}
+
+[sub_resource type="Animation" id=84]
+resource_name = "WalkUp"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 6, 2 ), Vector2( 7, 2 ), Vector2( 8, 2 ), Vector2( 9, 2 ), Vector2( 10, 2 ), Vector2( 11, 2 ) ]
+}
+
+[sub_resource type="AnimationNodeAnimation" id=103]
+animation = "Blink"
+
+[sub_resource type="AnimationNodeAnimation" id=85]
+animation = "CheckPhone"
+
+[sub_resource type="AnimationNodeAnimation" id=86]
+animation = "IdleLeft"
+
+[sub_resource type="AnimationNodeAnimation" id=87]
+animation = "IdleDown"
+
+[sub_resource type="AnimationNodeAnimation" id=88]
+animation = "IdleUp"
+
+[sub_resource type="AnimationNodeAnimation" id=89]
+animation = "IdleRight"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=90]
+blend_point_0/node = SubResource( 86 )
+blend_point_0/pos = Vector2( -1, 0 )
+blend_point_1/node = SubResource( 87 )
+blend_point_1/pos = Vector2( 0, 1.1 )
+blend_point_2/node = SubResource( 88 )
+blend_point_2/pos = Vector2( 0, -1 )
+blend_point_3/node = SubResource( 89 )
+blend_point_3/pos = Vector2( 1, 0 )
+min_space = Vector2( -1, -1.1 )
+max_space = Vector2( 1, 1.1 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id=91]
+animation = "WalkLeft"
+
+[sub_resource type="AnimationNodeAnimation" id=92]
+animation = "WalkDown"
+
+[sub_resource type="AnimationNodeAnimation" id=93]
+animation = "WalkUp"
+
+[sub_resource type="AnimationNodeAnimation" id=94]
+animation = "WalkRight"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=95]
+blend_point_0/node = SubResource( 91 )
+blend_point_0/pos = Vector2( -1, 0 )
+blend_point_1/node = SubResource( 92 )
+blend_point_1/pos = Vector2( 0, 1.1 )
+blend_point_2/node = SubResource( 93 )
+blend_point_2/pos = Vector2( 0, -1.1 )
+blend_point_3/node = SubResource( 94 )
+blend_point_3/pos = Vector2( 1, 0 )
+min_space = Vector2( -1, -1.1 )
+max_space = Vector2( 1, 1.1 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=96]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=97]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=98]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=99]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=104]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=105]
+
+[sub_resource type="AnimationNodeStateMachine" id=100]
+states/Blink/node = SubResource( 103 )
+states/Blink/position = Vector2( 696, 200 )
+states/CheckPhone/node = SubResource( 85 )
+states/CheckPhone/position = Vector2( 419, 89 )
+states/Idle/node = SubResource( 90 )
+states/Idle/position = Vector2( 696, 89 )
+states/Walk/node = SubResource( 95 )
+states/Walk/position = Vector2( 1001, 89 )
+transitions = [ "Idle", "Walk", SubResource( 96 ), "Walk", "Idle", SubResource( 97 ), "CheckPhone", "Idle", SubResource( 98 ), "Idle", "CheckPhone", SubResource( 99 ), "Blink", "Idle", SubResource( 104 ), "Idle", "Blink", SubResource( 105 ) ]
+start_node = "Idle"
+graph_offset = Vector2( 131.205, 0 )
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=101]
+
+[node name="Player" type="KinematicBody2D"]
+collision_layer = 2
+script = ExtResource( 4 )
+
+[node name="MediumShadow" type="Sprite" parent="."]
+position = Vector2( 0, 7 )
+scale = Vector2( 1.8, 1 )
+texture = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, -27 )
+texture = ExtResource( 1 )
+hframes = 56
+vframes = 20
+frame = 168
+
+[node name="Carlos" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9, 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -5 )
+rotation = 1.5708
+shape = SubResource( 73 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Sprite")
+anims/Blink = SubResource( 102 )
+anims/CheckPhone = SubResource( 74 )
+anims/IdleDown = SubResource( 75 )
+anims/IdleLeft = SubResource( 76 )
+anims/IdleRight = SubResource( 77 )
+anims/IdleUp = SubResource( 78 )
+anims/RESET = SubResource( 79 )
+anims/Sleep = SubResource( 80 )
+anims/WalkDown = SubResource( 81 )
+anims/WalkLeft = SubResource( 82 )
+anims/WalkRight = SubResource( 83 )
+anims/WalkUp = SubResource( 84 )
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource( 100 )
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/playback = SubResource( 101 )
+parameters/Idle/blend_position = Vector2( -0.000964344, 0.00378013 )
+parameters/Walk/blend_position = Vector2( -0.0949051, 0.486266 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 16 )
+volume_db = -10.0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+
+[node name="HUD" type="Control" parent="Camera2D"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Background" type="ColorRect" parent="Camera2D/HUD"]
+margin_left = -432.0
+margin_top = -248.0
+margin_right = -132.0
+margin_bottom = -219.0
+rect_min_size = Vector2( 300, 29 )
+color = Color( 0.12549, 0.12549, 0.12549, 1 )
+
+[node name="LoveMeter" type="ColorRect" parent="Camera2D/HUD"]
+margin_left = -432.0
+margin_top = -246.0
+margin_right = -232.0
+margin_bottom = -221.0
+color = Color( 0.0509804, 0.65098, 0.0509804, 1 )
+
+[node name="Sprite" type="Sprite" parent="Camera2D/HUD/LoveMeter"]
+position = Vector2( 0, 15 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 10 )
+
+[node name="MenuButtons" type="GridContainer" parent="Camera2D/HUD"]
+margin_left = 280.0
+margin_top = -248.0
+margin_right = 520.0
+margin_bottom = -208.0
+columns = 5
+
+[node name="TextureButton" type="TextureButton" parent="Camera2D/HUD/MenuButtons"]
+margin_right = 32.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+texture_normal = ExtResource( 11 )
+expand = true
+
+[node name="TextureButton2" type="TextureButton" parent="Camera2D/HUD/MenuButtons"]
+margin_left = 36.0
+margin_right = 68.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+texture_normal = ExtResource( 7 )
+expand = true
+
+[node name="TextureButton3" type="TextureButton" parent="Camera2D/HUD/MenuButtons"]
+margin_left = 72.0
+margin_right = 104.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+texture_normal = ExtResource( 14 )
+expand = true
+
+[node name="TextureButton4" type="TextureButton" parent="Camera2D/HUD/MenuButtons"]
+margin_left = 108.0
+margin_right = 140.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+texture_normal = ExtResource( 5 )
+expand = true
+
+[node name="TextureButton5" type="TextureButton" parent="Camera2D/HUD/MenuButtons"]
+margin_left = 144.0
+margin_right = 176.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+texture_normal = ExtResource( 6 )
+expand = true
+
+[node name="FriendsMenu" parent="Camera2D/HUD" instance=ExtResource( 12 )]
+visible = false
+
+[node name="Dictionary" parent="Camera2D/HUD" instance=ExtResource( 9 )]
+visible = false
+
+[node name="Inventory" parent="Camera2D/HUD" instance=ExtResource( 13 )]
+visible = false
+
+[node name="QuestMenu" parent="Camera2D/HUD" instance=ExtResource( 2 )]
+visible = false
+
+[node name="GameMenu" parent="Camera2D/HUD" instance=ExtResource( 15 )]
+visible = false
+
+[node name="LoadDialog" type="FileDialog" parent="Camera2D/HUD/GameMenu/FileOverlay5" index="2"]
+margin_left = -264.0
+margin_top = -69.0
+margin_right = 247.0
+margin_bottom = 154.0
+window_title = "Open a File"
+resizable = true
+mode = 0
+access = 2
+
+[node name="SaveDialog" type="FileDialog" parent="Camera2D/HUD/GameMenu/FileOverlay5" index="3"]
+margin_right = 356.0
+margin_bottom = 130.0
+access = 2
+
+[node name="ControlPad" parent="Camera2D/HUD" instance=ExtResource( 17 )]
+
+[connection signal="pressed" from="Camera2D/HUD/MenuButtons/TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="Camera2D/HUD/MenuButtons/TextureButton2" to="." method="_on_TextureButton2_pressed"]
+[connection signal="pressed" from="Camera2D/HUD/MenuButtons/TextureButton3" to="." method="_on_TextureButton3_pressed"]
+[connection signal="pressed" from="Camera2D/HUD/MenuButtons/TextureButton4" to="." method="_on_TextureButton4_pressed"]
+[connection signal="pressed" from="Camera2D/HUD/MenuButtons/TextureButton5" to="." method="_on_TextureButton5_pressed"]
+[connection signal="pressed" from="Camera2D/HUD/FriendsMenu/FileOverlay1/Node2D/TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="Camera2D/HUD/FriendsMenu/FileOverlay1/Node2D/TextureButton2" to="." method="_on_TextureButton2_pressed"]
+[connection signal="pressed" from="Camera2D/HUD/FriendsMenu/FileOverlay1/Node2D/TextureButton3" to="." method="_on_TextureButton3_pressed"]
+[connection signal="pressed" from="Camera2D/HUD/FriendsMenu/FileOverlay1/Node2D/TextureButton4" to="." method="_on_TextureButton4_pressed"]
+[connection signal="pressed" from="Camera2D/HUD/FriendsMenu/FileOverlay1/Node2D/TextureButton5" to="." method="_on_TextureButton5_pressed"]
+[connection signal="pressed" from="Camera2D/HUD/Dictionary/FileOverlay2/Buttons/TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="Camera2D/HUD/Dictionary/FileOverlay2/Buttons/TextureButton2" to="." method="_on_TextureButton2_pressed"]
+[connection signal="pressed" from="Camera2D/HUD/Dictionary/FileOverlay2/Buttons/TextureButton3" to="." method="_on_TextureButton3_pressed"]
+[connection signal="pressed" from="Camera2D/HUD/Dictionary/FileOverlay2/Buttons/TextureButton4" to="." method="_on_TextureButton4_pressed"]
+[connection signal="pressed" from="Camera2D/HUD/Dictionary/FileOverlay2/Buttons/TextureButton5" to="." method="_on_TextureButton5_pressed"]
+[connection signal="pressed" from="Camera2D/HUD/Inventory/FileOverlay3/Buttons/TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="Camera2D/HUD/Inventory/FileOverlay3/Buttons/TextureButton2" to="." method="_on_TextureButton2_pressed"]
+[connection signal="pressed" from="Camera2D/HUD/Inventory/FileOverlay3/Buttons/TextureButton3" to="." method="_on_TextureButton3_pressed"]
+[connection signal="pressed" from="Camera2D/HUD/Inventory/FileOverlay3/Buttons/TextureButton4" to="." method="_on_TextureButton4_pressed"]
+[connection signal="pressed" from="Camera2D/HUD/Inventory/FileOverlay3/Buttons/TextureButton5" to="." method="_on_TextureButton5_pressed"]
+[connection signal="pressed" from="Camera2D/HUD/QuestMenu/FileOverlay4/Buttons/TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="Camera2D/HUD/QuestMenu/FileOverlay4/Buttons/TextureButton2" to="." method="_on_TextureButton2_pressed"]
+[connection signal="pressed" from="Camera2D/HUD/QuestMenu/FileOverlay4/Buttons/TextureButton3" to="." method="_on_TextureButton3_pressed"]
+[connection signal="pressed" from="Camera2D/HUD/QuestMenu/FileOverlay4/Buttons/TextureButton4" to="." method="_on_TextureButton4_pressed"]
+[connection signal="pressed" from="Camera2D/HUD/QuestMenu/FileOverlay4/Buttons/TextureButton5" to="." method="_on_TextureButton5_pressed"]
+[connection signal="pressed" from="Camera2D/HUD/GameMenu/FileOverlay5/Buttons/TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="Camera2D/HUD/GameMenu/FileOverlay5/Buttons/TextureButton2" to="." method="_on_TextureButton2_pressed"]
+[connection signal="pressed" from="Camera2D/HUD/GameMenu/FileOverlay5/Buttons/TextureButton3" to="." method="_on_TextureButton3_pressed"]
+[connection signal="pressed" from="Camera2D/HUD/GameMenu/FileOverlay5/Buttons/TextureButton4" to="." method="_on_TextureButton4_pressed"]
+[connection signal="pressed" from="Camera2D/HUD/GameMenu/FileOverlay5/Buttons/TextureButton5" to="." method="_on_TextureButton5_pressed"]
+[connection signal="file_selected" from="Camera2D/HUD/GameMenu/FileOverlay5/LoadDialog" to="Camera2D/HUD/GameMenu" method="_on_LoadDialog_file_selected"]
+[connection signal="file_selected" from="Camera2D/HUD/GameMenu/FileOverlay5/SaveDialog" to="Camera2D/HUD/GameMenu" method="_on_SaveDialog_file_selected"]
+
+[editable path="Carlos"]
+[editable path="Camera2D/HUD/FriendsMenu"]
+[editable path="Camera2D/HUD/FriendsMenu/FileOverlay1/Node2D"]
+[editable path="Camera2D/HUD/Dictionary"]
+[editable path="Camera2D/HUD/Dictionary/FileOverlay2/Buttons"]
+[editable path="Camera2D/HUD/Inventory"]
+[editable path="Camera2D/HUD/Inventory/FileOverlay3/ColorRect/CenterContainer/InventoryDisplay"]
+[editable path="Camera2D/HUD/Inventory/FileOverlay3/ColorRect/CenterContainer/InventoryDisplay/InventorySlotDisplay"]
+[editable path="Camera2D/HUD/Inventory/FileOverlay3/ColorRect/CenterContainer/InventoryDisplay/InventorySlotDisplay2"]
+[editable path="Camera2D/HUD/Inventory/FileOverlay3/ColorRect/CenterContainer/InventoryDisplay/InventorySlotDisplay6"]
+[editable path="Camera2D/HUD/Inventory/FileOverlay3/Buttons"]
+[editable path="Camera2D/HUD/QuestMenu"]
+[editable path="Camera2D/HUD/QuestMenu/FileOverlay4/Buttons"]
+[editable path="Camera2D/HUD/GameMenu"]
+[editable path="Camera2D/HUD/GameMenu/FileOverlay5/Buttons"]

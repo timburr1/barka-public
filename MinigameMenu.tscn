@@ -1,0 +1,111 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://MinigameMenu.gd" type="Script" id=1]
+[ext_resource path="res://Minigames/Swimming/Icon.png" type="Texture" id=2]
+[ext_resource path="res://SceneTransition.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Font/Copse_32.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Font/Copse_48.tres" type="DynamicFont" id=5]
+[ext_resource path="res://Minigames/Sorting/Groceries/Items/tomate.png" type="Texture" id=6]
+[ext_resource path="res://Minigames/FlashCards/Icon.png" type="Texture" id=7]
+[ext_resource path="res://Minigames/Numbers/Icon.png" type="Texture" id=8]
+[ext_resource path="res://Minigames/SimonSays/Icon.png" type="Texture" id=9]
+[ext_resource path="res://Minigames/Kickoff/Ball.png" type="Texture" id=10]
+[ext_resource path="res://Font/Copse_64.tres" type="DynamicFont" id=11]
+
+[node name="MinigameMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.290196, 0.839216, 0.819608, 1 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 304.0
+margin_top = 48.0
+margin_right = 640.0
+margin_bottom = 152.0
+custom_fonts/normal_font = ExtResource( 11 )
+text = "Minigames"
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="GridContainer" type="GridContainer" parent="CenterContainer"]
+margin_left = 140.0
+margin_top = 161.0
+margin_right = 820.0
+margin_bottom = 379.0
+columns = 2
+
+[node name="FlashcardGameButton" type="Button" parent="CenterContainer/GridContainer"]
+margin_right = 330.0
+margin_bottom = 70.0
+custom_fonts/font = ExtResource( 4 )
+text = "Name Game"
+icon = ExtResource( 7 )
+
+[node name="NumbersGameButton" type="Button" parent="CenterContainer/GridContainer"]
+margin_left = 334.0
+margin_right = 680.0
+margin_bottom = 70.0
+custom_fonts/font = ExtResource( 4 )
+text = "Number Cruncher"
+icon = ExtResource( 8 )
+
+[node name="SortingGameButton" type="Button" parent="CenterContainer/GridContainer"]
+margin_top = 74.0
+margin_right = 330.0
+margin_bottom = 144.0
+custom_fonts/font = ExtResource( 4 )
+text = "Sorting Scramble"
+icon = ExtResource( 6 )
+
+[node name="SwimmingGameButton" type="Button" parent="CenterContainer/GridContainer"]
+margin_left = 334.0
+margin_top = 74.0
+margin_right = 680.0
+margin_bottom = 144.0
+custom_fonts/font = ExtResource( 4 )
+text = "Swim Time"
+icon = ExtResource( 2 )
+
+[node name="KickoffGameButton" type="Button" parent="CenterContainer/GridContainer"]
+margin_top = 148.0
+margin_right = 330.0
+margin_bottom = 218.0
+custom_fonts/font = ExtResource( 4 )
+text = "Kickoff"
+icon = ExtResource( 10 )
+expand_icon = true
+
+[node name="SimonSaysGameButton" type="Button" parent="CenterContainer/GridContainer"]
+margin_left = 334.0
+margin_top = 148.0
+margin_right = 680.0
+margin_bottom = 218.0
+custom_fonts/font = ExtResource( 4 )
+text = "Simón Dice"
+icon = ExtResource( 9 )
+
+[node name="BackButton" type="Button" parent="."]
+margin_left = 784.0
+margin_top = 424.0
+margin_right = 904.0
+margin_bottom = 489.0
+custom_fonts/font = ExtResource( 5 )
+text = "Back"
+
+[node name="SceneTransition" parent="." instance=ExtResource( 3 )]
+visible = false
+
+[connection signal="pressed" from="CenterContainer/GridContainer/FlashcardGameButton" to="." method="_on_FlashcardGameButton_pressed"]
+[connection signal="pressed" from="CenterContainer/GridContainer/NumbersGameButton" to="." method="_on_NumbersGameButton_pressed"]
+[connection signal="pressed" from="CenterContainer/GridContainer/SortingGameButton" to="." method="_on_SortingGameButton_pressed"]
+[connection signal="pressed" from="CenterContainer/GridContainer/SwimmingGameButton" to="." method="_on_SwimmingGameButton_pressed"]
+[connection signal="pressed" from="CenterContainer/GridContainer/KickoffGameButton" to="." method="_on_KickoffGameButton_pressed"]
+[connection signal="pressed" from="CenterContainer/GridContainer/SimonSaysGameButton" to="." method="_on_SimonSaysGameButton_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]

@@ -1,0 +1,167 @@
+[gd_scene load_steps=26 format=2]
+
+[ext_resource path="res://World/WorldMap/WorldMap.gd" type="Script" id=1]
+[ext_resource path="res://SceneTransition.tscn" type="PackedScene" id=2]
+[ext_resource path="res://World/WorldMap/Fountain.png" type="Texture" id=3]
+[ext_resource path="res://World/WorldMap/Background.png" type="Texture" id=4]
+[ext_resource path="res://World/WorldMap/BarcDeTriomf.png" type="Texture" id=5]
+[ext_resource path="res://World/WorldMap/Apartments.png" type="Texture" id=6]
+[ext_resource path="res://World/WorldMap/Park.png" type="Texture" id=7]
+[ext_resource path="res://World/WorldMap/Museum.png" type="Texture" id=8]
+[ext_resource path="res://World/WorldMap/Stadium.png" type="Texture" id=9]
+[ext_resource path="res://World/WorldMap/Hospital.png" type="Texture" id=10]
+[ext_resource path="res://World/WorldMap/Beach.png" type="Texture" id=11]
+[ext_resource path="res://World/WorldMap/Library.png" type="Texture" id=12]
+[ext_resource path="res://World/WorldMap/Restaurant.png" type="Texture" id=13]
+[ext_resource path="res://World/WorldMap/Church.png" type="Texture" id=14]
+[ext_resource path="res://World/WorldMap/Market.png" type="Texture" id=15]
+[ext_resource path="res://World/WorldMap/BarcDeTriomfGreyscale.png" type="Texture" id=16]
+[ext_resource path="res://World/WorldMap/FountainGreyscale.png" type="Texture" id=17]
+[ext_resource path="res://World/WorldMap/ChurchGreyscale.png" type="Texture" id=18]
+[ext_resource path="res://World/WorldMap/StadiumGreyscale.png" type="Texture" id=19]
+[ext_resource path="res://World/WorldMap/RestaurantGreyscale.png" type="Texture" id=20]
+[ext_resource path="res://World/WorldMap/HospitalGreyscale.png" type="Texture" id=21]
+[ext_resource path="res://World/WorldMap/MarketGreyscale.png" type="Texture" id=22]
+[ext_resource path="res://World/WorldMap/LibraryGreyscale.png" type="Texture" id=23]
+[ext_resource path="res://World/WorldMap/BeachGreyscale.png" type="Texture" id=24]
+[ext_resource path="res://World/WorldMap/MuseumGreyscale.png" type="Texture" id=25]
+
+[node name="Map" type="Control"]
+script = ExtResource( 1 )
+
+[node name="Background" type="TextureRect" parent="."]
+margin_right = 4451.0
+margin_bottom = 3000.0
+rect_scale = Vector2( 0.22, 0.18 )
+texture = ExtResource( 4 )
+
+[node name="BarcDeTriomf" type="TextureButton" parent="."]
+margin_left = 345.0
+margin_top = 203.0
+margin_right = 645.0
+margin_bottom = 503.0
+rect_scale = Vector2( 0.33, 0.33 )
+disabled = true
+texture_normal = ExtResource( 5 )
+texture_disabled = ExtResource( 16 )
+
+[node name="Fountain" type="TextureButton" parent="."]
+margin_left = 153.0
+margin_top = 283.0
+margin_right = 553.0
+margin_bottom = 583.0
+rect_scale = Vector2( 0.25, 0.25 )
+disabled = true
+texture_normal = ExtResource( 3 )
+texture_disabled = ExtResource( 17 )
+
+[node name="Church" type="TextureButton" parent="."]
+margin_left = 10.0
+margin_top = 102.0
+margin_right = 310.0
+margin_bottom = 502.0
+rect_scale = Vector2( 0.33, 0.33 )
+disabled = true
+texture_normal = ExtResource( 14 )
+texture_disabled = ExtResource( 18 )
+
+[node name="Stadium" type="TextureButton" parent="."]
+margin_left = 112.0
+margin_top = 157.0
+margin_right = 512.0
+margin_bottom = 457.0
+rect_scale = Vector2( 0.3, 0.3 )
+disabled = true
+texture_normal = ExtResource( 9 )
+texture_disabled = ExtResource( 19 )
+
+[node name="Hospital" type="TextureButton" parent="."]
+margin_left = 834.0
+margin_top = 139.0
+margin_right = 1234.0
+margin_bottom = 439.0
+rect_scale = Vector2( 0.3, 0.3 )
+disabled = true
+texture_normal = ExtResource( 10 )
+texture_disabled = ExtResource( 21 )
+
+[node name="Apartment" type="TextureButton" parent="."]
+margin_left = 403.0
+margin_top = 49.0
+margin_right = 703.0
+margin_bottom = 449.0
+rect_scale = Vector2( 0.33, 0.33 )
+texture_normal = ExtResource( 6 )
+
+[node name="Park" type="TextureButton" parent="."]
+margin_left = 297.0
+margin_top = 113.0
+margin_right = 697.0
+margin_bottom = 413.0
+rect_scale = Vector2( 0.25, 0.25 )
+texture_normal = ExtResource( 7 )
+
+[node name="Market" type="TextureButton" parent="."]
+margin_left = 665.0
+margin_top = 102.0
+margin_right = 1065.0
+margin_bottom = 402.0
+rect_scale = Vector2( 0.25, 0.25 )
+disabled = true
+texture_normal = ExtResource( 15 )
+texture_disabled = ExtResource( 22 )
+
+[node name="Restaurant" type="TextureButton" parent="."]
+margin_left = 565.0
+margin_top = 175.0
+margin_right = 965.0
+margin_bottom = 475.0
+rect_scale = Vector2( 0.25, 0.25 )
+disabled = true
+texture_normal = ExtResource( 13 )
+texture_disabled = ExtResource( 20 )
+
+[node name="Library" type="TextureButton" parent="."]
+margin_left = 548.0
+margin_top = 283.0
+margin_right = 948.0
+margin_bottom = 583.0
+rect_scale = Vector2( 0.25, 0.25 )
+disabled = true
+texture_normal = ExtResource( 12 )
+texture_disabled = ExtResource( 23 )
+
+[node name="Beach" type="TextureButton" parent="."]
+margin_left = 428.0
+margin_top = 384.0
+margin_right = 828.0
+margin_bottom = 684.0
+rect_scale = Vector2( 0.2, 0.2 )
+disabled = true
+texture_normal = ExtResource( 11 )
+texture_disabled = ExtResource( 24 )
+
+[node name="Museum" type="TextureButton" parent="."]
+margin_left = 10.0
+margin_top = 299.0
+margin_right = 410.0
+margin_bottom = 599.0
+rect_scale = Vector2( 0.33, 0.33 )
+disabled = true
+texture_normal = ExtResource( 8 )
+texture_disabled = ExtResource( 25 )
+
+[node name="SceneTransition" parent="." instance=ExtResource( 2 )]
+visible = false
+
+[connection signal="pressed" from="Fountain" to="." method="_on_Fountain_pressed"]
+[connection signal="pressed" from="Church" to="." method="_on_Church_pressed"]
+[connection signal="pressed" from="Stadium" to="." method="_on_Stadium_pressed"]
+[connection signal="pressed" from="Hospital" to="." method="_on_Hospital_pressed"]
+[connection signal="pressed" from="Apartment" to="." method="_on_Apartment_pressed"]
+[connection signal="pressed" from="Park" to="." method="_on_Park_pressed"]
+[connection signal="pressed" from="Market" to="." method="_on_Market_pressed"]
+[connection signal="pressed" from="Restaurant" to="." method="_on_Restaurant_pressed"]
+[connection signal="pressed" from="Library" to="." method="_on_Library_pressed"]
+[connection signal="pressed" from="Beach" to="." method="_on_Beach_pressed"]
+[connection signal="pressed" from="Museum" to="." method="_on_Museum_pressed"]

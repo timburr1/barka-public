@@ -1,0 +1,1102 @@
+[gd_scene load_steps=61 format=2]
+
+[ext_resource path="res://NPCs/NPC.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://World/_Resources/Room_Builder/FloorShadow.png" type="Texture" id=3]
+[ext_resource path="res://SceneTransition.tscn" type="PackedScene" id=4]
+[ext_resource path="res://World/PlayerDetectionZone.tscn" type="PackedScene" id=5]
+[ext_resource path="res://World/_Resources/Stadium/BlueStadiumBleachers48x48_Right.png" type="Texture" id=6]
+[ext_resource path="res://World/_Resources/Stadium/ME_Singles_School_48x48_Soccer_Court_1.png" type="Texture" id=7]
+[ext_resource path="res://World/_Resources/Stadium/BlueStadiumBleachers48x48_Left.png" type="Texture" id=8]
+[ext_resource path="res://World/_Resources/Stadium/YellowStadiumBleachers48x48_Front.png" type="Texture" id=9]
+[ext_resource path="res://World/_Resources/Stadium/YellowStadiumBleachers48x48_Left.png" type="Texture" id=10]
+[ext_resource path="res://World/_Resources/Stadium/BlueStadiumBleachers48x48._Front.png" type="Texture" id=11]
+[ext_resource path="res://World/_Resources/Stadium/YellowStadiumBleachers48x48_Right.png" type="Texture" id=12]
+[ext_resource path="res://World/_Resources/Stadium/ME_Singles_School_32x32_Soccer_Net_4.png" type="Texture" id=13]
+[ext_resource path="res://World/_Resources/Stadium/ME_Singles_School_48x48_Stadium_Light_3.png" type="Texture" id=14]
+[ext_resource path="res://World/_Resources/Stadium/ME_Singles_School_48x48_Stadium_Light_4.png" type="Texture" id=15]
+[ext_resource path="res://World/_Resources/Stadium/ME_Singles_School_32x32_Soccer_Net_2.png" type="Texture" id=16]
+[ext_resource path="res://World/_Resources/Stadium/ME_Singles_School_48x48_Stadium_Light_2.png" type="Texture" id=17]
+[ext_resource path="res://World/_Resources/Stadium/ME_Singles_School_32x32_Soccer_Ball_3.png" type="Texture" id=18]
+[ext_resource path="res://World/_Resources/Outside/Modern_Exteriors_Singles_Terrain_Grass_32x32_2.png" type="Texture" id=19]
+[ext_resource path="res://World/_Resources/Room_Builder/DarkBlueWalls.tres" type="TileSet" id=20]
+[ext_resource path="res://World/_Resources/Stadium/Music_and_Sport_Singles_Shadowless_32x32_164.png" type="Texture" id=21]
+[ext_resource path="res://World/_Resources/Stadium/ME_Singles_Worksite_32x32_Portable_Toilet_1.png" type="Texture" id=22]
+[ext_resource path="res://World/_Resources/Stadium/Television_and_FIlm_Studio_Singles_Shadowless_32x32_1.png" type="Texture" id=23]
+[ext_resource path="res://World/_Resources/Stadium/Lockers_Shadowless_32x32.png" type="Texture" id=24]
+[ext_resource path="res://World/_Resources/Stadium/Gym_Singles_Shadowless_32x32_169.png" type="Texture" id=25]
+[ext_resource path="res://World/_Resources/Stadium/Gym_Singles_Shadowless_32x32_66.png" type="Texture" id=26]
+[ext_resource path="res://World/_Resources/Outside/Modern_Exteriors_Singles_Terrain_Asphalt_32x32.png" type="Texture" id=27]
+[ext_resource path="res://World/_Resources/Stadium/ME_Singles_Vehicles_32x32_Street_Food_Cart_2.png" type="Texture" id=28]
+[ext_resource path="res://World/_Resources/Stadium/Gym_Singles_Shadowless_32x32_94.png" type="Texture" id=29]
+[ext_resource path="res://World/_Resources/Outside/Modern_Exteriors_Singles_Railing_2_32x32_4.png" type="Texture" id=30]
+[ext_resource path="res://World/_Resources/Stadium/Music_and_Sport_Singles_Shadowless_32x32_157.png" type="Texture" id=31]
+[ext_resource path="res://World/_Resources/Stadium/Music_and_Sport_Singles_Shadowless_32x32_163.png" type="Texture" id=32]
+[ext_resource path="res://World/_Resources/Stadium/Gym_Singles_Shadowless_32x32_170.png" type="Texture" id=33]
+[ext_resource path="res://World/_Resources/Stadium/Gym_Singles_Shadowless_32x32_76.png" type="Texture" id=34]
+[ext_resource path="res://World/_Resources/Outside/Modern_Exteriors_Singles_Railing_2_32x32_6.png" type="Texture" id=35]
+[ext_resource path="res://World/_Resources/Stadium/Hospital_Singles_Shadowless_32x32_112.png" type="Texture" id=36]
+[ext_resource path="res://World/_Resources/Stadium/Television_and_FIlm_Studio_Singles_Shadowless_32x32_2.png" type="Texture" id=37]
+[ext_resource path="res://World/_Resources/Stadium/ME_Singles_Vehicles_32x32_Pizza_Tuk_Tuk_1.png" type="Texture" id=38]
+[ext_resource path="res://World/_Resources/Stadium/Gym_Singles_Shadowless_32x32_97.png" type="Texture" id=39]
+[ext_resource path="res://World/_Resources/Stadium/Gym_Singles_Shadowless_32x32_98.png" type="Texture" id=40]
+[ext_resource path="res://World/ClickableObject.tscn" type="PackedScene" id=41]
+[ext_resource path="res://World/Stadium/Stadium.gd" type="Script" id=42]
+[ext_resource path="res://NPCs/Chicharito.gd" type="Script" id=43]
+[ext_resource path="res://NPCs/Enrique.gd" type="Script" id=44]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 114.5, 20.5 )
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 14, 1016.5 )
+
+[sub_resource type="RectangleShape2D" id=16]
+extents = Vector2( 783, 14 )
+
+[sub_resource type="RectangleShape2D" id=17]
+extents = Vector2( 12, 1015.5 )
+
+[sub_resource type="RectangleShape2D" id=25]
+extents = Vector2( 769.5, 16.5 )
+
+[sub_resource type="RectangleShape2D" id=26]
+extents = Vector2( 21, 76.5 )
+
+[sub_resource type="RectangleShape2D" id=27]
+extents = Vector2( 48, 16 )
+
+[sub_resource type="RectangleShape2D" id=28]
+extents = Vector2( 101, 25 )
+
+[sub_resource type="RectangleShape2D" id=29]
+extents = Vector2( 25.5, 18 )
+
+[sub_resource type="CircleShape2D" id=18]
+
+[sub_resource type="RectangleShape2D" id=19]
+extents = Vector2( 80, 49.5 )
+
+[sub_resource type="RectangleShape2D" id=20]
+extents = Vector2( 20.5, 29 )
+
+[sub_resource type="RectangleShape2D" id=21]
+extents = Vector2( 79.5, 39 )
+
+[sub_resource type="CapsuleShape2D" id=22]
+radius = 19.0
+height = 12.0
+
+[sub_resource type="RectangleShape2D" id=23]
+extents = Vector2( 20.5, 16 )
+
+[sub_resource type="RectangleShape2D" id=24]
+extents = Vector2( 109, 525 )
+
+[node name="Stadium" type="Node2D"]
+script = ExtResource( 42 )
+
+[node name="Ground" type="Sprite" parent="."]
+position = Vector2( 992, 1031 )
+scale = Vector2( 1, 1.12748 )
+texture = ExtResource( 19 )
+region_enabled = true
+region_rect = Rect2( -1361.41, -775.817, 2594.49, 2258.27 )
+
+[node name="Cement" type="Sprite" parent="Ground"]
+position = Vector2( 65, 704.225 )
+texture = ExtResource( 27 )
+region_enabled = true
+region_rect = Rect2( -72.8774, 173.103, 1559.55, 404.005 )
+
+[node name="Cement2" type="Sprite" parent="Ground"]
+position = Vector2( 65, 970.306 )
+texture = ExtResource( 27 )
+region_enabled = true
+region_rect = Rect2( -72.8774, 173.103, 222.837, 404.005 )
+
+[node name="MeSinglesSchool48X48SoccerCourt1" type="Sprite" parent="Ground"]
+position = Vector2( 49, -47.8945 )
+scale = Vector2( 1.28114, 1.15457 )
+texture = ExtResource( 7 )
+
+[node name="MeSinglesSchool32X32SoccerNet2" type="Sprite" parent="Ground/MeSinglesSchool48X48SoccerCourt1"]
+position = Vector2( -1.5611, -371.804 )
+texture = ExtResource( 16 )
+
+[node name="MeSinglesSchool32X32SoccerNet4" type="Sprite" parent="Ground/MeSinglesSchool48X48SoccerCourt1"]
+position = Vector2( 0, 354.904 )
+texture = ExtResource( 13 )
+
+[node name="MeSinglesSchool48X48StadiumLight4" type="Sprite" parent="Ground/MeSinglesSchool48X48SoccerCourt1"]
+position = Vector2( -325.491, -548.487 )
+texture = ExtResource( 15 )
+
+[node name="MeSinglesSchool48X48StadiumLight3" type="Sprite" parent="Ground/MeSinglesSchool48X48SoccerCourt1"]
+position = Vector2( 325.491, -546.183 )
+texture = ExtResource( 14 )
+
+[node name="MeSinglesSchool48X48StadiumLight2" type="Sprite" parent="Ground/MeSinglesSchool48X48SoccerCourt1"]
+position = Vector2( -302.855, 340.308 )
+texture = ExtResource( 17 )
+
+[node name="MeSinglesSchool48X48StadiumLight5" type="Sprite" parent="Ground/MeSinglesSchool48X48SoccerCourt1"]
+position = Vector2( 308.319, 339.54 )
+texture = ExtResource( 17 )
+
+[node name="MeSinglesSchool32X32SoccerBall3" type="Sprite" parent="Ground/MeSinglesSchool48X48SoccerCourt1"]
+position = Vector2( -167.039, -199.729 )
+texture = ExtResource( 18 )
+
+[node name="MeSinglesSchool48X48StadiumLight6" type="Sprite" parent="Ground/MeSinglesSchool48X48SoccerCourt1"]
+position = Vector2( -544.046, -268.098 )
+texture = ExtResource( 15 )
+
+[node name="MeSinglesSchool48X48StadiumLight7" type="Sprite" parent="Ground/MeSinglesSchool48X48SoccerCourt1"]
+position = Vector2( -552.632, 47.6277 )
+texture = ExtResource( 15 )
+
+[node name="MeSinglesSchool48X48StadiumLight8" type="Sprite" parent="Ground/MeSinglesSchool48X48SoccerCourt1"]
+position = Vector2( 559.657, -245.821 )
+texture = ExtResource( 14 )
+
+[node name="MeSinglesSchool48X48StadiumLight9" type="Sprite" parent="Ground/MeSinglesSchool48X48SoccerCourt1"]
+position = Vector2( 570.585, 66.8325 )
+texture = ExtResource( 14 )
+
+[node name="Exit" parent="." instance=ExtResource( 5 )]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Exit"]
+position = Vector2( 1057, 2048 )
+shape = SubResource( 1 )
+
+[node name="FloorShadow" type="Sprite" parent="Exit/CollisionShape2D2"]
+position = Vector2( 0.499939, -9 )
+scale = Vector2( 7.21875, 1 )
+texture = ExtResource( 3 )
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Carmen" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 648, 1857 )
+dialogue_name = "carmen"
+
+[node name="AnimatedSprite" parent="YSort/Carmen" index="1"]
+animation = "Carmen"
+
+[node name="Enrique" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 885, 1357 )
+script = ExtResource( 44 )
+
+[node name="MediumShadow" parent="YSort/Enrique" index="0"]
+position = Vector2( -1.50009, 9 )
+scale = Vector2( 2.18749, 1 )
+
+[node name="AnimatedSprite" parent="YSort/Enrique" index="1"]
+position = Vector2( -6, -6 )
+animation = "EnriqueRunning"
+
+[node name="Chicharito" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 1074, 1661 )
+script = ExtResource( 43 )
+
+[node name="AnimatedSprite" parent="YSort/Chicharito" index="1"]
+position = Vector2( 0, -2 )
+animation = "ChicharitoRunning"
+
+[node name="YellowStadiumBleachers48X48Front" type="Sprite" parent="YSort"]
+position = Vector2( 749, 216 )
+texture = ExtResource( 9 )
+
+[node name="YellowStadiumBleachers48X48Front2" type="Sprite" parent="YSort/YellowStadiumBleachers48X48Front"]
+position = Vector2( 193, 0 )
+texture = ExtResource( 9 )
+
+[node name="YellowStadiumBleachers48X48Front3" type="Sprite" parent="YSort/YellowStadiumBleachers48X48Front"]
+position = Vector2( 386, 0 )
+texture = ExtResource( 9 )
+
+[node name="YellowStadiumBleachers48X48Front4" type="Sprite" parent="YSort/YellowStadiumBleachers48X48Front"]
+position = Vector2( 579, 0 )
+texture = ExtResource( 9 )
+
+[node name="BlueStadiumBleachers48X48Front" type="Sprite" parent="YSort"]
+position = Vector2( 749, 327 )
+texture = ExtResource( 11 )
+
+[node name="BlueStadiumBleachers48X48Front2" type="Sprite" parent="YSort/BlueStadiumBleachers48X48Front"]
+position = Vector2( 193, 0 )
+texture = ExtResource( 11 )
+
+[node name="BlueStadiumBleachers48X48Front3" type="Sprite" parent="YSort/BlueStadiumBleachers48X48Front"]
+position = Vector2( 386, 0 )
+texture = ExtResource( 11 )
+
+[node name="BlueStadiumBleachers48X48Front4" type="Sprite" parent="YSort/BlueStadiumBleachers48X48Front"]
+position = Vector2( 579, 0 )
+texture = ExtResource( 11 )
+
+[node name="YellowStadiumBleachers48X48Left" type="Sprite" parent="YSort"]
+position = Vector2( 445, 494 )
+scale = Vector2( 1.14042, 1.06353 )
+texture = ExtResource( 10 )
+
+[node name="YellowStadiumBleachers48X48Left2" type="Sprite" parent="YSort/YellowStadiumBleachers48X48Left"]
+position = Vector2( 0, 141 )
+texture = ExtResource( 10 )
+
+[node name="YellowStadiumBleachers48X48Left3" type="Sprite" parent="YSort/YellowStadiumBleachers48X48Left"]
+position = Vector2( 0, 282 )
+texture = ExtResource( 10 )
+
+[node name="YellowStadiumBleachers48X48Left4" type="Sprite" parent="YSort/YellowStadiumBleachers48X48Left"]
+position = Vector2( 0, 423 )
+texture = ExtResource( 10 )
+
+[node name="YellowStadiumBleachers48X48Left5" type="Sprite" parent="YSort/YellowStadiumBleachers48X48Left"]
+position = Vector2( 0, 564 )
+texture = ExtResource( 10 )
+
+[node name="YellowStadiumBleachers48X48Left6" type="Sprite" parent="YSort/YellowStadiumBleachers48X48Left"]
+position = Vector2( 0, 705 )
+texture = ExtResource( 10 )
+
+[node name="YellowStadiumBleachers48X48Left7" type="Sprite" parent="YSort/YellowStadiumBleachers48X48Left"]
+position = Vector2( 0, 846 )
+texture = ExtResource( 10 )
+
+[node name="BlueStadiumBleachers48X48Left" type="Sprite" parent="YSort/YellowStadiumBleachers48X48Left"]
+position = Vector2( 94, 10 )
+texture = ExtResource( 8 )
+
+[node name="BlueStadiumBleachers48X48Left2" type="Sprite" parent="YSort/YellowStadiumBleachers48X48Left/BlueStadiumBleachers48X48Left"]
+position = Vector2( 0, 144 )
+texture = ExtResource( 8 )
+
+[node name="BlueStadiumBleachers48X48Left3" type="Sprite" parent="YSort/YellowStadiumBleachers48X48Left/BlueStadiumBleachers48X48Left"]
+position = Vector2( 0, 285 )
+texture = ExtResource( 8 )
+
+[node name="BlueStadiumBleachers48X48Left4" type="Sprite" parent="YSort/YellowStadiumBleachers48X48Left/BlueStadiumBleachers48X48Left"]
+position = Vector2( 0, 429 )
+texture = ExtResource( 8 )
+
+[node name="BlueStadiumBleachers48X48Left5" type="Sprite" parent="YSort/YellowStadiumBleachers48X48Left/BlueStadiumBleachers48X48Left"]
+position = Vector2( 0, 570 )
+texture = ExtResource( 8 )
+
+[node name="BlueStadiumBleachers48X48Left6" type="Sprite" parent="YSort/YellowStadiumBleachers48X48Left/BlueStadiumBleachers48X48Left"]
+position = Vector2( 0, 711 )
+texture = ExtResource( 8 )
+
+[node name="BlueStadiumBleachers48X48Left7" type="Sprite" parent="YSort/YellowStadiumBleachers48X48Left/BlueStadiumBleachers48X48Left"]
+position = Vector2( 0, 852 )
+texture = ExtResource( 8 )
+
+[node name="YellowStadiumBleachers48X48Right" type="Sprite" parent="YSort"]
+position = Vector2( 1659, 496 )
+scale = Vector2( 1.22069, 1.05665 )
+texture = ExtResource( 12 )
+
+[node name="YellowStadiumBleachers48X48Right2" type="Sprite" parent="YSort/YellowStadiumBleachers48X48Right"]
+position = Vector2( 0, 141 )
+texture = ExtResource( 12 )
+
+[node name="YellowStadiumBleachers48X48Right3" type="Sprite" parent="YSort/YellowStadiumBleachers48X48Right"]
+position = Vector2( 0, 282 )
+texture = ExtResource( 12 )
+
+[node name="YellowStadiumBleachers48X48Right4" type="Sprite" parent="YSort/YellowStadiumBleachers48X48Right"]
+position = Vector2( 0, 423 )
+texture = ExtResource( 12 )
+
+[node name="YellowStadiumBleachers48X48Right5" type="Sprite" parent="YSort/YellowStadiumBleachers48X48Right"]
+position = Vector2( 0, 564 )
+texture = ExtResource( 12 )
+
+[node name="YellowStadiumBleachers48X48Right6" type="Sprite" parent="YSort/YellowStadiumBleachers48X48Right"]
+position = Vector2( 0, 705 )
+texture = ExtResource( 12 )
+
+[node name="YellowStadiumBleachers48X48Right7" type="Sprite" parent="YSort/YellowStadiumBleachers48X48Right"]
+position = Vector2( 0, 846 )
+texture = ExtResource( 12 )
+
+[node name="BlueStadiumBleachers48X48Right" type="Sprite" parent="YSort/YellowStadiumBleachers48X48Right"]
+position = Vector2( -96, 13 )
+texture = ExtResource( 6 )
+
+[node name="BlueStadiumBleachers48X48Right2" type="Sprite" parent="YSort/YellowStadiumBleachers48X48Right/BlueStadiumBleachers48X48Right"]
+position = Vector2( 0, 141 )
+texture = ExtResource( 6 )
+
+[node name="BlueStadiumBleachers48X48Right3" type="Sprite" parent="YSort/YellowStadiumBleachers48X48Right/BlueStadiumBleachers48X48Right"]
+position = Vector2( 0, 282 )
+texture = ExtResource( 6 )
+
+[node name="BlueStadiumBleachers48X48Right4" type="Sprite" parent="YSort/YellowStadiumBleachers48X48Right/BlueStadiumBleachers48X48Right"]
+position = Vector2( 0, 426 )
+texture = ExtResource( 6 )
+
+[node name="BlueStadiumBleachers48X48Right5" type="Sprite" parent="YSort/YellowStadiumBleachers48X48Right/BlueStadiumBleachers48X48Right"]
+position = Vector2( 0, 567 )
+texture = ExtResource( 6 )
+
+[node name="BlueStadiumBleachers48X48Right6" type="Sprite" parent="YSort/YellowStadiumBleachers48X48Right/BlueStadiumBleachers48X48Right"]
+position = Vector2( 0, 708 )
+texture = ExtResource( 6 )
+
+[node name="BlueStadiumBleachers48X48Right7" type="Sprite" parent="YSort/YellowStadiumBleachers48X48Right/BlueStadiumBleachers48X48Right"]
+position = Vector2( 0, 849 )
+texture = ExtResource( 6 )
+
+[node name="MeSinglesVehicles32X32StreetFoodCart2" type="Sprite" parent="YSort"]
+position = Vector2( 1668, 1854 )
+texture = ExtResource( 28 )
+
+[node name="MeSinglesWorksite32X32PortableToilet1" type="Sprite" parent="YSort"]
+position = Vector2( 1512, 1626 )
+texture = ExtResource( 22 )
+
+[node name="MeSinglesWorksite32X32PortableToilet2" type="Sprite" parent="YSort/MeSinglesWorksite32X32PortableToilet1"]
+position = Vector2( 70, -2 )
+texture = ExtResource( 22 )
+
+[node name="MeSinglesWorksite32X32PortableToilet3" type="Sprite" parent="YSort/MeSinglesWorksite32X32PortableToilet1"]
+position = Vector2( 140, 0 )
+texture = ExtResource( 22 )
+
+[node name="TelevisionAndFIlmStudioSinglesShadowless32X321" type="Sprite" parent="YSort"]
+position = Vector2( 1439, 1020 )
+scale = Vector2( 1.16122, 1.15732 )
+texture = ExtResource( 23 )
+
+[node name="TelevisionAndFIlmStudioSinglesShadowless32X322" type="Sprite" parent="YSort"]
+position = Vector2( 638, 723 )
+scale = Vector2( 1.22723, 1.12127 )
+texture = ExtResource( 37 )
+
+[node name="TelevisionAndFIlmStudioSinglesShadowless32X323" type="Sprite" parent="YSort"]
+position = Vector2( 644, 1088 )
+scale = Vector2( 1.16, 1.16 )
+texture = ExtResource( 37 )
+
+[node name="TelevisionAndFIlmStudioSinglesShadowless32X324" type="Sprite" parent="YSort"]
+position = Vector2( 1439, 571 )
+scale = Vector2( 1.30668, 1.11861 )
+texture = ExtResource( 23 )
+
+[node name="MeSinglesVehicles32X32PizzaTukTuk1" type="Sprite" parent="YSort"]
+position = Vector2( 1350, 1693 )
+texture = ExtResource( 38 )
+
+[node name="LockersShadowless32X32" type="Sprite" parent="YSort"]
+position = Vector2( 400, 1673 )
+texture = ExtResource( 24 )
+
+[node name="MusicAndSportSinglesShadowless32X32157" type="Sprite" parent="YSort/LockersShadowless32X32"]
+position = Vector2( -2, -31 )
+texture = ExtResource( 31 )
+
+[node name="LockersShadowless32X33" type="Sprite" parent="YSort"]
+position = Vector2( 753, 1670 )
+texture = ExtResource( 24 )
+
+[node name="MusicAndSportSinglesShadowless32X32163" type="Sprite" parent="YSort/LockersShadowless32X33"]
+position = Vector2( -13, -57 )
+texture = ExtResource( 32 )
+
+[node name="MusicAndSportSinglesShadowless32X32164" type="Sprite" parent="YSort/LockersShadowless32X33/MusicAndSportSinglesShadowless32X32163"]
+position = Vector2( 64, 0 )
+texture = ExtResource( 21 )
+
+[node name="HospitalSinglesShadowless32X32112" type="Sprite" parent="YSort"]
+position = Vector2( 1763, 1631 )
+texture = ExtResource( 36 )
+
+[node name="GymSinglesShadowless32X32170" type="Sprite" parent="YSort"]
+position = Vector2( 369, 1830 )
+texture = ExtResource( 33 )
+
+[node name="GymSinglesShadowless32X32169" type="Sprite" parent="YSort"]
+position = Vector2( 373, 1905 )
+texture = ExtResource( 25 )
+
+[node name="GymSinglesShadowless32X3266" type="Sprite" parent="YSort"]
+position = Vector2( 761, 1908 )
+texture = ExtResource( 26 )
+
+[node name="GymSinglesShadowless32X3276" type="Sprite" parent="YSort"]
+position = Vector2( 669, 1965 )
+texture = ExtResource( 34 )
+
+[node name="GymSinglesShadowless32X3294" type="Sprite" parent="YSort"]
+position = Vector2( 531, 1676 )
+texture = ExtResource( 29 )
+
+[node name="GymSinglesShadowless32X3295" type="Sprite" parent="YSort"]
+position = Vector2( 598, 1678 )
+texture = ExtResource( 29 )
+
+[node name="GymSinglesShadowless32X3297" type="Sprite" parent="YSort"]
+position = Vector2( 472, 1846 )
+texture = ExtResource( 39 )
+
+[node name="TileMap" type="TileMap" parent="YSort"]
+tile_set = ExtResource( 20 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 3211273, 11, 0, 3211274, 1, 0, 3211275, 1, 0, 3211276, 1, 0, 3211277, 1, 0, 3211278, 1, 0, 3211279, 1, 0, 3211280, 1, 0, 3211281, 1, 0, 3211282, 1, 0, 3211283, 1, 0, 3211284, 1, 0, 3211285, 1, 0, 3211286, 1, 0, 3211287, 1, 0, 3211288, 1, 0, 3211289, 1, 0, 3211290, 3, 0, 3342345, 7, 0, 3342362, 4, 0, 3407881, 7, 0, 3407898, 4, 0, 3473417, 7, 0, 3473434, 4, 0, 3538953, 7, 0, 3538970, 4, 0, 3604489, 7, 0, 3604506, 4, 0, 3670025, 7, 0, 3735561, 7, 0, 3801097, 7, 0, 3866633, 7, 0, 3866650, 4, 0, 3932169, 7, 0, 3932186, 4, 0, 3997705, 7, 0, 3997722, 4, 0, 4063241, 7, 0, 4063258, 4, 0, 4128777, 7, 0, 4128794, 4, 0, 4194316, 10, 0, 4194317, 8, 0, 4194318, 8, 0, 4194319, 8, 0, 4194320, 8, 0, 4194321, 8, 0, 4194322, 8, 0, 4194323, 8, 0, 4194324, 8, 0, 4194325, 8, 0, 4194326, 8, 0, 4194327, 8, 0, 4194328, 8, 0, 4194329, 8, 0, 4194330, 9, 0 )
+
+[node name="GymSinglesShadowless32X3298" type="Sprite" parent="YSort"]
+position = Vector2( 475, 1938 )
+texture = ExtResource( 40 )
+
+[node name="GymSinglesShadowless32X3299" type="Sprite" parent="YSort"]
+position = Vector2( 544, 1879 )
+rotation = -0.459641
+texture = ExtResource( 40 )
+
+[node name="ModernExteriorsSinglesRailing232X327" type="Sprite" parent="YSort"]
+position = Vector2( 1197, 2040 )
+scale = Vector2( 1.59375, 1.37624 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X326" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X327"]
+position = Vector2( 31.6862, 0.0144043 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X327" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X327"]
+position = Vector2( 63.6862, 0.0144043 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X328" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X327"]
+position = Vector2( 95.6862, 0.0145264 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X329" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X327"]
+position = Vector2( 127.686, 0.0144043 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X330" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X327"]
+position = Vector2( 159.686, 0.0145264 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X331" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X327"]
+position = Vector2( 191.686, 0.0144043 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X332" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X327"]
+position = Vector2( 223.686, 0.0145264 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X333" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X327"]
+position = Vector2( 255.372, 0.0288086 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X334" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X327"]
+position = Vector2( 287.372, 0.0288086 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X335" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X327"]
+position = Vector2( 319.372, 0.0289307 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X336" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X327"]
+position = Vector2( 351.372, 0.0288086 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X337" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X327"]
+position = Vector2( 383.372, 0.0289307 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X328" type="Sprite" parent="YSort"]
+position = Vector2( 304, 2041 )
+scale = Vector2( 1.59375, 1.37624 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X326" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X328"]
+position = Vector2( 31.6862, 0.0144043 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X327" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X328"]
+position = Vector2( 63.6862, 0.0144043 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X328" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X328"]
+position = Vector2( 95.6862, 0.0145264 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X329" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X328"]
+position = Vector2( 127.686, 0.0144043 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X330" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X328"]
+position = Vector2( 159.686, 0.0145264 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X331" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X328"]
+position = Vector2( 191.686, 0.0144043 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X332" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X328"]
+position = Vector2( 223.686, 0.0145264 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X333" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X328"]
+position = Vector2( 255.372, 0.0288086 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X334" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X328"]
+position = Vector2( 287.372, 0.0288086 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X335" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X328"]
+position = Vector2( 319.372, 0.0289307 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X336" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X328"]
+position = Vector2( 351.373, 3.53903e-08 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X337" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X328"]
+position = Vector2( 383.373, -0.000122035 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X329" type="Sprite" parent="YSort"]
+position = Vector2( 288, 23 )
+scale = Vector2( 1.59375, 1.37624 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X326" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X329"]
+position = Vector2( 31.6862, 0.0144043 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X327" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X329"]
+position = Vector2( 63.6862, 0.0144043 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X328" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X329"]
+position = Vector2( 95.6862, 0.0145264 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X329" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X329"]
+position = Vector2( 127.686, 0.0144043 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X330" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X329"]
+position = Vector2( 159.686, 0.0145264 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X331" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X329"]
+position = Vector2( 191.686, 0.0144043 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X332" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X329"]
+position = Vector2( 223.686, 0.0145264 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X333" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X329"]
+position = Vector2( 255.372, 0.0288086 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X334" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X329"]
+position = Vector2( 287.372, 0.0288086 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X335" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X329"]
+position = Vector2( 319.372, 0.0289307 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X336" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X329"]
+position = Vector2( 351.372, 0.0288086 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X337" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X329"]
+position = Vector2( 383.372, 0.0289307 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X338" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X329"]
+position = Vector2( 415.372, 0.0288086 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X339" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X329"]
+position = Vector2( 447.372, 0.0289307 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X340" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X329"]
+position = Vector2( 479.058, 0.0146484 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X341" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X329"]
+position = Vector2( 511.058, 0.0145264 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X342" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X329"]
+position = Vector2( 543.058, 0.0146484 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X343" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X329"]
+position = Vector2( 575.058, 0.0144377 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X344" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X329"]
+position = Vector2( 607.058, 0.0144377 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X345" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X329"]
+position = Vector2( 639.058, 0.0145617 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X346" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X329"]
+position = Vector2( 671.058, 0.0144377 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X347" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X329"]
+position = Vector2( 703.058, 0.0145617 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X348" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X329"]
+position = Vector2( 735.058, 0.0144377 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X349" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X329"]
+position = Vector2( 767.058, 0.0145617 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X350" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X329"]
+position = Vector2( 798.744, 0.028842 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X351" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X329"]
+position = Vector2( 830.744, 0.028842 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X352" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X329"]
+position = Vector2( 862.745, 0.028966 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X353" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X329"]
+position = Vector2( 894.745, 0.028842 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X354" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X329"]
+position = Vector2( 926.745, 0.028966 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X355" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X329"]
+position = Vector2( 958.744, 0.028842 )
+texture = ExtResource( 35 )
+
+[node name="ModernExteriorsSinglesRailing232X324" type="Sprite" parent="YSort"]
+position = Vector2( 281, 2027 )
+rotation = 3.14159
+scale = Vector2( 1.26756, -2.22538 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X325" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X324"]
+position = Vector2( -1.52588e-05, -31.9047 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X326" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X324"]
+position = Vector2( -1.52588e-05, -63.8094 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X327" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X324"]
+position = Vector2( 0, -95.7141 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X328" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X324"]
+position = Vector2( 0, -127.619 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X329" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X324"]
+position = Vector2( 0, -159.524 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X330" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X324"]
+position = Vector2( 0, -191.428 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X331" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X324"]
+position = Vector2( 0, -223.333 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X332" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X324"]
+position = Vector2( 0, -255.238 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X333" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X324"]
+position = Vector2( 0, -287.142 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X334" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X324"]
+position = Vector2( 0, -319.047 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X335" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X324"]
+position = Vector2( 0, -350.952 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X336" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X324"]
+position = Vector2( 0, -382.857 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X337" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X324"]
+position = Vector2( 0, -414.761 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X338" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X324"]
+position = Vector2( 0, -446.666 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X339" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X324"]
+position = Vector2( 0, -478.571 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X340" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X324"]
+position = Vector2( 0, -510.475 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X341" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X324"]
+position = Vector2( 0, -542.38 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X342" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X324"]
+position = Vector2( 0, -574.285 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X343" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X324"]
+position = Vector2( 0, -606.19 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X344" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X324"]
+position = Vector2( 0, -638.094 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X345" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X324"]
+position = Vector2( 0, -669.999 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X346" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X324"]
+position = Vector2( 0, -701.904 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X347" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X324"]
+position = Vector2( 0, -733.808 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X348" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X324"]
+position = Vector2( 0, -765.713 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X349" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X324"]
+position = Vector2( 0, -797.618 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X350" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X324"]
+position = Vector2( 0, -829.523 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X351" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X324"]
+position = Vector2( 0, -861.427 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X352" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X324"]
+position = Vector2( 0, -893.332 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X325" type="Sprite" parent="YSort"]
+position = Vector2( 1846, 2027 )
+rotation = 3.14159
+scale = Vector2( 1.26756, -2.22538 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X325" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X325"]
+position = Vector2( -1.52588e-05, -31.9047 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X326" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X325"]
+position = Vector2( -1.52588e-05, -63.8094 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X327" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X325"]
+position = Vector2( 0, -95.7141 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X328" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X325"]
+position = Vector2( 0, -127.619 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X329" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X325"]
+position = Vector2( 0, -159.524 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X330" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X325"]
+position = Vector2( 0, -191.428 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X331" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X325"]
+position = Vector2( 0, -223.333 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X332" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X325"]
+position = Vector2( 0, -255.238 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X333" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X325"]
+position = Vector2( 0, -287.142 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X334" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X325"]
+position = Vector2( 0, -319.047 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X335" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X325"]
+position = Vector2( 0, -350.952 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X336" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X325"]
+position = Vector2( 0, -382.857 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X337" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X325"]
+position = Vector2( 0, -414.761 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X338" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X325"]
+position = Vector2( 0, -446.666 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X339" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X325"]
+position = Vector2( 0, -478.571 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X340" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X325"]
+position = Vector2( 0, -510.475 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X341" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X325"]
+position = Vector2( 0, -542.38 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X342" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X325"]
+position = Vector2( 0, -574.285 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X343" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X325"]
+position = Vector2( 0, -606.19 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X344" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X325"]
+position = Vector2( 0, -638.094 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X345" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X325"]
+position = Vector2( 0, -669.999 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X346" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X325"]
+position = Vector2( 0, -701.904 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X347" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X325"]
+position = Vector2( 0, -733.808 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X348" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X325"]
+position = Vector2( 0, -765.713 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X349" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X325"]
+position = Vector2( 0, -797.618 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X350" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X325"]
+position = Vector2( 0, -829.523 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X351" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X325"]
+position = Vector2( 0, -861.427 )
+texture = ExtResource( 30 )
+
+[node name="ModernExteriorsSinglesRailing232X352" type="Sprite" parent="YSort/ModernExteriorsSinglesRailing232X325"]
+position = Vector2( 0, -893.332 )
+texture = ExtResource( 30 )
+
+[node name="Player" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 1060, 1964 )
+
+[node name="Barriers" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 273, 1054 )
+shape = SubResource( 15 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 1050, 43 )
+shape = SubResource( 16 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 1842, 1041.5 )
+shape = SubResource( 17 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 1059.5, 2055.5 )
+shape = SubResource( 25 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Barriers"]
+polygon = PoolVector2Array( 290, 2030, 326, 2029, 326, 1712, 484, 1712, 483, 1611, 668, 1611, 668, 1706, 827, 1706, 827, 1796, 872, 1795, 871, 1566, 664, 1566, 654, 1549, 637, 1568, 287, 1565 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 848, 1963.5 )
+shape = SubResource( 26 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 1664, 1872 )
+shape = SubResource( 27 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Barriers"]
+polygon = PoolVector2Array( 1253, 1768, 1448, 1768, 1448, 1744, 1416, 1720, 1252, 1721 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 1582, 1651 )
+shape = SubResource( 28 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 1763.5, 1641 )
+shape = SubResource( 29 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Barriers"]
+polygon = PoolVector2Array( 595, 1489, 403, 1423, 406, 413, 610, 465, 610, 445, 391, 403, 386, 1486 )
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Barriers"]
+polygon = PoolVector2Array( 668, 402, 644, 399, 648, 165, 1428, 167, 1426, 404, 1414, 403, 1407, 185, 668, 191 )
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Barriers"]
+polygon = PoolVector2Array( 1476, 1498, 1721, 1498, 1723, 396, 1487, 450, 1489, 467, 1705, 423, 1702, 1427 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 335, 1195 )
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 335, 738 )
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 619, 399 )
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 1461, 403 )
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 1764, 784 )
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 1782, 1195 )
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 1438, 1565 )
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 736, 1928 )
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 664, 1986 )
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 477, 1857 )
+
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 368, 1839 )
+
+[node name="CollisionShape2D20" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 375, 1916 )
+
+[node name="CollisionShape2D21" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 533, 1704 )
+
+[node name="CollisionShape2D22" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 599, 1706 )
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="Barriers"]
+polygon = PoolVector2Array( 956, 1423, 1123, 1423, 1124, 1468, 1112, 1487, 966, 1486, 955, 1468 )
+
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="Barriers"]
+polygon = PoolVector2Array( 956, 534, 972, 535, 978, 481, 1092, 482, 1102, 533, 1120, 533, 1119, 451, 957, 451 )
+
+[node name="SceneTransition" parent="." instance=ExtResource( 4 )]
+visible = false
+
+[node name="ClickableObject" parent="." instance=ExtResource( 41 )]
+position = Vector2( 826, 718 )
+item_name = "La pelota"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickableObject/ClickableArea" index="0"]
+shape = SubResource( 18 )
+
+[node name="ClickableObject2" parent="." instance=ExtResource( 41 )]
+position = Vector2( 1040, 496 )
+item_name = "El arco"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickableObject2/ClickableArea" index="0"]
+position = Vector2( 0, 3.5 )
+shape = SubResource( 19 )
+
+[node name="ClickableObject3" parent="." instance=ExtResource( 41 )]
+position = Vector2( 1432, 588 )
+item_name = "La cámara"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickableObject3/ClickableArea" index="0"]
+position = Vector2( 5.5, 7 )
+shape = SubResource( 20 )
+
+[node name="ClickableObject4" parent="." instance=ExtResource( 41 )]
+position = Vector2( 448, 1688 )
+item_name = "Los casilleros"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickableObject4/ClickableArea" index="0"]
+position = Vector2( -48.5, -2 )
+shape = SubResource( 21 )
+
+[node name="ClickableObject5" parent="." instance=ExtResource( 41 )]
+position = Vector2( 780, 1640 )
+item_name = "Los trofeos"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickableObject5/ClickableArea" index="0"]
+position = Vector2( 2, -6 )
+shape = SubResource( 22 )
+
+[node name="ClickableObject6" parent="." instance=ExtResource( 41 )]
+position = Vector2( 374, 1915 )
+item_name = "Las pesas"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickableObject6/ClickableArea" index="0"]
+position = Vector2( 10.5, -6 )
+shape = SubResource( 23 )
+
+[node name="ClickableObject8" parent="." instance=ExtResource( 41 )]
+position = Vector2( 1590, 1064 )
+item_name = "Las gradas"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickableObject8/ClickableArea" index="0"]
+position = Vector2( 9, -85 )
+shape = SubResource( 24 )
+
+[connection signal="input_event" from="ClickableObject/ClickableArea" to="ClickableObject" method="_on_ClickableArea_input_event"]
+[connection signal="input_event" from="ClickableObject2/ClickableArea" to="ClickableObject2" method="_on_ClickableArea_input_event"]
+[connection signal="input_event" from="ClickableObject3/ClickableArea" to="ClickableObject3" method="_on_ClickableArea_input_event"]
+[connection signal="input_event" from="ClickableObject4/ClickableArea" to="ClickableObject4" method="_on_ClickableArea_input_event"]
+[connection signal="input_event" from="ClickableObject5/ClickableArea" to="ClickableObject5" method="_on_ClickableArea_input_event"]
+[connection signal="input_event" from="ClickableObject6/ClickableArea" to="ClickableObject6" method="_on_ClickableArea_input_event"]
+[connection signal="input_event" from="ClickableObject8/ClickableArea" to="ClickableObject8" method="_on_ClickableArea_input_event"]
+
+[editable path="YSort/Carmen"]
+[editable path="YSort/Enrique"]
+[editable path="YSort/Chicharito"]
+[editable path="ClickableObject"]
+[editable path="ClickableObject2"]
+[editable path="ClickableObject3"]
+[editable path="ClickableObject4"]
+[editable path="ClickableObject5"]
+[editable path="ClickableObject6"]
+[editable path="ClickableObject8"]

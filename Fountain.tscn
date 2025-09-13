@@ -1,0 +1,1380 @@
+[gd_scene load_steps=127 format=2]
+
+[ext_resource path="res://NPCs/NPC.tscn" type="PackedScene" id=1]
+[ext_resource path="res://World/ClickableObject.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://World/Museum/ClickablePainting.tscn" type="PackedScene" id=4]
+[ext_resource path="res://SceneTransition.tscn" type="PackedScene" id=5]
+[ext_resource path="res://World/PlayerDetectionZone.tscn" type="PackedScene" id=6]
+[ext_resource path="res://World/_Resources/Fountain/AnimatedFountain/Magic_Fountain_32x32_Frame6.png" type="Texture" id=7]
+[ext_resource path="res://World/_Resources/Fountain/ME_Singles_Garden_32x32_Statue_Angel_1.png" type="Texture" id=8]
+[ext_resource path="res://World/_Resources/Fountain/Garden_Pillar_32x32.png" type="Texture" id=9]
+[ext_resource path="res://World/_Resources/Fountain/ME_Singles_Garden_32x32_Fountain_2_4.png" type="Texture" id=10]
+[ext_resource path="res://World/_Resources/Fountain/ArtMuseumMontjuic.png" type="Texture" id=11]
+[ext_resource path="res://World/_Resources/Outside/Modern_Exteriors_Singles_Bench_32x32_5.png" type="Texture" id=12]
+[ext_resource path="res://World/_Resources/Fountain/ME_Singles_City_Props_32x32_Flower_Bush_2.png" type="Texture" id=13]
+[ext_resource path="res://World/_Resources/Fountain/ME_Singles_City_Props_32x32_Flower_Bush_5.png" type="Texture" id=14]
+[ext_resource path="res://World/_Resources/Fountain/Condominium_Singles_Shadowless_32x32_6.png" type="Texture" id=15]
+[ext_resource path="res://World/_Resources/Fountain/Condominium_Singles_Shadowless_32x32_5.png" type="Texture" id=16]
+[ext_resource path="res://World/_Resources/Outside/Modern_Exteriors_Singles_Bench_32x32_6.png" type="Texture" id=17]
+[ext_resource path="res://World/_Resources/Fountain/Condominium_Singles_Shadowless_32x32_4.png" type="Texture" id=18]
+[ext_resource path="res://World/_Resources/Fountain/ME_Singles_City_Props_32x32_Flower_Bush_4.png" type="Texture" id=19]
+[ext_resource path="res://World/_Resources/Fountain/Modern_Exteriors_Singles_Terrain_Rocks_32x32_XLight.png" type="Texture" id=20]
+[ext_resource path="res://World/_Resources/Outside/Modern_Exteriors_Singles_Bench_32x32_2.png" type="Texture" id=21]
+[ext_resource path="res://World/_Resources/Fountain/ME_Singles_Garden_32x32_Fountain_2_4_right.png" type="Texture" id=22]
+[ext_resource path="res://World/_Resources/Fountain/ME_Singles_Garden_32x32_Statue_Putto_6.png" type="Texture" id=23]
+[ext_resource path="res://World/_Resources/Fountain/ME_Singles_City_Props_32x32_Tree_13.png" type="Texture" id=24]
+[ext_resource path="res://World/_Resources/Fountain/ME_Singles_Garden_32x32_Bush_Potted_8.png" type="Texture" id=25]
+[ext_resource path="res://World/_Resources/Room_Builder/BeigeFloorSprite.png" type="Texture" id=26]
+[ext_resource path="res://World/_Resources/Fountain/banister.png" type="Texture" id=27]
+[ext_resource path="res://World/_Resources/Fountain/AnimatedFountain/Magic_Fountain_32x32_Frame4.png" type="Texture" id=28]
+[ext_resource path="res://World/_Resources/Fountain/AnimatedFountain/Magic_Fountain_32x32_Frame25.png" type="Texture" id=29]
+[ext_resource path="res://World/_Resources/Fountain/AnimatedFountain/Magic_Fountain_32x32_Frame9.png" type="Texture" id=30]
+[ext_resource path="res://World/_Resources/Fountain/AnimatedFountain/Magic_Fountain_32x32_Frame7.png" type="Texture" id=31]
+[ext_resource path="res://World/_Resources/Fountain/AnimatedFountain/Magic_Fountain_32x32_Frame17.png" type="Texture" id=32]
+[ext_resource path="res://World/_Resources/Fountain/AnimatedFountain/Magic_Fountain_32x32_Frame1.png" type="Texture" id=33]
+[ext_resource path="res://World/_Resources/Fountain/AnimatedFountain/Magic_Fountain_32x32_Frame11.png" type="Texture" id=34]
+[ext_resource path="res://World/_Resources/Fountain/AnimatedFountain/Magic_Fountain_32x32_Frame2.png" type="Texture" id=35]
+[ext_resource path="res://World/_Resources/Fountain/AnimatedFountain/Magic_Fountain_32x32_Frame5.png" type="Texture" id=36]
+[ext_resource path="res://World/_Resources/Fountain/AnimatedFountain/Magic_Fountain_32x32_Frame13.png" type="Texture" id=37]
+[ext_resource path="res://World/_Resources/Fountain/AnimatedFountain/Magic_Fountain_32x32_Frame3.png" type="Texture" id=38]
+[ext_resource path="res://World/_Resources/Fountain/AnimatedFountain/Magic_Fountain_32x32_Frame15.png" type="Texture" id=39]
+[ext_resource path="res://World/_Resources/Fountain/AnimatedFountain/Magic_Fountain_32x32_Frame19.png" type="Texture" id=40]
+[ext_resource path="res://World/_Resources/Fountain/AnimatedFountain/Magic_Fountain_32x32_Frame20.png" type="Texture" id=41]
+[ext_resource path="res://World/_Resources/Fountain/AnimatedFountain/Magic_Fountain_32x32_Frame18.png" type="Texture" id=42]
+[ext_resource path="res://World/_Resources/Fountain/AnimatedFountain/Magic_Fountain_32x32_Frame12.png" type="Texture" id=43]
+[ext_resource path="res://World/_Resources/Fountain/AnimatedFountain/Magic_Fountain_32x32_Frame22.png" type="Texture" id=44]
+[ext_resource path="res://World/_Resources/Fountain/AnimatedFountain/Magic_Fountain_32x32_Frame23.png" type="Texture" id=45]
+[ext_resource path="res://World/_Resources/Fountain/AnimatedFountain/Magic_Fountain_32x32_Frame24.png" type="Texture" id=46]
+[ext_resource path="res://World/_Resources/Fountain/AnimatedFountain/Magic_Fountain_32x32_Frame21.png" type="Texture" id=47]
+[ext_resource path="res://World/_Resources/Fountain/AnimatedFountain/Magic_Fountain_32x32_Frame8.png" type="Texture" id=48]
+[ext_resource path="res://World/_Resources/Fountain/AnimatedFountain/Magic_Fountain_32x32_Frame14.png" type="Texture" id=49]
+[ext_resource path="res://World/_Resources/Fountain/AnimatedFountain/Magic_Fountain_32x32_Frame10.png" type="Texture" id=50]
+[ext_resource path="res://World/_Resources/Fountain/AnimatedFountain/Magic_Fountain_32x32_Frame16.png" type="Texture" id=51]
+[ext_resource path="res://World/_Resources/Fountain/AnimatedFountain/Magic_Fountain_32x32_Frame26.png" type="Texture" id=52]
+[ext_resource path="res://World/Fountain/Fountain.gd" type="Script" id=53]
+[ext_resource path="res://World/_Resources/Outside/ParkFence/Gaudi border.png" type="Texture" id=54]
+[ext_resource path="res://World/_Resources/Outside/ParkFence/Gaudi border end.png" type="Texture" id=55]
+[ext_resource path="res://World/_Resources/Outside/ParkFence/Gaudi border end flip.png" type="Texture" id=56]
+[ext_resource path="res://World/_Resources/Outside/ParkFence/Gaudi border entrance.png" type="Texture" id=57]
+[ext_resource path="res://World/_Resources/Outside/ParkFence/Gaudi border purple.png" type="Texture" id=58]
+[ext_resource path="res://World/_Resources/Outside/ParkFence/Gaudi border purple flip.png" type="Texture" id=59]
+[ext_resource path="res://World/_Resources/Outside/ParkFence/Gaudi border lavender flip.png" type="Texture" id=60]
+[ext_resource path="res://World/_Resources/Outside/ParkFence/Gaudi border green flip.png" type="Texture" id=61]
+[ext_resource path="res://World/_Resources/Outside/ParkFence/Gaudi border v2.png" type="Texture" id=62]
+[ext_resource path="res://World/_Resources/Outside/ParkFence/Gaudi border orange flip.png" type="Texture" id=63]
+[ext_resource path="res://World/_Resources/Outside/ParkFence/Gaudi border blue flip.png" type="Texture" id=64]
+[ext_resource path="res://World/_Resources/Outside/Modern_Exteriors_Singles_Railing_4_32x32_2.png" type="Texture" id=65]
+[ext_resource path="res://World/_Resources/Outside/ParkFence/Gaudi border entrance flip.png" type="Texture" id=66]
+[ext_resource path="res://World/_Resources/Outside/ParkFence/Gaudi border blue.png" type="Texture" id=67]
+[ext_resource path="res://World/_Resources/Outside/Modern_Exteriors_Singles_Railing_4_32x32_4.png" type="Texture" id=68]
+[ext_resource path="res://World/_Resources/Outside/ParkFence/Gaudi border back corner.png" type="Texture" id=69]
+[ext_resource path="res://World/_Resources/Outside/Modern_Exteriors_Singles_Railing_4_32x32_9.png" type="Texture" id=70]
+[ext_resource path="res://World/_Resources/Outside/Modern_Exteriors_Singles_Railing_4_32x32_6.png" type="Texture" id=71]
+[ext_resource path="res://World/_Resources/Outside/Modern_Exteriors_Singles_Railing_4_32x32_8.png" type="Texture" id=72]
+[ext_resource path="res://World/_Resources/Outside/ParkFence/Gaudi border red flip.png" type="Texture" id=73]
+[ext_resource path="res://World/_Resources/Outside/ParkFence/Gaudi border red.png" type="Texture" id=74]
+[ext_resource path="res://World/_Resources/Outside/Modern_Exteriors_Singles_Railing_4_32x32_3.png" type="Texture" id=75]
+[ext_resource path="res://World/_Resources/Outside/ParkFence/Gaudi border orange.png" type="Texture" id=76]
+[ext_resource path="res://World/_Resources/Outside/Modern_Exteriors_Singles_Railing_4_32x32_7.png" type="Texture" id=77]
+[ext_resource path="res://World/_Resources/Outside/Modern_Exteriors_Singles_Railing_4_32x32_5.png" type="Texture" id=78]
+[ext_resource path="res://World/_Resources/Outside/Modern_Exteriors_Singles_Railing_4_32x32_10.png" type="Texture" id=79]
+[ext_resource path="res://World/_Resources/Outside/Modern_Exteriors_Singles_Railing_4_32x32_1.png" type="Texture" id=80]
+[ext_resource path="res://World/_Resources/Outside/ParkFence/Gaudi border green.png" type="Texture" id=81]
+[ext_resource path="res://World/_Resources/Outside/ParkFence/Gaudi border lavender.png" type="Texture" id=82]
+[ext_resource path="res://World/_Resources/Room_Builder/FloorShadow.png" type="Texture" id=83]
+[ext_resource path="res://World/_Resources/Outside/Modern_Exteriors_Singles_Info_Sign_32x32_4.png" type="Texture" id=84]
+
+[sub_resource type="RectangleShape2D" id=20]
+extents = Vector2( 143.5, 18.5 )
+
+[sub_resource type="Animation" id=2]
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 18, 1 ), Vector2( 19, 1 ), Vector2( 20, 1 ), Vector2( 21, 1 ), Vector2( 22, 1 ), Vector2( 23, 1 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath("..")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.6 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "blink_animation_finished"
+} ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "CheckPhone"
+length = 0.6
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 336, 337, 338, 339, 340, 341, 342, 343, 344, 345, 346, 347 ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath("..")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.6 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "phone_animation_finished"
+} ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "IdleDown"
+length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 3 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "IdleLeft"
+length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 2 ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "IdleRight"
+length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "IdleUp"
+length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+
+[sub_resource type="Animation" id=8]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 336 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:frame_coords")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ Vector2( 0, 3 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "Sleep"
+length = 1.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 0, 3 ), Vector2( 1, 3 ), Vector2( 2, 3 ), Vector2( 3, 3 ), Vector2( 4, 3 ), Vector2( 5, 3 ) ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "WalkDown"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 18, 2 ), Vector2( 19, 2 ), Vector2( 20, 2 ), Vector2( 21, 2 ), Vector2( 22, 2 ), Vector2( 23, 2 ) ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "WalkLeft"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 12, 2 ), Vector2( 13, 2 ), Vector2( 14, 2 ), Vector2( 15, 2 ), Vector2( 16, 2 ), Vector2( 17, 2 ) ]
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "WalkRight"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 0, 2 ), Vector2( 1, 2 ), Vector2( 2, 2 ), Vector2( 3, 2 ), Vector2( 4, 2 ), Vector2( 5, 2 ) ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "WalkUp"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 6, 2 ), Vector2( 7, 2 ), Vector2( 8, 2 ), Vector2( 9, 2 ), Vector2( 10, 2 ), Vector2( 11, 2 ) ]
+}
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=14]
+
+[sub_resource type="SpriteFrames" id=24]
+animations = [ {
+"frames": [ ExtResource( 40 ), ExtResource( 41 ), ExtResource( 47 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 29 ), ExtResource( 52 ) ],
+"loop": true,
+"name": "maintain",
+"speed": 7.0
+}, {
+"frames": [ ExtResource( 33 ), ExtResource( 35 ), ExtResource( 38 ), ExtResource( 28 ), ExtResource( 36 ), ExtResource( 7 ), ExtResource( 31 ), ExtResource( 48 ), ExtResource( 30 ), ExtResource( 50 ), ExtResource( 34 ), ExtResource( 43 ), ExtResource( 37 ), ExtResource( 49 ), ExtResource( 39 ), ExtResource( 51 ), ExtResource( 32 ), ExtResource( 42 ), ExtResource( 40 ) ],
+"loop": true,
+"name": "start",
+"speed": 7.0
+} ]
+
+[sub_resource type="TileSet" id=33]
+0/name = "Modern_Exteriors_Singles_Railing_4_32x32_1.png 0"
+0/texture = ExtResource( 80 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 32, 64 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "Modern_Exteriors_Singles_Railing_4_32x32_2.png 1"
+1/texture = ExtResource( 65 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 32, 64 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "Modern_Exteriors_Singles_Railing_4_32x32_3.png 2"
+2/texture = ExtResource( 75 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 0, 32, 64 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "Modern_Exteriors_Singles_Railing_4_32x32_4.png 3"
+3/texture = ExtResource( 68 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 0, 0, 32, 64 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "Modern_Exteriors_Singles_Railing_4_32x32_5.png 4"
+4/texture = ExtResource( 78 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 0, 0, 32, 64 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "Modern_Exteriors_Singles_Railing_4_32x32_6.png 5"
+5/texture = ExtResource( 71 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 0, 0, 32, 64 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "Modern_Exteriors_Singles_Railing_4_32x32_7.png 6"
+6/texture = ExtResource( 77 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 0, 0, 32, 64 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+7/name = "Modern_Exteriors_Singles_Railing_4_32x32_8.png 7"
+7/texture = ExtResource( 72 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 0, 0, 32, 64 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape_one_way = false
+7/shape_one_way_margin = 0.0
+7/shapes = [  ]
+7/z_index = 0
+8/name = "Modern_Exteriors_Singles_Railing_4_32x32_9.png 8"
+8/texture = ExtResource( 70 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 0, 0, 32, 64 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape_one_way = false
+8/shape_one_way_margin = 0.0
+8/shapes = [  ]
+8/z_index = 0
+9/name = "Modern_Exteriors_Singles_Railing_4_32x32_10.png 9"
+9/texture = ExtResource( 79 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 0, 0, 32, 64 )
+9/tile_mode = 0
+9/occluder_offset = Vector2( 0, 0 )
+9/navigation_offset = Vector2( 0, 0 )
+9/shape_offset = Vector2( 0, 0 )
+9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+9/shape_one_way = false
+9/shape_one_way_margin = 0.0
+9/shapes = [  ]
+9/z_index = 0
+10/name = "Gaudi border end flip.png 10"
+10/texture = ExtResource( 56 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 0, 0, 32, 64 )
+10/tile_mode = 0
+10/occluder_offset = Vector2( 0, 0 )
+10/navigation_offset = Vector2( 0, 0 )
+10/shape_offset = Vector2( 0, 0 )
+10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+10/shape_one_way = false
+10/shape_one_way_margin = 0.0
+10/shapes = [  ]
+10/z_index = 0
+11/name = "Gaudi border end.png 11"
+11/texture = ExtResource( 55 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 0, 0, 32, 64 )
+11/tile_mode = 0
+11/occluder_offset = Vector2( 0, 0 )
+11/navigation_offset = Vector2( 0, 0 )
+11/shape_offset = Vector2( 0, 0 )
+11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+11/shape_one_way = false
+11/shape_one_way_margin = 0.0
+11/shapes = [  ]
+11/z_index = 0
+12/name = "Gaudi border green flip.png 12"
+12/texture = ExtResource( 61 )
+12/tex_offset = Vector2( 0, 0 )
+12/modulate = Color( 1, 1, 1, 1 )
+12/region = Rect2( 0, 0, 32, 32 )
+12/tile_mode = 0
+12/occluder_offset = Vector2( 0, 0 )
+12/navigation_offset = Vector2( 0, 0 )
+12/shape_offset = Vector2( 0, 0 )
+12/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+12/shape_one_way = false
+12/shape_one_way_margin = 0.0
+12/shapes = [  ]
+12/z_index = 0
+13/name = "Gaudi border green.png 13"
+13/texture = ExtResource( 81 )
+13/tex_offset = Vector2( 0, 0 )
+13/modulate = Color( 1, 1, 1, 1 )
+13/region = Rect2( 0, 0, 32, 32 )
+13/tile_mode = 0
+13/occluder_offset = Vector2( 0, 0 )
+13/navigation_offset = Vector2( 0, 0 )
+13/shape_offset = Vector2( 0, 0 )
+13/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+13/shape_one_way = false
+13/shape_one_way_margin = 0.0
+13/shapes = [  ]
+13/z_index = 0
+14/name = "Gaudi border orange flip.png 14"
+14/texture = ExtResource( 63 )
+14/tex_offset = Vector2( 0, 0 )
+14/modulate = Color( 1, 1, 1, 1 )
+14/region = Rect2( 0, 0, 32, 32 )
+14/tile_mode = 0
+14/occluder_offset = Vector2( 0, 0 )
+14/navigation_offset = Vector2( 0, 0 )
+14/shape_offset = Vector2( 0, 0 )
+14/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+14/shape_one_way = false
+14/shape_one_way_margin = 0.0
+14/shapes = [  ]
+14/z_index = 0
+15/name = "Gaudi border orange.png 15"
+15/texture = ExtResource( 76 )
+15/tex_offset = Vector2( 0, 0 )
+15/modulate = Color( 1, 1, 1, 1 )
+15/region = Rect2( 0, 0, 32, 32 )
+15/tile_mode = 0
+15/occluder_offset = Vector2( 0, 0 )
+15/navigation_offset = Vector2( 0, 0 )
+15/shape_offset = Vector2( 0, 0 )
+15/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+15/shape_one_way = false
+15/shape_one_way_margin = 0.0
+15/shapes = [  ]
+15/z_index = 0
+16/name = "Gaudi border purple flip.png 16"
+16/texture = ExtResource( 59 )
+16/tex_offset = Vector2( 0, 0 )
+16/modulate = Color( 1, 1, 1, 1 )
+16/region = Rect2( 0, 0, 32, 32 )
+16/tile_mode = 0
+16/occluder_offset = Vector2( 0, 0 )
+16/navigation_offset = Vector2( 0, 0 )
+16/shape_offset = Vector2( 0, 0 )
+16/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+16/shape_one_way = false
+16/shape_one_way_margin = 0.0
+16/shapes = [  ]
+16/z_index = 0
+17/name = "Gaudi border purple.png 17"
+17/texture = ExtResource( 58 )
+17/tex_offset = Vector2( 0, 0 )
+17/modulate = Color( 1, 1, 1, 1 )
+17/region = Rect2( 0, 0, 32, 32 )
+17/tile_mode = 0
+17/occluder_offset = Vector2( 0, 0 )
+17/navigation_offset = Vector2( 0, 0 )
+17/shape_offset = Vector2( 0, 0 )
+17/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+17/shape_one_way = false
+17/shape_one_way_margin = 0.0
+17/shapes = [  ]
+17/z_index = 0
+18/name = "Gaudi border red flip.png 18"
+18/texture = ExtResource( 73 )
+18/tex_offset = Vector2( 0, 0 )
+18/modulate = Color( 1, 1, 1, 1 )
+18/region = Rect2( 0, 0, 32, 32 )
+18/tile_mode = 0
+18/occluder_offset = Vector2( 0, 0 )
+18/navigation_offset = Vector2( 0, 0 )
+18/shape_offset = Vector2( 0, 0 )
+18/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+18/shape_one_way = false
+18/shape_one_way_margin = 0.0
+18/shapes = [  ]
+18/z_index = 0
+19/name = "Gaudi border red.png 19"
+19/texture = ExtResource( 74 )
+19/tex_offset = Vector2( 0, 0 )
+19/modulate = Color( 1, 1, 1, 1 )
+19/region = Rect2( 0, 0, 32, 32 )
+19/tile_mode = 0
+19/occluder_offset = Vector2( 0, 0 )
+19/navigation_offset = Vector2( 0, 0 )
+19/shape_offset = Vector2( 0, 0 )
+19/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+19/shape_one_way = false
+19/shape_one_way_margin = 0.0
+19/shapes = [  ]
+19/z_index = 0
+20/name = "Gaudi border.png 20"
+20/texture = ExtResource( 54 )
+20/tex_offset = Vector2( 0, 0 )
+20/modulate = Color( 1, 1, 1, 1 )
+20/region = Rect2( 0, 0, 128, 32 )
+20/tile_mode = 0
+20/occluder_offset = Vector2( 0, 0 )
+20/navigation_offset = Vector2( 0, 0 )
+20/shape_offset = Vector2( 0, 0 )
+20/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+20/shape_one_way = false
+20/shape_one_way_margin = 0.0
+20/shapes = [  ]
+20/z_index = 0
+21/name = "Gaudi border v2.png 21"
+21/texture = ExtResource( 62 )
+21/tex_offset = Vector2( 0, 0 )
+21/modulate = Color( 1, 1, 1, 1 )
+21/region = Rect2( 0, 32, 128, 32 )
+21/tile_mode = 0
+21/occluder_offset = Vector2( 0, 0 )
+21/navigation_offset = Vector2( 0, 0 )
+21/shape_offset = Vector2( 0, 0 )
+21/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+21/shape_one_way = false
+21/shape_one_way_margin = 0.0
+21/shapes = [  ]
+21/z_index = 0
+22/name = "Gaudi border v2.png 22"
+22/texture = ExtResource( 62 )
+22/tex_offset = Vector2( 0, 0 )
+22/modulate = Color( 1, 1, 1, 1 )
+22/region = Rect2( 0, 0, 128, 64 )
+22/tile_mode = 0
+22/occluder_offset = Vector2( 0, 0 )
+22/navigation_offset = Vector2( 0, 0 )
+22/shape_offset = Vector2( 0, 0 )
+22/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+22/shape_one_way = false
+22/shape_one_way_margin = 0.0
+22/shapes = [  ]
+22/z_index = 0
+23/name = "Gaudi border blue flip.png 23"
+23/texture = ExtResource( 64 )
+23/tex_offset = Vector2( 0, 0 )
+23/modulate = Color( 1, 1, 1, 1 )
+23/region = Rect2( 0, 0, 32, 32 )
+23/tile_mode = 0
+23/occluder_offset = Vector2( 0, 0 )
+23/navigation_offset = Vector2( 0, 0 )
+23/shape_offset = Vector2( 0, 0 )
+23/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+23/shape_one_way = false
+23/shape_one_way_margin = 0.0
+23/shapes = [  ]
+23/z_index = 0
+24/name = "Gaudi border blue.png 24"
+24/texture = ExtResource( 67 )
+24/tex_offset = Vector2( 0, 0 )
+24/modulate = Color( 1, 1, 1, 1 )
+24/region = Rect2( 0, 0, 32, 32 )
+24/tile_mode = 0
+24/occluder_offset = Vector2( 0, 0 )
+24/navigation_offset = Vector2( 0, 0 )
+24/shape_offset = Vector2( 0, 0 )
+24/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+24/shape_one_way = false
+24/shape_one_way_margin = 0.0
+24/shapes = [  ]
+24/z_index = 0
+25/name = "Gaudi border lavender flip.png 25"
+25/texture = ExtResource( 60 )
+25/tex_offset = Vector2( 0, 0 )
+25/modulate = Color( 1, 1, 1, 1 )
+25/region = Rect2( 0, 0, 32, 32 )
+25/tile_mode = 0
+25/occluder_offset = Vector2( 0, 0 )
+25/navigation_offset = Vector2( 0, 0 )
+25/shape_offset = Vector2( 0, 0 )
+25/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+25/shape_one_way = false
+25/shape_one_way_margin = 0.0
+25/shapes = [  ]
+25/z_index = 0
+26/name = "Gaudi border lavender.png 26"
+26/texture = ExtResource( 82 )
+26/tex_offset = Vector2( 0, 0 )
+26/modulate = Color( 1, 1, 1, 1 )
+26/region = Rect2( 0, 0, 32, 32 )
+26/tile_mode = 0
+26/occluder_offset = Vector2( 0, 0 )
+26/navigation_offset = Vector2( 0, 0 )
+26/shape_offset = Vector2( 0, 0 )
+26/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+26/shape_one_way = false
+26/shape_one_way_margin = 0.0
+26/shapes = [  ]
+26/z_index = 0
+27/name = "Gaudi border entrance flip.png 27"
+27/texture = ExtResource( 66 )
+27/tex_offset = Vector2( 0, 0 )
+27/modulate = Color( 1, 1, 1, 1 )
+27/region = Rect2( 0, 0, 32, 32 )
+27/tile_mode = 0
+27/occluder_offset = Vector2( 0, 0 )
+27/navigation_offset = Vector2( 0, 0 )
+27/shape_offset = Vector2( 0, 0 )
+27/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+27/shape_one_way = false
+27/shape_one_way_margin = 0.0
+27/shapes = [  ]
+27/z_index = 0
+28/name = "Gaudi border entrance.png 28"
+28/texture = ExtResource( 57 )
+28/tex_offset = Vector2( 0, 0 )
+28/modulate = Color( 1, 1, 1, 1 )
+28/region = Rect2( 0, 0, 32, 32 )
+28/tile_mode = 0
+28/occluder_offset = Vector2( 0, 0 )
+28/navigation_offset = Vector2( 0, 0 )
+28/shape_offset = Vector2( 0, 0 )
+28/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+28/shape_one_way = false
+28/shape_one_way_margin = 0.0
+28/shapes = [  ]
+28/z_index = 0
+29/name = "Gaudi border back corner.png 29"
+29/texture = ExtResource( 69 )
+29/tex_offset = Vector2( 0, 0 )
+29/modulate = Color( 1, 1, 1, 1 )
+29/region = Rect2( 0, 0, 96, 32 )
+29/tile_mode = 0
+29/occluder_offset = Vector2( 0, 0 )
+29/navigation_offset = Vector2( 0, 0 )
+29/shape_offset = Vector2( 0, 0 )
+29/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+29/shape_one_way = false
+29/shape_one_way_margin = 0.0
+29/shapes = [  ]
+29/z_index = 0
+
+[sub_resource type="RectangleShape2D" id=34]
+extents = Vector2( 180.5, 38 )
+
+[sub_resource type="CircleShape2D" id=35]
+radius = 47.0
+
+[sub_resource type="CircleShape2D" id=36]
+radius = 51.0098
+
+[sub_resource type="RectangleShape2D" id=37]
+extents = Vector2( 36.5, 32 )
+
+[sub_resource type="RectangleShape2D" id=38]
+extents = Vector2( 37.5, 32 )
+
+[sub_resource type="CircleShape2D" id=39]
+radius = 24.0052
+
+[sub_resource type="RectangleShape2D" id=40]
+extents = Vector2( 16.5, 34.5 )
+
+[sub_resource type="RectangleShape2D" id=41]
+extents = Vector2( 16.5, 31 )
+
+[sub_resource type="CircleShape2D" id=42]
+radius = 18.0278
+
+[sub_resource type="RectangleShape2D" id=43]
+extents = Vector2( 43, 12.5 )
+
+[sub_resource type="RectangleShape2D" id=44]
+extents = Vector2( 42.5, 13.5 )
+
+[sub_resource type="RectangleShape2D" id=45]
+extents = Vector2( 16.5, 33.5 )
+
+[sub_resource type="RectangleShape2D" id=46]
+extents = Vector2( 17, 36.5 )
+
+[sub_resource type="CircleShape2D" id=47]
+radius = 24.0208
+
+[sub_resource type="CircleShape2D" id=48]
+radius = 14.0357
+
+[sub_resource type="RectangleShape2D" id=25]
+extents = Vector2( 29.5, 28.5 )
+
+[sub_resource type="RectangleShape2D" id=26]
+extents = Vector2( 18.5, 11.5 )
+
+[sub_resource type="RectangleShape2D" id=27]
+extents = Vector2( 29.5, 21.5 )
+
+[sub_resource type="RectangleShape2D" id=31]
+extents = Vector2( 20, 30 )
+
+[sub_resource type="CircleShape2D" id=32]
+radius = 253.551
+
+[sub_resource type="RectangleShape2D" id=18]
+extents = Vector2( 41, 19 )
+
+[sub_resource type="RectangleShape2D" id=49]
+extents = Vector2( 25.5001, 14.9999 )
+
+[sub_resource type="CapsuleShape2D" id=21]
+radius = 51.0
+height = 66.0
+
+[sub_resource type="CapsuleShape2D" id=22]
+radius = 41.0
+height = 52.0
+
+[sub_resource type="CapsuleShape2D" id=23]
+radius = 50.0
+height = 74.0
+
+[sub_resource type="RectangleShape2D" id=29]
+extents = Vector2( 16.5, 26 )
+
+[node name="Fountain" type="Node2D"]
+script = ExtResource( 53 )
+
+[node name="Ground" type="Sprite" parent="."]
+position = Vector2( 1035, 539 )
+texture = ExtResource( 20 )
+region_enabled = true
+region_rect = Rect2( -1598.41, -1683.26, 3695.01, 2897.8 )
+
+[node name="CondominiumSinglesShadowless32X324" type="Sprite" parent="Ground"]
+position = Vector2( 48, -197 )
+scale = Vector2( 3.30979, 1.81793 )
+texture = ExtResource( 18 )
+
+[node name="CondominiumSinglesShadowless32X325" type="Sprite" parent="Ground/CondominiumSinglesShadowless32X324"]
+position = Vector2( 32, 0 )
+texture = ExtResource( 16 )
+
+[node name="CondominiumSinglesShadowless32X327" type="Sprite" parent="Ground/CondominiumSinglesShadowless32X324"]
+position = Vector2( 64, 0 )
+texture = ExtResource( 16 )
+
+[node name="CondominiumSinglesShadowless32X328" type="Sprite" parent="Ground/CondominiumSinglesShadowless32X324"]
+position = Vector2( 96, 0 )
+texture = ExtResource( 16 )
+
+[node name="CondominiumSinglesShadowless32X326" type="Sprite" parent="Ground/CondominiumSinglesShadowless32X324"]
+position = Vector2( 128, 0 )
+texture = ExtResource( 15 )
+
+[node name="LeftBanister" type="Sprite" parent="Ground/CondominiumSinglesShadowless32X324"]
+position = Vector2( -32.0262, -96.8134 )
+texture = ExtResource( 27 )
+centered = false
+
+[node name="RightBanister" type="Sprite" parent="Ground/CondominiumSinglesShadowless32X324"]
+position = Vector2( 119.947, -96.8134 )
+texture = ExtResource( 27 )
+centered = false
+flip_h = true
+
+[node name="Sprite" type="Sprite" parent="Ground"]
+position = Vector2( 207, -419 )
+scale = Vector2( 1.3729, 1.39863 )
+texture = ExtResource( 26 )
+region_enabled = true
+region_rect = Rect2( -0.791016, -159.931, 347, 253 )
+
+[node name="OutsideExit" parent="." instance=ExtResource( 6 )]
+
+[node name="South" type="CollisionShape2D" parent="OutsideExit"]
+position = Vector2( 1263.5, 1259.5 )
+shape = SubResource( 20 )
+
+[node name="FloorShadow" type="Sprite" parent="OutsideExit"]
+position = Vector2( 1263.5, 1259.5 )
+scale = Vector2( 8.96875, 1.5 )
+texture = ExtResource( 83 )
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Player" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 1230, 278 )
+
+[node name="AnimationPlayer" parent="YSort/Player" index="4"]
+anims/Blink = SubResource( 2 )
+anims/CheckPhone = SubResource( 3 )
+anims/IdleDown = SubResource( 4 )
+anims/IdleLeft = SubResource( 5 )
+anims/IdleRight = SubResource( 6 )
+anims/IdleUp = SubResource( 7 )
+anims/RESET = SubResource( 8 )
+anims/Sleep = SubResource( 9 )
+anims/WalkDown = SubResource( 10 )
+anims/WalkLeft = SubResource( 11 )
+anims/WalkRight = SubResource( 12 )
+anims/WalkUp = SubResource( 13 )
+
+[node name="AnimationTree" parent="YSort/Player" index="5"]
+parameters/playback = SubResource( 14 )
+
+[node name="_h_scroll2" type="HScrollBar" parent="YSort/Player/Camera2D/HUD/FriendsMenu/FileOverlay1/ScrollContainer" index="0"]
+margin_right = 12.0
+margin_bottom = 12.0
+
+[node name="_v_scroll2" type="VScrollBar" parent="YSort/Player/Camera2D/HUD/FriendsMenu/FileOverlay1/ScrollContainer" index="1"]
+margin_right = 12.0
+margin_bottom = 12.0
+
+[node name="_h_scroll3" type="HScrollBar" parent="YSort/Player/Camera2D/HUD/FriendsMenu/FileOverlay1/ScrollContainer" index="2"]
+margin_right = 12.0
+margin_bottom = 12.0
+
+[node name="_v_scroll3" type="VScrollBar" parent="YSort/Player/Camera2D/HUD/FriendsMenu/FileOverlay1/ScrollContainer" index="3"]
+margin_right = 12.0
+margin_bottom = 12.0
+
+[node name="_h_scroll2" type="HScrollBar" parent="YSort/Player/Camera2D/HUD/Dictionary/FileOverlay2/ScrollContainer" index="0"]
+margin_right = 12.0
+margin_bottom = 12.0
+
+[node name="_v_scroll2" type="VScrollBar" parent="YSort/Player/Camera2D/HUD/Dictionary/FileOverlay2/ScrollContainer" index="1"]
+margin_right = 12.0
+margin_bottom = 12.0
+
+[node name="_h_scroll3" type="HScrollBar" parent="YSort/Player/Camera2D/HUD/Dictionary/FileOverlay2/ScrollContainer" index="2"]
+margin_right = 12.0
+margin_bottom = 12.0
+
+[node name="_v_scroll3" type="VScrollBar" parent="YSort/Player/Camera2D/HUD/Dictionary/FileOverlay2/ScrollContainer" index="3"]
+margin_right = 12.0
+margin_bottom = 12.0
+
+[node name="_h_scroll2" type="HScrollBar" parent="YSort/Player/Camera2D/HUD/QuestMenu/FileOverlay4/ScrollContainer" index="0"]
+margin_right = 12.0
+margin_bottom = 12.0
+
+[node name="_v_scroll2" type="VScrollBar" parent="YSort/Player/Camera2D/HUD/QuestMenu/FileOverlay4/ScrollContainer" index="1"]
+margin_right = 12.0
+margin_bottom = 12.0
+
+[node name="_h_scroll3" type="HScrollBar" parent="YSort/Player/Camera2D/HUD/QuestMenu/FileOverlay4/ScrollContainer" index="2"]
+margin_right = 12.0
+margin_bottom = 12.0
+
+[node name="_v_scroll3" type="VScrollBar" parent="YSort/Player/Camera2D/HUD/QuestMenu/FileOverlay4/ScrollContainer" index="3"]
+margin_right = 12.0
+margin_bottom = 12.0
+
+[node name="India" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 1313, 549 )
+dialogue_name = "india"
+
+[node name="MediumShadow" parent="YSort/India" index="0"]
+position = Vector2( -2.5, 11 )
+scale = Vector2( 0.937501, 1 )
+
+[node name="AnimatedSprite" parent="YSort/India" index="1"]
+position = Vector2( -4, -4 )
+animation = "IndiaPurpIdle"
+
+[node name="MagicFountain32X32Frame26" type="AnimatedSprite" parent="YSort"]
+position = Vector2( 1240, 738 )
+scale = Vector2( 2, 2 )
+frames = SubResource( 24 )
+animation = "start"
+
+[node name="MeSinglesGarden32X32StatueAngel1" type="Sprite" parent="YSort"]
+position = Vector2( 529, 227 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 8 )
+
+[node name="MeSinglesGarden32X32StatuePutto6" type="Sprite" parent="YSort"]
+position = Vector2( 1875, 896 )
+scale = Vector2( 1.44222, 1.49626 )
+texture = ExtResource( 23 )
+
+[node name="MeSinglesCityProps32X32FlowerBush2" type="Sprite" parent="YSort"]
+position = Vector2( 1873, 986 )
+scale = Vector2( 0.999619, 0.998166 )
+texture = ExtResource( 13 )
+
+[node name="MeSinglesCityProps32X32FlowerBush9" type="Sprite" parent="YSort"]
+position = Vector2( 1829, 940.995 )
+rotation = -1.57327
+scale = Vector2( 0.998165, 0.999619 )
+texture = ExtResource( 13 )
+
+[node name="MeSinglesCityProps32X32FlowerBush10" type="Sprite" parent="YSort"]
+position = Vector2( 1917, 940.998 )
+rotation = 1.56363
+scale = Vector2( 0.998165, 0.999619 )
+texture = ExtResource( 13 )
+
+[node name="MeSinglesCityProps32X32FlowerBush5" type="Sprite" parent="YSort"]
+position = Vector2( 1688, 896.993 )
+rotation = -1.57971
+scale = Vector2( 0.998166, 0.999619 )
+texture = ExtResource( 14 )
+
+[node name="MeSinglesCityProps32X32FlowerBush7" type="Sprite" parent="YSort"]
+position = Vector2( 1689, 987.023 )
+rotation = -1.57971
+scale = Vector2( 0.998166, 0.999619 )
+texture = ExtResource( 14 )
+
+[node name="MeSinglesCityProps32X32FlowerBush4" type="Sprite" parent="YSort"]
+position = Vector2( 2065.99, 891.068 )
+rotation = 1.56176
+scale = Vector2( 0.998165, 0.999619 )
+texture = ExtResource( 19 )
+
+[node name="MeSinglesCityProps32X32FlowerBush8" type="Sprite" parent="YSort"]
+position = Vector2( 2068, 982.866 )
+rotation = 1.56176
+scale = Vector2( 0.998165, 0.999619 )
+texture = ExtResource( 19 )
+
+[node name="MeSinglesCityProps32X32Tree13" type="Sprite" parent="YSort"]
+position = Vector2( 1727, 764 )
+scale = Vector2( 0.999619, 0.998166 )
+texture = ExtResource( 24 )
+
+[node name="MeSinglesCityProps32X32Tree14" type="Sprite" parent="YSort"]
+position = Vector2( 2022, 761 )
+scale = Vector2( 0.999619, 0.998166 )
+texture = ExtResource( 24 )
+
+[node name="MeSinglesGarden32X32BushPotted8" type="Sprite" parent="YSort"]
+position = Vector2( 1765, 1042 )
+scale = Vector2( 0.999619, 0.998166 )
+texture = ExtResource( 25 )
+
+[node name="MeSinglesGarden32X32BushPotted9" type="Sprite" parent="YSort"]
+position = Vector2( 1988, 1044 )
+scale = Vector2( 0.999619, 0.998166 )
+texture = ExtResource( 25 )
+
+[node name="ModernExteriorsSinglesBench32X322" type="Sprite" parent="YSort"]
+position = Vector2( 1934, 795 )
+texture = ExtResource( 21 )
+
+[node name="ModernExteriorsSinglesBench32X325" type="Sprite" parent="YSort"]
+position = Vector2( 1723, 888 )
+texture = ExtResource( 12 )
+
+[node name="ModernExteriorsSinglesBench32X328" type="Sprite" parent="YSort"]
+position = Vector2( 1724, 995 )
+texture = ExtResource( 12 )
+
+[node name="ModernExteriorsSinglesBench32X326" type="Sprite" parent="YSort"]
+position = Vector2( 2031, 881 )
+texture = ExtResource( 17 )
+
+[node name="ModernExteriorsSinglesBench32X329" type="Sprite" parent="YSort"]
+position = Vector2( 2031, 989 )
+texture = ExtResource( 17 )
+
+[node name="ModernExteriorsSinglesBench32X323" type="Sprite" parent="YSort"]
+position = Vector2( 1818, 795 )
+texture = ExtResource( 21 )
+
+[node name="MeSinglesGarden32X32StatueAngel2" type="Sprite" parent="YSort"]
+position = Vector2( 1934, 221 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 8 )
+
+[node name="GardenPillar32X32" type="Sprite" parent="YSort"]
+position = Vector2( 534, 956 )
+scale = Vector2( 1.5, 1.8 )
+texture = ExtResource( 9 )
+
+[node name="GardenPillar32X33" type="Sprite" parent="YSort/GardenPillar32X32"]
+position = Vector2( 62.6667, 0.666672 )
+texture = ExtResource( 9 )
+
+[node name="GardenPillar32X34" type="Sprite" parent="YSort/GardenPillar32X32"]
+position = Vector2( 124, 1.33337 )
+texture = ExtResource( 9 )
+
+[node name="GardenPillar32X35" type="Sprite" parent="YSort/GardenPillar32X32"]
+position = Vector2( 186, 1.99997 )
+texture = ExtResource( 9 )
+
+[node name="MeSinglesGarden32X32Fountain24Right" type="Sprite" parent="YSort"]
+position = Vector2( 1558, 523 )
+texture = ExtResource( 22 )
+
+[node name="MeSinglesGarden32X32Fountain24" type="Sprite" parent="YSort"]
+position = Vector2( 918, 538 )
+texture = ExtResource( 10 )
+
+[node name="ArtMuseumMontjuic" type="Sprite" parent="YSort"]
+position = Vector2( 1233, -132 )
+texture = ExtResource( 11 )
+
+[node name="MeSinglesCityProps32X32Tree13" type="Sprite" parent="YSort/ArtMuseumMontjuic"]
+position = Vector2( -318, 316.999 )
+scale = Vector2( 1.4229, 1.37256 )
+texture = ExtResource( 24 )
+
+[node name="MeSinglesCityProps32X32Tree14" type="Sprite" parent="YSort/ArtMuseumMontjuic"]
+position = Vector2( -446.999, 315 )
+scale = Vector2( 1.4229, 1.37256 )
+texture = ExtResource( 24 )
+
+[node name="MeSinglesCityProps32X32Tree15" type="Sprite" parent="YSort/ArtMuseumMontjuic"]
+position = Vector2( -577, 316.999 )
+scale = Vector2( 1.4229, 1.37256 )
+texture = ExtResource( 24 )
+
+[node name="MeSinglesCityProps32X32Tree16" type="Sprite" parent="YSort/ArtMuseumMontjuic"]
+position = Vector2( 319, 311.999 )
+scale = Vector2( 1.4229, 1.37256 )
+texture = ExtResource( 24 )
+
+[node name="MeSinglesCityProps32X32Tree17" type="Sprite" parent="YSort/ArtMuseumMontjuic"]
+position = Vector2( 447, 311 )
+scale = Vector2( 1.4229, 1.37256 )
+texture = ExtResource( 24 )
+
+[node name="MeSinglesCityProps32X32Tree18" type="Sprite" parent="YSort/ArtMuseumMontjuic"]
+position = Vector2( 574, 311.999 )
+scale = Vector2( 1.4229, 1.37256 )
+texture = ExtResource( 24 )
+
+[node name="Fence" type="TileMap" parent="YSort"]
+tile_set = SubResource( 33 )
+cell_size = Vector2( 32, 32 )
+cell_tile_origin = 1
+cell_y_sort = true
+format = 1
+tile_data = PoolIntArray( -1114104, 0, 0, -1114103, 1, 0, -1114102, 1, 0, -1114101, 1, 0, -1114100, 1, 0, -1114099, 1, 0, -1114098, 1, 0, -1114097, 1, 0, -1114096, 1, 0, -1114095, 1, 0, -1114094, 1, 0, -1114093, 1, 0, -1114092, 1, 0, -1114091, 1, 0, -1114090, 1, 0, -1114089, 1, 0, -1114088, 1, 0, -1114087, 1, 0, -1114086, 1, 0, -1114085, 1, 0, -1114084, 1, 0, -1114083, 1, 0, -1114082, 1, 0, -1114081, 1, 0, -1114080, 1, 0, -1114079, 1, 0, -1114078, 1, 0, -1114077, 1, 0, -1114076, 1, 0, -1114075, 1, 0, -1114074, 1, 0, -1114073, 1, 0, -1114072, 1, 0, -1114071, 1, 0, -1114070, 1, 0, -1114069, 1, 0, -1114068, 1, 0, -1114067, 1, 0, -1114066, 1, 0, -1114065, 1, 0, -1114064, 1, 0, -1114063, 1, 0, -1114062, 1, 0, -1114061, 1, 0, -1114060, 1, 0, -1114059, 1, 0, -1114058, 1, 0, -1114057, 1, 0, -1114056, 1, 0, -1114055, 1, 0, -1114054, 1, 0, -1114053, 1, 0, -1114052, 1, 0, -1114051, 1, 0, -1114050, 1, 0, -1114049, 1, 0, -1114048, 1, 0, -1114047, 1, 0, -1114046, 1, 0, -1114045, 1, 0, -1114044, 1, 0, -1114043, 2, 0, -983032, 7, 0, -982971, 3, 0, -851960, 7, 0, -851899, 3, 0, -720888, 7, 0, -720827, 3, 0, -589816, 7, 0, -589755, 3, 0, -458744, 7, 0, -458683, 3, 0, -327672, 7, 0, -327611, 3, 0, -196600, 7, 0, -196539, 3, 0, -65528, 7, 0, -65467, 3, 0, 65544, 7, 0, 65605, 3, 0, 196616, 7, 0, 196677, 3, 0, 327688, 7, 0, 327749, 3, 0, 458760, 7, 0, 458821, 3, 0, 589832, 7, 0, 589893, 3, 0, 720904, 7, 0, 720965, 3, 0, 851976, 7, 0, 852037, 3, 0, 983048, 7, 0, 983109, 3, 0, 1114120, 7, 0, 1114181, 3, 0, 1245192, 7, 0, 1245253, 3, 0, 1376264, 7, 0, 1376299, 23, 0, 1376325, 3, 0, 1441835, 18, 0, 1507336, 7, 0, 1507397, 3, 0, 1638408, 7, 0, 1638469, 3, 0, 1769480, 7, 0, 1769541, 3, 0, 1900552, 7, 0, 1900613, 3, 0, 2031624, 7, 0, 2031685, 3, 0, 2162696, 7, 0, 2162757, 3, 0, 2293768, 7, 0, 2293829, 3, 0, 2424840, 6, 0, 2424841, 1, 0, 2424842, 1, 0, 2424843, 1, 0, 2424844, 1, 0, 2424845, 1, 0, 2424846, 1, 0, 2424847, 1, 0, 2424848, 1, 0, 2424849, 1, 0, 2424850, 1, 0, 2424851, 1, 0, 2424852, 1, 0, 2424853, 1, 0, 2424854, 1, 0, 2424855, 1, 0, 2424856, 1, 0, 2424857, 1, 0, 2424858, 1, 0, 2424859, 1, 0, 2424860, 1, 0, 2424861, 1, 0, 2424862, 1, 0, 2424863, 1, 0, 2424864, 1, 0, 2424865, 1, 0, 2424866, 9, 0, 2424876, 8, 0, 2424877, 1, 0, 2424878, 1, 0, 2424879, 1, 0, 2424880, 1, 0, 2424881, 1, 0, 2424882, 1, 0, 2424883, 1, 0, 2424884, 1, 0, 2424885, 1, 0, 2424886, 1, 0, 2424887, 1, 0, 2424888, 1, 0, 2424889, 1, 0, 2424890, 1, 0, 2424891, 1, 0, 2424892, 1, 0, 2424893, 1, 0, 2424894, 1, 0, 2424895, 1, 0, 2424896, 1, 0, 2424897, 1, 0, 2424898, 1, 0, 2424899, 1, 0, 2424900, 1, 0, 2424901, 4, 0 )
+
+[node name="ModernExteriorsSinglesInfoSign32X324" type="Sprite" parent="YSort"]
+position = Vector2( 850, 1095 )
+texture = ExtResource( 84 )
+
+[node name="ModernExteriorsSinglesInfoSign32X325" type="Sprite" parent="YSort"]
+position = Vector2( 1313, 905 )
+texture = ExtResource( 84 )
+
+[node name="ModernExteriorsSinglesInfoSign32X326" type="Sprite" parent="YSort"]
+position = Vector2( 1487, 442 )
+texture = ExtResource( 84 )
+
+[node name="Barriers" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Barriers"]
+polygon = PoolVector2Array( 1115, 1247, 1117, 1223, 274, 1213, 283, -487, 2213, -490, 2213, 1221, 1407, 1221, 1407, 1253, 2257, 1259, 2257, 1259, 2264, -557, 235, -548, 245, 1259 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 673.5, 1037 )
+shape = SubResource( 34 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Barriers"]
+polygon = PoolVector2Array( 974, 432, 1005, 432, 1002, 172, 1023, 171, 1025, 111, 1062, 97, 1091, 109, 1093, 170, 1139, 167, 1202, 198, 1207, 149, 1260, 145, 1259, 198, 1324, 167, 1376, 167, 1373, 119, 1405, 102, 1441, 118, 1441, 168, 1479, 167, 1481, 441, 1510, 441, 1510, 236, 1556, 240, 1584, 175, 1635, 167, 1679, 236, 1690, 234, 1709, 175, 1763, 166, 1793, 194, 1799, 232, 1817, 236, 1832, 180, 1867, 168, 1946, 164, 1946, -316, 517, -318, 519, 180, 595, 167, 628, 180, 652, 246, 670, 241, 680, 172, 729, 160, 770, 185, 773, 241, 797, 242, 800, 185, 855, 158, 897, 190, 904, 242, 926, 239, 923, 185, 971, 167 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 921, 591 )
+shape = SubResource( 35 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 1556, 574 )
+shape = SubResource( 36 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 527.5, 272 )
+shape = SubResource( 37 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 1932.5, 260 )
+shape = SubResource( 38 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Barriers"]
+polygon = PoolVector2Array( 1079, 852, 1112, 886, 1180, 882, 1210, 907, 1269, 905, 1294, 900, 1306, 923, 1323, 923, 1334, 888, 1375, 886, 1408, 853, 1410, 820, 1451, 818, 1485, 788, 1486, 734, 1441, 691, 1402, 676, 1401, 639, 1377, 615, 1293, 616, 1256, 571, 1220, 572, 1186, 613, 1096, 613, 1073, 636, 1072, 686, 1046, 686, 995, 726, 995, 789, 1031, 817, 1073, 819 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 1765, 1067.5 )
+shape = SubResource( 39 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 1724.5, 994.5 )
+shape = SubResource( 40 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 1724.5, 887 )
+shape = SubResource( 41 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 1725, 789 )
+shape = SubResource( 42 )
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 1817, 800.5 )
+shape = SubResource( 43 )
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 1933.5, 804.5 )
+shape = SubResource( 44 )
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 2029.5, 879.5 )
+shape = SubResource( 45 )
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 2030, 988.5 )
+shape = SubResource( 46 )
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 1989, 1068 )
+shape = SubResource( 47 )
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 2023, 788 )
+shape = SubResource( 48 )
+
+[node name="MuseumExits" parent="." instance=ExtResource( 6 )]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="MuseumExits"]
+position = Vector2( 1057.5, 124.5 )
+shape = SubResource( 25 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="MuseumExits"]
+position = Vector2( 1231.5, 167.5 )
+shape = SubResource( 26 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="MuseumExits"]
+position = Vector2( 1406.5, 134.5 )
+shape = SubResource( 27 )
+
+[node name="SceneTransition" parent="." instance=ExtResource( 5 )]
+visible = false
+
+[node name="ClickableMuseum" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1487, 442 )
+dialogue_name = "museum"
+img_path = "res://World/Fountain/Art/Museum.png"
+title = "El palacio nacional"
+artist = "Eugenio Cendoya y Enric Catà"
+year = "1929"
+
+[node name="CollisionShape2D" parent="ClickableMuseum/Clickable" index="0"]
+position = Vector2( 0, 1 )
+shape = SubResource( 31 )
+
+[node name="CollisionShape2D2" parent="ClickableMuseum/PlayerDetectionZone" index="1"]
+shape = SubResource( 32 )
+
+[node name="SpeechBubble" parent="ClickableMuseum" index="2"]
+position = Vector2( 16, -24 )
+
+[node name="ClickableObject" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1921, 810 )
+item_name = "El banco"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickableObject/ClickableArea" index="0"]
+position = Vector2( 12, -5 )
+shape = SubResource( 18 )
+
+[node name="PlayerDetectionZone" parent="ClickableObject" index="1"]
+position = Vector2( 13, -5 )
+
+[node name="ClickableFountain" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1313, 905 )
+dialogue_name = "fountain"
+img_path = "res://World/Fountain/Art/Fountain.png"
+title = "Fuente mágica de Montjuic"
+artist = "Carles Buigas"
+year = "1929"
+
+[node name="CollisionShape2D" parent="ClickableFountain/Clickable" index="0"]
+position = Vector2( 0, 2.5 )
+rotation = 1.5708
+shape = SubResource( 49 )
+
+[node name="SpeechBubble" parent="ClickableFountain" index="2"]
+position = Vector2( 16, -20 )
+
+[node name="ClickableObject2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1548, 250 )
+item_name = "El árbol"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickableObject2/ClickableArea" index="0"]
+position = Vector2( 3, -72 )
+shape = SubResource( 21 )
+
+[node name="ClickableObject3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1866, 907 )
+item_name = "La estatua"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickableObject3/ClickableArea" index="0"]
+position = Vector2( 8, -2 )
+shape = SubResource( 22 )
+
+[node name="ClickableObject4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 913, 562 )
+item_name = "La fuente"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickableObject4/ClickableArea" index="0"]
+position = Vector2( 8, -13 )
+shape = SubResource( 23 )
+
+[node name="ClickableColumns" parent="." instance=ExtResource( 4 )]
+position = Vector2( 852, 1092 )
+dialogue_name = "columns"
+img_path = "res://World/Fountain/Art/Columns.png"
+title = "Las cuatro columnas"
+artist = "Josep Puig i Cadafalch"
+year = "1919 (reconstruidas en 2010)"
+
+[node name="CollisionShape2D" parent="ClickableColumns/Clickable" index="0"]
+position = Vector2( -2.5, 3 )
+shape = SubResource( 29 )
+
+[node name="CollisionShape2D2" parent="ClickableColumns/PlayerDetectionZone" index="1"]
+position = Vector2( 0, 3 )
+rotation = 1.5708
+
+[node name="SpeechBubble" parent="ClickableColumns" index="2"]
+position = Vector2( 14, -21 )
+
+[connection signal="animation_finished" from="YSort/MagicFountain32X32Frame26" to="." method="_on_Fountain_start_animation_finished"]
+[connection signal="input_event" from="ClickableObject/ClickableArea" to="ClickableObject" method="_on_ClickableArea_input_event"]
+[connection signal="input_event" from="ClickableObject2/ClickableArea" to="ClickableObject2" method="_on_ClickableArea_input_event"]
+[connection signal="input_event" from="ClickableObject3/ClickableArea" to="ClickableObject3" method="_on_ClickableArea_input_event"]
+[connection signal="input_event" from="ClickableObject4/ClickableArea" to="ClickableObject4" method="_on_ClickableArea_input_event"]
+
+[editable path="YSort/Player"]
+[editable path="YSort/Player/Carlos"]
+[editable path="YSort/Player/Camera2D/HUD/FriendsMenu"]
+[editable path="YSort/Player/Camera2D/HUD/FriendsMenu/FileOverlay1/Node2D"]
+[editable path="YSort/Player/Camera2D/HUD/Dictionary"]
+[editable path="YSort/Player/Camera2D/HUD/Dictionary/FileOverlay2/Buttons"]
+[editable path="YSort/Player/Camera2D/HUD/Inventory"]
+[editable path="YSort/Player/Camera2D/HUD/Inventory/FileOverlay3/ColorRect/CenterContainer/InventoryDisplay"]
+[editable path="YSort/Player/Camera2D/HUD/Inventory/FileOverlay3/ColorRect/CenterContainer/InventoryDisplay/InventorySlotDisplay"]
+[editable path="YSort/Player/Camera2D/HUD/Inventory/FileOverlay3/ColorRect/CenterContainer/InventoryDisplay/InventorySlotDisplay2"]
+[editable path="YSort/Player/Camera2D/HUD/Inventory/FileOverlay3/ColorRect/CenterContainer/InventoryDisplay/InventorySlotDisplay6"]
+[editable path="YSort/Player/Camera2D/HUD/Inventory/FileOverlay3/Buttons"]
+[editable path="YSort/Player/Camera2D/HUD/QuestMenu"]
+[editable path="YSort/Player/Camera2D/HUD/QuestMenu/FileOverlay4/Buttons"]
+[editable path="YSort/Player/Camera2D/HUD/GameMenu"]
+[editable path="YSort/Player/Camera2D/HUD/GameMenu/FileOverlay5/Buttons"]
+[editable path="YSort/India"]
+[editable path="ClickableMuseum"]
+[editable path="ClickableObject"]
+[editable path="ClickableFountain"]
+[editable path="ClickableObject2"]
+[editable path="ClickableObject3"]
+[editable path="ClickableObject4"]
+[editable path="ClickableColumns"]

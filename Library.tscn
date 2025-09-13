@@ -1,0 +1,485 @@
+[gd_scene load_steps=46 format=2]
+
+[ext_resource path="res://SceneTransition.tscn" type="PackedScene" id=1]
+[ext_resource path="res://World/PlayerDetectionZone.tscn" type="PackedScene" id=2]
+[ext_resource path="res://NPCs/NPC.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://World/_Resources/Room_Builder/FloorShadow.png" type="Texture" id=5]
+[ext_resource path="res://World/_Resources/Room_Builder/LibraryFloor.png" type="Texture" id=6]
+[ext_resource path="res://World/_Resources/01_Generic/LibraryRug.png" type="Texture" id=7]
+[ext_resource path="res://World/Library/Library.gd" type="Script" id=8]
+[ext_resource path="res://World/_Resources/01_Generic/Rug7.png" type="Texture" id=9]
+[ext_resource path="res://World/_Resources/01_Generic/Rug5.png" type="Texture" id=10]
+[ext_resource path="res://World/_Resources/01_Generic/Rug6.png" type="Texture" id=11]
+[ext_resource path="res://World/_Resources/05_Classroom_and_Library/CheckoutDesk.png" type="Texture" id=12]
+[ext_resource path="res://World/_Resources/Room_Builder/BeigeWalls.tres" type="TileSet" id=15]
+[ext_resource path="res://World/_Resources/02_Living_Room/Plant3.png" type="Texture" id=16]
+[ext_resource path="res://World/_Resources/02_Living_Room/Plant2.png" type="Texture" id=17]
+[ext_resource path="res://World/_Resources/05_Classroom_and_Library/Bookshelf4.png" type="Texture" id=18]
+[ext_resource path="res://World/_Resources/05_Classroom_and_Library/Podium1.png" type="Texture" id=19]
+[ext_resource path="res://World/_Resources/01_Generic/ChairLeft.png" type="Texture" id=20]
+[ext_resource path="res://World/_Resources/05_Classroom_and_Library/Bookshelf1.png" type="Texture" id=21]
+[ext_resource path="res://World/_Resources/01_Generic/ChairRight.png" type="Texture" id=22]
+[ext_resource path="res://World/_Resources/05_Classroom_and_Library/ComputerWithStool.png" type="Texture" id=23]
+[ext_resource path="res://World/_Resources/05_Classroom_and_Library/Podium2.png" type="Texture" id=24]
+[ext_resource path="res://World/_Resources/05_Classroom_and_Library/StudyTable.png" type="Texture" id=25]
+[ext_resource path="res://World/_Resources/05_Classroom_and_Library/Books2.png" type="Texture" id=26]
+[ext_resource path="res://World/_Resources/01_Generic/Table1.png" type="Texture" id=27]
+[ext_resource path="res://World/_Resources/05_Classroom_and_Library/Books1.png" type="Texture" id=28]
+[ext_resource path="res://World/_Resources/01_Generic/Stool.png" type="Texture" id=29]
+[ext_resource path="res://World/_Resources/05_Classroom_and_Library/Books4.png" type="Texture" id=30]
+[ext_resource path="res://World/_Resources/05_Classroom_and_Library/Bookshelf2.png" type="Texture" id=31]
+[ext_resource path="res://World/_Resources/05_Classroom_and_Library/BookshelfVertical1.png" type="Texture" id=32]
+[ext_resource path="res://World/_Resources/05_Classroom_and_Library/computers.png" type="Texture" id=33]
+[ext_resource path="res://World/_Resources/05_Classroom_and_Library/Bookshelf3.png" type="Texture" id=34]
+[ext_resource path="res://World/_Resources/04_Bedroom/Book.png" type="Texture" id=35]
+[ext_resource path="res://World/_Resources/04_Bedroom/Doll2.png" type="Texture" id=36]
+[ext_resource path="res://World/_Resources/04_Bedroom/Train.png" type="Texture" id=38]
+[ext_resource path="res://World/ClickableObject.tscn" type="PackedScene" id=39]
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 33, 12 )
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 12, 448 )
+
+[sub_resource type="RectangleShape2D" id=16]
+extents = Vector2( 131, 20 )
+
+[sub_resource type="RectangleShape2D" id=17]
+extents = Vector2( 646.25, 12 )
+
+[sub_resource type="RectangleShape2D" id=19]
+extents = Vector2( 144, 32.25 )
+
+[sub_resource type="CircleShape2D" id=20]
+radius = 14.1421
+
+[sub_resource type="RectangleShape2D" id=21]
+extents = Vector2( 65.5, 18 )
+
+[sub_resource type="RectangleShape2D" id=22]
+extents = Vector2( 147.5, 52 )
+
+[sub_resource type="RectangleShape2D" id=23]
+extents = Vector2( 62.5, 28 )
+
+[node name="Library" type="Node2D"]
+script = ExtResource( 8 )
+
+[node name="Floor" type="Sprite" parent="."]
+position = Vector2( 1, -21 )
+scale = Vector2( 1.00156, 1 )
+texture = ExtResource( 6 )
+region_enabled = true
+region_rect = Rect2( 40.0491, 0, 1278.28, 806.692 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 15 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( -917524, 0, 0, -917523, 2, 0, -917522, 2, 0, -917521, 2, 0, -917520, 2, 0, -917519, 2, 0, -917518, 2, 0, -917517, 2, 0, -917516, 2, 0, -917515, 2, 0, -917514, 2, 0, -917513, 2, 0, -917512, 2, 0, -917511, 2, 0, -917510, 2, 0, -917509, 2, 0, -917508, 2, 0, -917507, 2, 0, -917506, 2, 0, -917505, 2, 0, -983040, 2, 0, -983039, 2, 0, -983038, 2, 0, -983037, 2, 0, -983036, 2, 0, -983035, 2, 0, -983034, 2, 0, -983033, 2, 0, -983032, 2, 0, -983031, 2, 0, -983030, 2, 0, -983029, 2, 0, -983028, 2, 0, -983027, 2, 0, -983026, 2, 0, -983025, 2, 0, -983024, 2, 0, -983023, 2, 0, -983022, 2, 0, -983021, 7, 0 )
+
+[node name="LibraryRug" type="Sprite" parent="."]
+position = Vector2( 116, 170 )
+texture = ExtResource( 7 )
+
+[node name="LibraryRug2" type="Sprite" parent="."]
+position = Vector2( 112, -135 )
+texture = ExtResource( 7 )
+
+[node name="Rug5" type="Sprite" parent="."]
+position = Vector2( -417, -282 )
+texture = ExtResource( 10 )
+
+[node name="Rug6" type="Sprite" parent="."]
+position = Vector2( 379, 232 )
+texture = ExtResource( 11 )
+
+[node name="Rug7" type="Sprite" parent="."]
+position = Vector2( 476, -304 )
+texture = ExtResource( 9 )
+
+[node name="Books4" type="Sprite" parent="Rug7"]
+position = Vector2( -49, -22 )
+texture = ExtResource( 30 )
+
+[node name="Books2" type="Sprite" parent="Rug7"]
+position = Vector2( 75, -15 )
+texture = ExtResource( 26 )
+
+[node name="Books1" type="Sprite" parent="Rug7"]
+position = Vector2( -43, 49 )
+texture = ExtResource( 28 )
+
+[node name="Book" type="Sprite" parent="Rug7"]
+position = Vector2( 68, 9 )
+texture = ExtResource( 35 )
+
+[node name="Doll2" type="Sprite" parent="Rug7"]
+position = Vector2( 30, -57 )
+texture = ExtResource( 36 )
+
+[node name="Train" type="Sprite" parent="Rug7"]
+position = Vector2( 99, 43 )
+texture = ExtResource( 38 )
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="CheckoutDesk" type="Sprite" parent="YSort"]
+position = Vector2( 67, -380 )
+texture = ExtResource( 12 )
+
+[node name="Gilda" parent="YSort/CheckoutDesk" instance=ExtResource( 3 )]
+position = Vector2( -1, 26 )
+dialogue_name = "gilda"
+
+[node name="AnimatedSprite" parent="YSort/CheckoutDesk/Gilda" index="1"]
+animation = "Gilda"
+
+[node name="Computers" type="Sprite" parent="YSort"]
+position = Vector2( 232, -367 )
+texture = ExtResource( 33 )
+
+[node name="Plant3" type="Sprite" parent="YSort"]
+position = Vector2( -9, -406 )
+texture = ExtResource( 16 )
+
+[node name="Plant2" type="Sprite" parent="YSort"]
+position = Vector2( 380, -417 )
+texture = ExtResource( 17 )
+
+[node name="Plant4" type="Sprite" parent="YSort"]
+position = Vector2( 602, -402 )
+texture = ExtResource( 17 )
+
+[node name="BookshelfVertical1" type="Sprite" parent="YSort"]
+position = Vector2( 629, -327 )
+texture = ExtResource( 32 )
+
+[node name="BookshelfVertical2" type="Sprite" parent="YSort"]
+position = Vector2( 628, -189 )
+texture = ExtResource( 32 )
+
+[node name="BookshelfVertical3" type="Sprite" parent="YSort"]
+position = Vector2( 629, -44 )
+texture = ExtResource( 32 )
+
+[node name="BookshelfVertical4" type="Sprite" parent="YSort"]
+position = Vector2( 629, 98 )
+texture = ExtResource( 32 )
+
+[node name="BookshelfVertical5" type="Sprite" parent="YSort"]
+position = Vector2( 628, 246 )
+texture = ExtResource( 32 )
+
+[node name="Bookshelf3" type="Sprite" parent="YSort"]
+position = Vector2( 455, -414 )
+texture = ExtResource( 34 )
+
+[node name="Bookshelf2" type="Sprite" parent="YSort"]
+position = Vector2( 535, -416 )
+texture = ExtResource( 31 )
+
+[node name="Podium2" type="Sprite" parent="YSort"]
+position = Vector2( 217, 193 )
+texture = ExtResource( 24 )
+
+[node name="Podium1" type="Sprite" parent="YSort"]
+position = Vector2( -99, -368 )
+texture = ExtResource( 19 )
+
+[node name="ChairRight" type="Sprite" parent="YSort"]
+position = Vector2( -141, -256 )
+texture = ExtResource( 22 )
+
+[node name="ChairRight2" type="Sprite" parent="YSort"]
+position = Vector2( -145, -224 )
+texture = ExtResource( 22 )
+
+[node name="ChairLeft" type="Sprite" parent="YSort"]
+position = Vector2( -63, -247 )
+texture = ExtResource( 20 )
+
+[node name="ChairLeft2" type="Sprite" parent="YSort"]
+position = Vector2( -58, -223 )
+texture = ExtResource( 20 )
+
+[node name="Table1" type="Sprite" parent="YSort/ChairLeft2"]
+position = Vector2( -44, -6 )
+texture = ExtResource( 27 )
+
+[node name="Books2" type="Sprite" parent="YSort/ChairLeft2/Table1"]
+position = Vector2( -8, -9 )
+texture = ExtResource( 26 )
+
+[node name="StudyTable" type="Sprite" parent="YSort"]
+position = Vector2( 381, 225 )
+texture = ExtResource( 25 )
+
+[node name="Bookshelf1" type="Sprite" parent="YSort"]
+position = Vector2( -544, -45 )
+texture = ExtResource( 21 )
+
+[node name="Bookshelf5" type="Sprite" parent="YSort"]
+position = Vector2( -397, -46 )
+texture = ExtResource( 21 )
+
+[node name="Bookshelf6" type="Sprite" parent="YSort"]
+position = Vector2( -210, -47 )
+texture = ExtResource( 21 )
+
+[node name="Bookshelf15" type="Sprite" parent="YSort"]
+position = Vector2( -63, -48 )
+texture = ExtResource( 21 )
+
+[node name="Bookshelf7" type="Sprite" parent="YSort"]
+position = Vector2( -543, 110 )
+texture = ExtResource( 21 )
+
+[node name="Bookshelf8" type="Sprite" parent="YSort"]
+position = Vector2( -207, 109 )
+texture = ExtResource( 21 )
+
+[node name="Bookshelf9" type="Sprite" parent="YSort"]
+position = Vector2( -544, 288 )
+texture = ExtResource( 21 )
+
+[node name="Bookshelf10" type="Sprite" parent="YSort"]
+position = Vector2( -204, 284 )
+texture = ExtResource( 21 )
+
+[node name="Bookshelf11" type="Sprite" parent="YSort"]
+position = Vector2( -396, 109 )
+texture = ExtResource( 21 )
+
+[node name="Bookshelf12" type="Sprite" parent="YSort"]
+position = Vector2( -60, 108 )
+texture = ExtResource( 21 )
+
+[node name="Bookshelf13" type="Sprite" parent="YSort"]
+position = Vector2( -397, 287 )
+texture = ExtResource( 21 )
+
+[node name="Bookshelf14" type="Sprite" parent="YSort"]
+position = Vector2( -57, 283 )
+texture = ExtResource( 21 )
+
+[node name="ComputerWithStool" type="Sprite" parent="YSort"]
+position = Vector2( -578, -354 )
+texture = ExtResource( 23 )
+
+[node name="ComputerWithStool2" type="Sprite" parent="YSort"]
+position = Vector2( -486, -355 )
+texture = ExtResource( 23 )
+
+[node name="ComputerWithStool3" type="Sprite" parent="YSort"]
+position = Vector2( -400, -355 )
+texture = ExtResource( 23 )
+
+[node name="ComputerWithStool4" type="Sprite" parent="YSort"]
+position = Vector2( -307, -355 )
+texture = ExtResource( 23 )
+
+[node name="ComputerWithStool5" type="Sprite" parent="YSort"]
+position = Vector2( -537, -236 )
+texture = ExtResource( 23 )
+
+[node name="ComputerWithStool6" type="Sprite" parent="YSort"]
+position = Vector2( -451, -236 )
+texture = ExtResource( 23 )
+
+[node name="ComputerWithStool7" type="Sprite" parent="YSort"]
+position = Vector2( -358, -236 )
+texture = ExtResource( 23 )
+
+[node name="ComputerWithStool8" type="Sprite" parent="YSort"]
+position = Vector2( -268, -238 )
+texture = ExtResource( 23 )
+
+[node name="Bookshelf4" type="Sprite" parent="YSort"]
+position = Vector2( 358, 38 )
+texture = ExtResource( 18 )
+
+[node name="Bookshelf16" type="Sprite" parent="YSort"]
+position = Vector2( 357, -68 )
+texture = ExtResource( 18 )
+
+[node name="Bookshelf17" type="Sprite" parent="YSort"]
+position = Vector2( 357, -177 )
+texture = ExtResource( 18 )
+
+[node name="Stool" type="Sprite" parent="YSort"]
+position = Vector2( 369, -315 )
+texture = ExtResource( 29 )
+
+[node name="Stool2" type="Sprite" parent="YSort"]
+position = Vector2( 359, -295 )
+texture = ExtResource( 29 )
+
+[node name="Stool3" type="Sprite" parent="YSort"]
+position = Vector2( 591, -291 )
+texture = ExtResource( 29 )
+
+[node name="Azulejo" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 234, 265 )
+dialogue_name = "azulejo"
+
+[node name="MediumShadow" parent="YSort/Azulejo" index="0"]
+position = Vector2( 7.689e-06, 8 )
+scale = Vector2( 2.125, 1 )
+
+[node name="AnimatedSprite" parent="YSort/Azulejo" index="1"]
+position = Vector2( 0, -9 )
+animation = "AzulejoIdle"
+
+[node name="CollisionShape2D" parent="YSort/Azulejo" index="2"]
+position = Vector2( 0, 2 )
+
+[node name="Player" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( 111, 315 )
+
+[node name="Exit" parent="." instance=ExtResource( 2 )]
+
+[node name="CollisionShape2D" parent="Exit" index="0"]
+position = Vector2( 117, 375 )
+shape = SubResource( 14 )
+
+[node name="FloorShadow" type="Sprite" parent="Exit/CollisionShape2D" index="0"]
+position = Vector2( 0, -5 )
+scale = Vector2( 2.34375, 1 )
+texture = ExtResource( 5 )
+
+[node name="SceneTransition" parent="." instance=ExtResource( 1 )]
+visible = false
+
+[node name="Barriers" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( -649, -45 )
+shape = SubResource( 15 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 356, -177 )
+shape = SubResource( 16 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 357, -66 )
+shape = SubResource( 16 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 358, 43 )
+shape = SubResource( 16 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( -5.25, 393 )
+shape = SubResource( 17 )
+
+[node name="SmBookshelf4" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( -470, -42.25 )
+shape = SubResource( 19 )
+
+[node name="SmBookshelf5" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( -137, -44 )
+shape = SubResource( 19 )
+
+[node name="SmBookshelf6" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( -135, 110 )
+shape = SubResource( 19 )
+
+[node name="SmBookshelf7" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( -470, 113 )
+shape = SubResource( 19 )
+
+[node name="SmBookshelf8" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( -472, 291 )
+shape = SubResource( 19 )
+
+[node name="SmBookshelf9" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( -131, 289 )
+shape = SubResource( 19 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 216, 212 )
+shape = SubResource( 20 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( -100, -348 )
+shape = SubResource( 20 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 368, -313 )
+shape = SubResource( 20 )
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 358, -295 )
+shape = SubResource( 20 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Barriers"]
+polygon = PoolVector2Array( 287, 232, 312, 232, 311, 205, 317, 199, 451, 199, 455, 232, 474, 232, 474, 251, 452, 251, 451, 266, 314, 267, 310, 251, 286, 252 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Barriers"]
+polygon = PoolVector2Array( 683, 378, 636, 378, 636, 290, 615, 292, 613, 205, 638, 204, 637, 143, 614, 144, 614, 56, 637, 56, 637, 4, 616, 3, 615, -87, 638, -85, 636, -146, 616, -148, 616, -231, 638, -231, 636, -282, 574, -284, 576, -305, 617, -307, 617, -368, 597, -380, 568, -395, 421, -394, 421, -432, 388, -430, 392, -398, 370, -396, 374, -434, 128, -432, 126, -350, 6, -352, -3, -380, -21, -382, -26, -432, -639, -429, -631, -498, 660, -497 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Barriers"]
+polygon = PoolVector2Array( -153, -259, -67, -260, -49, -250, -45, -225, -45, -206, -63, -206, -66, -200, -138, -199, -141, -208, -160, -208, -159, -246 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 231.5, -360 )
+shape = SubResource( 21 )
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Barriers"]
+polygon = PoolVector2Array( -601, -371, -555, -371, -555, -333, -573, -330, -577, -322, -601, -321 )
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Barriers"]
+position = Vector2( 93, 0 )
+polygon = PoolVector2Array( -601, -371, -555, -371, -555, -333, -573, -330, -577, -322, -601, -321 )
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="Barriers"]
+position = Vector2( 179.8, -1 )
+polygon = PoolVector2Array( -601, -371, -555, -371, -555, -333, -573, -330, -577, -322, -601, -321 )
+
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="Barriers"]
+position = Vector2( 272.8, -1 )
+polygon = PoolVector2Array( -601, -371, -555, -371, -555, -333, -573, -330, -577, -322, -601, -321 )
+
+[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="Barriers"]
+position = Vector2( 40.8, 118 )
+polygon = PoolVector2Array( -601, -371, -555, -371, -555, -333, -573, -330, -577, -322, -601, -321 )
+
+[node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="Barriers"]
+position = Vector2( 128, 119 )
+polygon = PoolVector2Array( -601, -371, -555, -371, -555, -333, -573, -330, -577, -322, -601, -321 )
+
+[node name="CollisionPolygon2D10" type="CollisionPolygon2D" parent="Barriers"]
+position = Vector2( 220.6, 117 )
+polygon = PoolVector2Array( -601, -371, -555, -371, -555, -333, -573, -330, -577, -322, -601, -321 )
+
+[node name="CollisionPolygon2D11" type="CollisionPolygon2D" parent="Barriers"]
+position = Vector2( 310, 117 )
+polygon = PoolVector2Array( -601, -371, -555, -371, -555, -333, -573, -330, -577, -322, -601, -321 )
+
+[node name="ClickableObject" parent="." instance=ExtResource( 39 )]
+position = Vector2( -30, 116 )
+item_name = "Los libros"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickableObject/ClickableArea" index="0"]
+position = Vector2( -104.5, -8 )
+shape = SubResource( 22 )
+
+[node name="ClickableObject2" parent="." instance=ExtResource( 39 )]
+position = Vector2( 208, -363 )
+item_name = "Las computadoras"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickableObject2/ClickableArea" index="0"]
+position = Vector2( 23.5, -16 )
+shape = SubResource( 23 )
+
+[connection signal="input_event" from="ClickableObject/ClickableArea" to="ClickableObject" method="_on_ClickableArea_input_event"]
+[connection signal="input_event" from="ClickableObject2/ClickableArea" to="ClickableObject2" method="_on_ClickableArea_input_event"]
+
+[editable path="YSort/CheckoutDesk/Gilda"]
+[editable path="YSort/Azulejo"]
+[editable path="Exit"]
+[editable path="ClickableObject"]
+[editable path="ClickableObject2"]

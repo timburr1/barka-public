@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://UI/InventoryItems/Seashell/Pink.png" type="Texture" id=1]
+[ext_resource path="res://World/PlayerDetectionZone.tscn" type="PackedScene" id=2]
+[ext_resource path="res://World/QuestionBubble.png" type="Texture" id=3]
+[ext_resource path="res://World/Beach/Seashell.gd" type="Script" id=4]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 33.0151
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 16.0
+
+[node name="Seashell" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, -4 )
+scale = Vector2( 0.5, 0.55 )
+texture = ExtResource( 1 )
+
+[node name="ClickableObject" type="Node2D" parent="."]
+
+[node name="QuestionBubble" type="Sprite" parent="ClickableObject"]
+position = Vector2( 16, -12 )
+texture = ExtResource( 3 )
+
+[node name="PlayerDetectionZone" parent="ClickableObject" instance=ExtResource( 2 )]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="ClickableObject/PlayerDetectionZone"]
+visible = false
+shape = SubResource( 2 )
+
+[node name="ClickableArea" type="Area2D" parent="ClickableObject"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickableObject/ClickableArea"]
+position = Vector2( 4, -4 )
+shape = SubResource( 3 )
+
+[connection signal="input_event" from="ClickableObject/ClickableArea" to="." method="_on_ClickableArea_input_event"]

@@ -1,0 +1,279 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://World/_Resources/Room_Builder/GreenWhite3D.png" type="Texture" id=1]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://World/Apartment/Hallway/Hallway.gd" type="Script" id=3]
+[ext_resource path="res://World/Apartment/Hallway/floor.png" type="Texture" id=4]
+[ext_resource path="res://World/Apartment/Hallway/Door.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Font/PixelRpg.tres" type="DynamicFont" id=6]
+[ext_resource path="res://Font/PixelRPG.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://World/PlayerDetectionZone.tscn" type="PackedScene" id=8]
+[ext_resource path="res://SceneTransition.tscn" type="PackedScene" id=9]
+[ext_resource path="res://World/_Resources/Room_Builder/GreenWhiteWalls.png" type="Texture" id=10]
+
+[sub_resource type="TileSet" id=9]
+0/name = "GreenWhite3D.png 0"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 32, 32, 32, 32 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "GreenWhite3D.png 1"
+1/texture = ExtResource( 1 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 32, 96, 32, 32 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "GreenWhite3D.png 2"
+2/texture = ExtResource( 1 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 32, 160, 32, 32 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "GreenWhiteWalls.png 3"
+3/texture = ExtResource( 10 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 32, 64, 32, 64 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+
+[sub_resource type="DynamicFont" id=3]
+size = 14
+font_data = ExtResource( 7 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 812, 13 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 764, 31 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 30.5, 96.5 )
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=1]
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 30, 76 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 30, 107.5 )
+
+[node name="Hallway" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Floor" type="Sprite" parent="."]
+position = Vector2( 794, 123 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( -96, 20, 2880, 140 )
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( 752, 32 )
+tile_set = SubResource( 9 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( -44, 3, 0, -43, 3, 0, -42, 3, 0, -41, 3, 0, -40, 3, 0, -39, 3, 0, -38, 3, 0, -37, 3, 0, -36, 3, 0, -35, 3, 0, -34, 3, 0, -33, 3, 0, -32, 3, 0, -31, 3, 0, -30, 3, 0, -29, 3, 0, -28, 3, 0, -27, 3, 0, -26, 3, 0, -25, 3, 0, -24, 3, 0, -23, 3, 0, -22, 3, 0, -21, 3, 0, -20, 3, 0, -19, 3, 0, -18, 3, 0, -17, 3, 0, -16, 3, 0, -15, 3, 0, -14, 3, 0, -13, 3, 0, -12, 3, 0, -11, 3, 0, -10, 3, 0, -9, 3, 0, -8, 3, 0, -7, 3, 0, -6, 3, 0, -5, 3, 0, -4, 3, 0, -3, 3, 0, -2, 3, 0, -1, 3, 0, -65536, 3, 0, -65535, 3, 0, -65534, 3, 0, -65533, 3, 0, -65532, 3, 0, -65531, 3, 0, -65530, 3, 0, -65529, 3, 0, -65528, 3, 0, -65527, 3, 0, -65526, 3, 0, -65525, 3, 0, -65524, 3, 0, -65523, 3, 0, -65522, 3, 0, -65521, 3, 0, -65520, 3, 0, -65519, 3, 0, -65518, 3, 0, -65517, 3, 0, -65516, 3, 0, -65515, 3, 0, -65514, 3, 0, -65513, 3, 0, -65512, 3, 0, -65511, 3, 0, -65510, 3, 0, -65509, 3, 0, -65508, 3, 0, -65507, 3, 0, -65506, 3, 0, -65505, 3, 0, -65504, 3, 0, -65503, 3, 0, -65502, 3, 0, -65501, 3, 0, -65500, 3, 0, -65499, 3, 0, -65498, 3, 0, -65497, 3, 0, -65496, 3, 0, -65495, 3, 0, -65494, 3, 0, -65493, 3, 0, -65492, 3, 0, -65491, 3, 0 )
+
+[node name="Label" type="Label" parent="TileMap"]
+margin_left = -883.0
+margin_top = -16.0
+margin_right = -831.0
+margin_bottom = 17.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Salida
+(Exit)"
+
+[node name="Label2" type="Label" parent="TileMap"]
+margin_left = 443.0
+margin_top = -16.0
+margin_right = 495.0
+margin_bottom = 17.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Salida
+(Exit)"
+
+[node name="Barriers" type="StaticBody2D" parent="TileMap"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/Barriers"]
+position = Vector2( -152, 170 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="TileMap/Barriers"]
+position = Vector2( -116, -9 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="TileMap/Barriers"]
+position = Vector2( 552.5, 64.5 )
+shape = SubResource( 8 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="TileMap/Barriers"]
+position = Vector2( -940, 65 )
+shape = SubResource( 8 )
+
+[node name="Door301" parent="." instance=ExtResource( 5 )]
+position = Vector2( 40, 43 )
+
+[node name="PlayerDetectionZone" parent="Door301" index="1"]
+position = Vector2( 0, 6 )
+
+[node name="Label" type="Label" parent="Door301"]
+margin_left = 16.0
+margin_top = -21.0
+margin_right = 40.0
+margin_bottom = -7.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 6 )
+text = "301"
+
+[node name="Door302" parent="." instance=ExtResource( 5 )]
+position = Vector2( 296, 43 )
+
+[node name="PlayerDetectionZone" parent="Door302" index="1"]
+position = Vector2( 0, 3 )
+
+[node name="Label" type="Label" parent="Door302"]
+margin_left = 16.0
+margin_top = -21.0
+margin_right = 40.0
+margin_bottom = -7.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 6 )
+text = "302
+"
+
+[node name="Door303" parent="." instance=ExtResource( 5 )]
+position = Vector2( 552, 43 )
+
+[node name="PlayerDetectionZone" parent="Door303" index="1"]
+position = Vector2( 0, 6 )
+
+[node name="Label" type="Label" parent="Door303"]
+margin_left = 16.0
+margin_top = -21.0
+margin_right = 40.0
+margin_bottom = -7.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 6 )
+text = "303
+
+"
+
+[node name="Door304" parent="." instance=ExtResource( 5 )]
+position = Vector2( 808, 43 )
+
+[node name="PlayerDetectionZone" parent="Door304" index="1"]
+position = Vector2( 0, 3 )
+
+[node name="Label" type="Label" parent="Door304"]
+margin_left = 16.0
+margin_top = -21.0
+margin_right = 40.0
+margin_bottom = -7.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 6 )
+text = "304
+
+"
+
+[node name="Door305" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1064, 43 )
+
+[node name="PlayerDetectionZone" parent="Door305" index="1"]
+position = Vector2( 0, 3 )
+
+[node name="Label" type="Label" parent="Door305"]
+margin_left = 16.0
+margin_top = -21.0
+margin_right = 40.0
+margin_bottom = -7.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 6 )
+text = "305
+
+"
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Player" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 549, 80 )
+
+[node name="CollisionShape2D" parent="YSort/Player" index="3"]
+position = Vector2( 0, 0 )
+
+[node name="AnimationTree" parent="YSort/Player" index="5"]
+parameters/playback = SubResource( 1 )
+
+[node name="Exit" parent="." instance=ExtResource( 8 )]
+
+[node name="CollisionShape2D" parent="Exit" index="0"]
+position = Vector2( 1273.5, 116 )
+shape = SubResource( 7 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Exit"]
+position = Vector2( -157, 97 )
+shape = SubResource( 10 )
+
+[node name="SceneTransition" parent="." instance=ExtResource( 9 )]
+visible = false
+
+[editable path="Door301"]
+[editable path="Door301/PlayerDetectionZone"]
+[editable path="Door302"]
+[editable path="Door302/PlayerDetectionZone"]
+[editable path="Door303"]
+[editable path="Door303/PlayerDetectionZone"]
+[editable path="Door304"]
+[editable path="Door304/PlayerDetectionZone"]
+[editable path="Door305"]
+[editable path="Door305/PlayerDetectionZone"]
+[editable path="YSort/Player"]
+[editable path="YSort/Player/Carlos"]
+[editable path="YSort/Player/Camera2D/HUD/FriendsMenu"]
+[editable path="YSort/Player/Camera2D/HUD/FriendsMenu/FileOverlay1/Node2D"]
+[editable path="YSort/Player/Camera2D/HUD/Dictionary"]
+[editable path="YSort/Player/Camera2D/HUD/Dictionary/FileOverlay2/Buttons"]
+[editable path="YSort/Player/Camera2D/HUD/Inventory"]
+[editable path="YSort/Player/Camera2D/HUD/Inventory/FileOverlay3/ColorRect/CenterContainer/InventoryDisplay"]
+[editable path="YSort/Player/Camera2D/HUD/Inventory/FileOverlay3/ColorRect/CenterContainer/InventoryDisplay/InventorySlotDisplay"]
+[editable path="YSort/Player/Camera2D/HUD/Inventory/FileOverlay3/ColorRect/CenterContainer/InventoryDisplay/InventorySlotDisplay2"]
+[editable path="YSort/Player/Camera2D/HUD/Inventory/FileOverlay3/ColorRect/CenterContainer/InventoryDisplay/InventorySlotDisplay6"]
+[editable path="YSort/Player/Camera2D/HUD/Inventory/FileOverlay3/Buttons"]
+[editable path="YSort/Player/Camera2D/HUD/QuestMenu"]
+[editable path="YSort/Player/Camera2D/HUD/QuestMenu/FileOverlay4/Buttons"]
+[editable path="YSort/Player/Camera2D/HUD/GameMenu"]
+[editable path="YSort/Player/Camera2D/HUD/GameMenu/FileOverlay5/Buttons"]
+[editable path="Exit"]

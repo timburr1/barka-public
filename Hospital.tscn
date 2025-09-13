@@ -1,0 +1,1157 @@
+[gd_scene load_steps=107 format=2]
+
+[ext_resource path="res://SceneTransition.tscn" type="PackedScene" id=1]
+[ext_resource path="res://World/PlayerDetectionZone.tscn" type="PackedScene" id=2]
+[ext_resource path="res://World/_Resources/Room_Builder/RestaurantTile.png" type="Texture" id=3]
+[ext_resource path="res://World/_Resources/Room_Builder/FloorShadow.png" type="Texture" id=4]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://NPCs/NPC.tscn" type="PackedScene" id=6]
+[ext_resource path="res://World/_Resources/Room_Builder/GreyWallsTall.png" type="Texture" id=7]
+[ext_resource path="res://World/_Resources/19_Hospital/Hospital_Singles_32x32_91.png" type="Texture" id=8]
+[ext_resource path="res://World/_Resources/19_Hospital/Hospital_Singles_32x32_10.png" type="Texture" id=9]
+[ext_resource path="res://World/_Resources/19_Hospital/Hospital_Singles_32x32_338.png" type="Texture" id=10]
+[ext_resource path="res://World/_Resources/19_Hospital/Hospital_Singles_32x32_420.png" type="Texture" id=11]
+[ext_resource path="res://World/_Resources/19_Hospital/Shelf5.png" type="Texture" id=12]
+[ext_resource path="res://World/_Resources/19_Hospital/Shelf6.png" type="Texture" id=13]
+[ext_resource path="res://World/_Resources/19_Hospital/Hospital_Singles_32x32_547.png" type="Texture" id=14]
+[ext_resource path="res://World/_Resources/19_Hospital/Hospital_Singles_32x32_464.png" type="Texture" id=15]
+[ext_resource path="res://World/_Resources/19_Hospital/BoxesLg.png" type="Texture" id=16]
+[ext_resource path="res://World/_Resources/19_Hospital/Cabinet.png" type="Texture" id=17]
+[ext_resource path="res://World/_Resources/19_Hospital/Hospital_Singles_32x32_71.png" type="Texture" id=18]
+[ext_resource path="res://World/_Resources/19_Hospital/Hospital_Singles_32x32_254.png" type="Texture" id=19]
+[ext_resource path="res://World/_Resources/19_Hospital/Hospital_Singles_32x32_315.png" type="Texture" id=20]
+[ext_resource path="res://World/_Resources/19_Hospital/Hospital_Singles_32x32_533.png" type="Texture" id=21]
+[ext_resource path="res://World/_Resources/19_Hospital/Hospital_Singles_32x32_466.png" type="Texture" id=22]
+[ext_resource path="res://World/_Resources/Room_Builder/VerticalWalls.tres" type="TileSet" id=23]
+[ext_resource path="res://World/_Resources/19_Hospital/Hospital_Singles_32x32_368.png" type="Texture" id=24]
+[ext_resource path="res://World/_Resources/19_Hospital/Hospital_Singles_32x32_206.png" type="Texture" id=25]
+[ext_resource path="res://World/_Resources/19_Hospital/Hospital_Singles_32x32_213.png" type="Texture" id=26]
+[ext_resource path="res://World/_Resources/19_Hospital/Hospital_Singles_32x32_93.png" type="Texture" id=27]
+[ext_resource path="res://World/_Resources/19_Hospital/Hospital_Singles_32x32_52.png" type="Texture" id=28]
+[ext_resource path="res://World/_Resources/19_Hospital/Hospital_Singles_32x32_246_flip.png" type="Texture" id=29]
+[ext_resource path="res://World/_Resources/19_Hospital/Hospital_Singles_32x32_244.png" type="Texture" id=30]
+[ext_resource path="res://World/_Resources/19_Hospital/Hospital_Singles_32x32_452.png" type="Texture" id=31]
+[ext_resource path="res://World/_Resources/19_Hospital/Hospital_Singles_32x32_8.png" type="Texture" id=32]
+[ext_resource path="res://World/_Resources/19_Hospital/Hospital_Singles_32x32_246.png" type="Texture" id=33]
+[ext_resource path="res://World/_Resources/19_Hospital/Hospital_Singles_32x32_332.png" type="Texture" id=34]
+[ext_resource path="res://World/_Resources/19_Hospital/Hospital_Singles_32x32_412.png" type="Texture" id=35]
+[ext_resource path="res://World/_Resources/19_Hospital/Hospital_Singles_32x32_449.png" type="Texture" id=36]
+[ext_resource path="res://World/_Resources/19_Hospital/Hospital_Singles_32x32_361.png" type="Texture" id=37]
+[ext_resource path="res://World/_Resources/19_Hospital/Hospital_Singles_32x32_69.png" type="Texture" id=38]
+[ext_resource path="res://World/_Resources/19_Hospital/Hospital_Singles_32x32_9.png" type="Texture" id=39]
+[ext_resource path="res://World/_Resources/19_Hospital/Hospital_Singles_32x32_328.png" type="Texture" id=40]
+[ext_resource path="res://World/_Resources/19_Hospital/Hospital_Singles_32x32_49.png" type="Texture" id=41]
+[ext_resource path="res://World/_Resources/19_Hospital/Hospital_Singles_32x32_545.png" type="Texture" id=42]
+[ext_resource path="res://World/_Resources/19_Hospital/Chair.png" type="Texture" id=43]
+[ext_resource path="res://World/_Resources/19_Hospital/Hospital_Singles_32x32_353.png" type="Texture" id=44]
+[ext_resource path="res://World/_Resources/19_Hospital/Hospital_Singles_32x32_125.png" type="Texture" id=45]
+[ext_resource path="res://World/_Resources/19_Hospital/Hospital_Singles_32x32_70.png" type="Texture" id=46]
+[ext_resource path="res://World/_Resources/19_Hospital/Hospital_Singles_32x32_210.png" type="Texture" id=47]
+[ext_resource path="res://World/_Resources/19_Hospital/Hospital_Singles_32x32_199.png" type="Texture" id=48]
+[ext_resource path="res://World/_Resources/19_Hospital/Hospital_Singles_32x32_240.png" type="Texture" id=49]
+[ext_resource path="res://World/_Resources/19_Hospital/Hospital_Singles_32x32_13.png" type="Texture" id=50]
+[ext_resource path="res://World/_Resources/19_Hospital/BoxesSm.png" type="Texture" id=51]
+[ext_resource path="res://World/_Resources/19_Hospital/Hospital_Singles_32x32_209.png" type="Texture" id=52]
+[ext_resource path="res://World/Hospital/Hospital.gd" type="Script" id=53]
+[ext_resource path="res://World/_Resources/19_Hospital/Hospital_Singles_32x32_357.png" type="Texture" id=54]
+[ext_resource path="res://World/_Resources/19_Hospital/Hospital_Singles_32x32_474.png" type="Texture" id=55]
+[ext_resource path="res://World/_Resources/19_Hospital/Hospital_Singles_32x32_12.png" type="Texture" id=56]
+[ext_resource path="res://World/_Resources/19_Hospital/Shelf2.png" type="Texture" id=57]
+[ext_resource path="res://World/_Resources/19_Hospital/Hospital_Singles_32x32_451.png" type="Texture" id=58]
+[ext_resource path="res://World/_Resources/19_Hospital/Hospital_Singles_32x32_544.png" type="Texture" id=59]
+[ext_resource path="res://World/_Resources/19_Hospital/Shelf3.png" type="Texture" id=60]
+[ext_resource path="res://World/_Resources/19_Hospital/Hospital_Singles_32x32_322.png" type="Texture" id=61]
+[ext_resource path="res://World/_Resources/19_Hospital/Shelf4.png" type="Texture" id=62]
+[ext_resource path="res://World/_Resources/19_Hospital/Hospital_Singles_32x32_387.png" type="Texture" id=63]
+[ext_resource path="res://World/_Resources/19_Hospital/Hospital_Singles_32x32_450.png" type="Texture" id=64]
+[ext_resource path="res://World/_Resources/19_Hospital/Hospital_Singles_32x32_476.png" type="Texture" id=65]
+[ext_resource path="res://World/_Resources/01_Generic/Window07.png" type="Texture" id=66]
+[ext_resource path="res://World/_Resources/04_Bedroom/Doll.png" type="Texture" id=67]
+[ext_resource path="res://World/_Resources/19_Hospital/Hospital_Singles_32x32_390_full.png" type="Texture" id=68]
+[ext_resource path="res://World/_Resources/04_Bedroom/Train.png" type="Texture" id=69]
+[ext_resource path="res://World/_Resources/05_Classroom_and_Library/Books2.png" type="Texture" id=70]
+[ext_resource path="res://World/_Resources/01_Generic/Rug6.png" type="Texture" id=71]
+[ext_resource path="res://World/_Resources/07_Art/Art_Singles_32x32_20.png" type="Texture" id=72]
+[ext_resource path="res://World/_Resources/19_Hospital/Hospital_Singles_32x32_66.png" type="Texture" id=73]
+[ext_resource path="res://World/_Resources/19_Hospital/Hospital_Singles_32x32_129.png" type="Texture" id=74]
+[ext_resource path="res://World/_Resources/19_Hospital/Hospital_Singles_32x32_239.png" type="Texture" id=75]
+[ext_resource path="res://World/_Resources/19_Hospital/Hospital_Singles_32x32_211.png" type="Texture" id=76]
+[ext_resource path="res://World/_Resources/19_Hospital/Hospital_Singles_32x32_150.png" type="Texture" id=77]
+
+[sub_resource type="TileSet" id=26]
+0/name = "GreyWallsTall.png 0"
+0/texture = ExtResource( 7 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 64, 96 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "GreyWallsTall.png 1"
+1/texture = ExtResource( 7 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 64, 96 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "GreyWallsTall.png 2"
+2/texture = ExtResource( 7 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 64, 0, 32, 128 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "GreyWallsTall.png 3"
+3/texture = ExtResource( 7 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 96, 0, 32, 128 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "GreyWallsTall.png 4"
+4/texture = ExtResource( 7 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 224, 160, 32, 32 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "GreyWallsTall.png 5"
+5/texture = ExtResource( 7 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 192, 64, 32, 32 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "GreyWallsTall.png 6"
+6/texture = ExtResource( 7 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 288, 64, 32, 32 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+7/name = "GreyWallsTall.png 7"
+7/texture = ExtResource( 7 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 192, 160, 32, 32 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape_one_way = false
+7/shape_one_way_margin = 0.0
+7/shapes = [  ]
+7/z_index = 0
+8/name = "GreyWallsTall.png 8"
+8/texture = ExtResource( 7 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 288, 160, 32, 32 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape_one_way = false
+8/shape_one_way_margin = 0.0
+8/shapes = [  ]
+8/z_index = 0
+
+[sub_resource type="Animation" id=1]
+resource_name = "Blink"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 18, 1 ), Vector2( 19, 1 ), Vector2( 20, 1 ), Vector2( 21, 1 ), Vector2( 22, 1 ), Vector2( 23, 1 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath("..")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.6 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "blink_animation_finished"
+} ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "CheckPhone"
+length = 0.6
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 336, 337, 338, 339, 340, 341, 342, 343, 344, 345, 346, 347 ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath("..")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.6 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "phone_animation_finished"
+} ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "IdleDown"
+length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 3 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "IdleLeft"
+length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 2 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "IdleRight"
+length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "IdleUp"
+length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+
+[sub_resource type="Animation" id=7]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 336 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:frame_coords")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ Vector2( 0, 3 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "Sleep"
+length = 1.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 0, 3 ), Vector2( 1, 3 ), Vector2( 2, 3 ), Vector2( 3, 3 ), Vector2( 4, 3 ), Vector2( 5, 3 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "WalkDown"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 18, 2 ), Vector2( 19, 2 ), Vector2( 20, 2 ), Vector2( 21, 2 ), Vector2( 22, 2 ), Vector2( 23, 2 ) ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "WalkLeft"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 12, 2 ), Vector2( 13, 2 ), Vector2( 14, 2 ), Vector2( 15, 2 ), Vector2( 16, 2 ), Vector2( 17, 2 ) ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "WalkRight"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 0, 2 ), Vector2( 1, 2 ), Vector2( 2, 2 ), Vector2( 3, 2 ), Vector2( 4, 2 ), Vector2( 5, 2 ) ]
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "WalkUp"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 6, 2 ), Vector2( 7, 2 ), Vector2( 8, 2 ), Vector2( 9, 2 ), Vector2( 10, 2 ), Vector2( 11, 2 ) ]
+}
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=13]
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 64.5, 11.875 )
+
+[sub_resource type="RectangleShape2D" id=17]
+extents = Vector2( 137.5, 14.5 )
+
+[sub_resource type="RectangleShape2D" id=22]
+extents = Vector2( 22.75, 16.5 )
+
+[sub_resource type="RectangleShape2D" id=23]
+extents = Vector2( 23, 16.5 )
+
+[sub_resource type="CircleShape2D" id=24]
+radius = 18.1108
+
+[sub_resource type="CircleShape2D" id=27]
+radius = 20.0
+
+[sub_resource type="CircleShape2D" id=28]
+
+[sub_resource type="CircleShape2D" id=29]
+radius = 12.0416
+
+[sub_resource type="RectangleShape2D" id=30]
+extents = Vector2( 31, 12 )
+
+[sub_resource type="RectangleShape2D" id=31]
+extents = Vector2( 43, 9 )
+
+[sub_resource type="RectangleShape2D" id=32]
+extents = Vector2( 24, 14 )
+
+[sub_resource type="RectangleShape2D" id=33]
+extents = Vector2( 29, 9.5 )
+
+[sub_resource type="CircleShape2D" id=34]
+radius = 18.0278
+
+[sub_resource type="RectangleShape2D" id=35]
+extents = Vector2( 12, 8 )
+
+[sub_resource type="RectangleShape2D" id=36]
+extents = Vector2( 29, 7.5 )
+
+[node name="Hospital" type="Node2D"]
+script = ExtResource( 53 )
+
+[node name="Tiles" type="Sprite" parent="."]
+position = Vector2( 991, 468 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 160, -256, 2590.63, 1253.26 )
+
+[node name="Rug6" type="Sprite" parent="Tiles"]
+position = Vector2( 251.272, -288 )
+rotation = 1.56855
+scale = Vector2( 1.00023, 1.14464 )
+texture = ExtResource( 71 )
+
+[node name="Walls" type="TileMap" parent="."]
+tile_set = SubResource( 26 )
+cell_size = Vector2( 32, 32 )
+cell_quadrant_size = 32
+format = 1
+tile_data = PoolIntArray( -196608, 2, 0, -196607, 1, 0, -196605, 1, 0, -196603, 0, 0, -196602, 1, 0, -196601, 1, 0, -196599, 1, 0, -196597, 1, 0, -196595, 1, 0, -196593, 1, 0, -196591, 0, 0, -196590, 1, 0, -196589, 1, 0, -196587, 1, 0, -196585, 1, 0, -196583, 1, 0, -196581, 1, 0, -196579, 1, 0, -196577, 1, 0, -196575, 1, 0, -196573, 1, 0, -196571, 1, 0, -196569, 1, 0, -196567, 1, 0, -196565, 1, 0, -196563, 1, 0, -196561, 3, 0, 65536, 5, 0, 65583, 6, 0, 131072, 5, 0, 131119, 6, 0, 196608, 5, 0, 196655, 6, 0, 262144, 5, 0, 262191, 6, 0, 327680, 5, 0, 327727, 6, 0, 393216, 5, 0, 393263, 6, 0, 458752, 2, 0, 458753, 0, 0, 458755, 0, 0, 458760, 0, 0, 458762, 0, 0, 458763, 0, 0, 458765, 0, 0, 458770, 0, 0, 458772, 0, 0, 458774, 0, 0, 458775, 0, 0, 458779, 0, 0, 458781, 0, 0, 458783, 0, 0, 458785, 0, 0, 458799, 6, 0, 524335, 6, 0, 589871, 6, 0, 655407, 6, 0, 720896, 5, 0, 720943, 6, 0, 786432, 5, 0, 786479, 6, 0, 851968, 5, 0, 852015, 6, 0, 917504, 2, 0, 917505, 0, 0, 917506, 1, 0, 917508, 1, 0, 917510, 0, 0, 917512, 1, 0, 917514, 1, 0, 917518, 0, 0, 917519, 0, 0, 917551, 6, 0, 983087, 6, 0, 1048605, 0, 0, 1048607, 1, 0, 1048609, 0, 0, 1048611, 0, 0, 1048612, 1, 0, 1048613, 0, 0, 1048615, 0, 0, 1048617, 0, 0, 1048619, 0, 0, 1048621, 0, 0, 1048623, 6, 0, 1114159, 6, 0, 1179648, 5, 0, 1179695, 6, 0, 1245184, 5, 0, 1245231, 6, 0, 1310720, 5, 0, 1310767, 6, 0, 1376256, 5, 0, 1376303, 6, 0, 1441792, 5, 0, 1441839, 6, 0, 1507328, 5, 0, 1507375, 6, 0, 1572864, 5, 0, 1572911, 6, 0, 1638400, 5, 0, 1638447, 6, 0, 1703936, 7, 0, 1703937, 4, 0, 1703938, 4, 0, 1703939, 4, 0, 1703940, 4, 0, 1703941, 4, 0, 1703942, 4, 0, 1703943, 4, 0, 1703944, 4, 0, 1703945, 4, 0, 1703946, 4, 0, 1703947, 4, 0, 1703948, 4, 0, 1703949, 4, 0, 1703950, 4, 0, 1703951, 4, 0, 1703952, 4, 0, 1703953, 4, 0, 1703954, 4, 0, 1703955, 4, 0, 1703956, 4, 0, 1703957, 8, 0, 1703962, 7, 0, 1703963, 4, 0, 1703964, 4, 0, 1703965, 4, 0, 1703966, 4, 0, 1703967, 4, 0, 1703968, 4, 0, 1703969, 4, 0, 1703970, 4, 0, 1703971, 4, 0, 1703972, 4, 0, 1703973, 4, 0, 1703974, 4, 0, 1703975, 4, 0, 1703976, 4, 0, 1703977, 4, 0, 1703978, 4, 0, 1703979, 4, 0, 1703980, 4, 0, 1703981, 4, 0, 1703982, 4, 0, 1703983, 8, 0 )
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Player" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 792, 752 )
+
+[node name="AnimationPlayer" parent="YSort/Player" index="4"]
+anims/Blink = SubResource( 1 )
+anims/CheckPhone = SubResource( 2 )
+anims/IdleDown = SubResource( 3 )
+anims/IdleLeft = SubResource( 4 )
+anims/IdleRight = SubResource( 5 )
+anims/IdleUp = SubResource( 6 )
+anims/RESET = SubResource( 7 )
+anims/Sleep = SubResource( 8 )
+anims/WalkDown = SubResource( 9 )
+anims/WalkLeft = SubResource( 10 )
+anims/WalkRight = SubResource( 11 )
+anims/WalkUp = SubResource( 12 )
+
+[node name="AnimationTree" parent="YSort/Player" index="5"]
+parameters/playback = SubResource( 13 )
+
+[node name="Alvaro" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( 753, 636 )
+dialogue_name = "alvaro"
+
+[node name="AnimatedSprite" parent="YSort/Alvaro" index="1"]
+animation = "AlvaroIdle"
+
+[node name="Calista" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( 866, 191 )
+dialogue_name = "calista"
+
+[node name="MediumShadow" parent="YSort/Calista" index="0"]
+position = Vector2( -0.999981, 9 )
+scale = Vector2( 2, 1 )
+
+[node name="AnimatedSprite" parent="YSort/Calista" index="1"]
+position = Vector2( -3, -10 )
+animation = "CalistaIdle"
+
+[node name="Clara" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( 529, 387 )
+dialogue_name = "clara"
+
+[node name="MediumShadow" parent="YSort/Clara" index="0"]
+position = Vector2( -1.99997, 3.5 )
+scale = Vector2( 1.25, 0.7 )
+
+[node name="AnimatedSprite" parent="YSort/Clara" index="1"]
+position = Vector2( 0, -6 )
+animation = "ClaraIdle"
+
+[node name="Martin" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( 1456, 296 )
+dialogue_name = "martin"
+
+[node name="AnimatedSprite" parent="YSort/Martin" index="1"]
+animation = "MartinIdle"
+
+[node name="Silvia" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( 1222, 153 )
+dialogue_name = "silvia"
+
+[node name="AnimatedSprite" parent="YSort/Silvia" index="1"]
+animation = "SilviaIdleDown"
+
+[node name="Aitana" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( 482, 622 )
+dialogue_name = "aitana"
+
+[node name="MediumShadow" parent="YSort/Aitana" index="0"]
+position = Vector2( -0.50001, 4.00001 )
+scale = Vector2( 1.0625, 0.800001 )
+
+[node name="AnimatedSprite" parent="YSort/Aitana" index="1"]
+position = Vector2( 0, -5 )
+animation = "AitanaIdle"
+
+[node name="Oscar" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( 328, 778 )
+dialogue_name = "oscar"
+
+[node name="AnimatedSprite" parent="YSort/Oscar" index="1"]
+animation = "OscarIdleDown"
+
+[node name="BoxesLg" type="Sprite" parent="YSort"]
+position = Vector2( 144, 13 )
+texture = ExtResource( 16 )
+
+[node name="BoxesSm" type="Sprite" parent="YSort"]
+position = Vector2( 89, 155 )
+texture = ExtResource( 51 )
+
+[node name="Cabinet" type="Sprite" parent="YSort"]
+position = Vector2( 231, -17 )
+texture = ExtResource( 17 )
+
+[node name="Chair" type="Sprite" parent="YSort"]
+position = Vector2( 1082, 609 )
+texture = ExtResource( 43 )
+
+[node name="Chair6" type="Sprite" parent="YSort"]
+position = Vector2( 988, 609 )
+texture = ExtResource( 43 )
+
+[node name="Chair7" type="Sprite" parent="YSort"]
+position = Vector2( 951, 609 )
+texture = ExtResource( 43 )
+
+[node name="Chair4" type="Sprite" parent="YSort"]
+position = Vector2( 1124, 609 )
+texture = ExtResource( 43 )
+
+[node name="HospitalSingles32X328" type="Sprite" parent="YSort"]
+position = Vector2( 711, 642 )
+texture = ExtResource( 32 )
+
+[node name="HospitalSingles32X329" type="Sprite" parent="YSort/HospitalSingles32X328"]
+position = Vector2( 96, 0 )
+texture = ExtResource( 39 )
+
+[node name="HospitalSingles32X3212" type="Sprite" parent="YSort/HospitalSingles32X328"]
+position = Vector2( 32, 0 )
+texture = ExtResource( 56 )
+
+[node name="HospitalSingles32X3210" type="Sprite" parent="YSort/HospitalSingles32X328"]
+position = Vector2( 127, 0 )
+texture = ExtResource( 9 )
+
+[node name="HospitalSingles32X3213" type="Sprite" parent="YSort/HospitalSingles32X328"]
+position = Vector2( 159, 0 )
+texture = ExtResource( 50 )
+
+[node name="HospitalSingles32X3249" type="Sprite" parent="YSort"]
+position = Vector2( 471, -49 )
+texture = ExtResource( 41 )
+
+[node name="HospitalSingles32X3252" type="Sprite" parent="YSort"]
+position = Vector2( 1086, -41 )
+texture = ExtResource( 28 )
+
+[node name="HospitalSingles32X32200" type="Sprite" parent="YSort"]
+position = Vector2( 1424, 632 )
+texture = ExtResource( 48 )
+
+[node name="Chicharito" parent="YSort/HospitalSingles32X32200" instance=ExtResource( 6 )]
+position = Vector2( 0, -5 )
+dialogue_name = "chicharito"
+
+[node name="MediumShadow" parent="YSort/HospitalSingles32X32200/Chicharito" index="0"]
+position = Vector2( -2.86102e-06, 5.5 )
+scale = Vector2( 0.999999, 0.7 )
+
+[node name="AnimatedSprite" parent="YSort/HospitalSingles32X32200/Chicharito" index="1"]
+position = Vector2( 0, -3 )
+flip_h = true
+
+[node name="Cabinet2" type="Sprite" parent="YSort"]
+position = Vector2( 1270, 599 )
+texture = ExtResource( 17 )
+
+[node name="HospitalSingles32X32126" type="Sprite" parent="YSort"]
+position = Vector2( 1373, 541 )
+texture = ExtResource( 45 )
+
+[node name="HospitalSingles32X32127" type="Sprite" parent="YSort"]
+position = Vector2( 305, 472 )
+texture = ExtResource( 45 )
+
+[node name="HospitalSingles32X3269" type="Sprite" parent="YSort"]
+position = Vector2( 819, 678 )
+texture = ExtResource( 38 )
+
+[node name="HospitalSingles32X3270" type="Sprite" parent="YSort"]
+position = Vector2( 1196, 611 )
+texture = ExtResource( 46 )
+
+[node name="HospitalSingles32X3271" type="Sprite" parent="YSort"]
+position = Vector2( 51, 537 )
+texture = ExtResource( 18 )
+
+[node name="HospitalSingles32X3272" type="Sprite" parent="YSort"]
+position = Vector2( 497, 796 )
+texture = ExtResource( 18 )
+
+[node name="HospitalSingles32X3291" type="Sprite" parent="YSort"]
+position = Vector2( 1200, 680 )
+texture = ExtResource( 8 )
+
+[node name="HospitalSingles32X3298" type="Sprite" parent="YSort"]
+position = Vector2( 1200, 712 )
+texture = ExtResource( 8 )
+
+[node name="Chair5" type="Sprite" parent="YSort"]
+position = Vector2( 1329, 612 )
+texture = ExtResource( 43 )
+
+[node name="HospitalSingles32X3299" type="Sprite" parent="YSort"]
+position = Vector2( 1310, 679 )
+texture = ExtResource( 27 )
+
+[node name="HospitalSingles32X3273" type="Sprite" parent="YSort"]
+position = Vector2( 1253, 794 )
+texture = ExtResource( 46 )
+
+[node name="HospitalSingles32X32317" type="Sprite" parent="YSort"]
+position = Vector2( 1384, 746 )
+texture = ExtResource( 20 )
+
+[node name="HospitalSingles32X3292" type="Sprite" parent="YSort"]
+position = Vector2( 1489, 728 )
+texture = ExtResource( 8 )
+
+[node name="HospitalSingles32X3293" type="Sprite" parent="YSort"]
+position = Vector2( 562, 552 )
+texture = ExtResource( 27 )
+
+[node name="HospitalSingles32X3294" type="Sprite" parent="YSort/HospitalSingles32X3293"]
+position = Vector2( 0, 34 )
+texture = ExtResource( 27 )
+
+[node name="HospitalSingles32X3295" type="Sprite" parent="YSort/HospitalSingles32X3293"]
+position = Vector2( 0, 71 )
+texture = ExtResource( 27 )
+
+[node name="HospitalSingles32X3296" type="Sprite" parent="YSort/HospitalSingles32X3293"]
+position = Vector2( 0, 107 )
+texture = ExtResource( 27 )
+
+[node name="HospitalSingles32X3297" type="Sprite" parent="YSort/HospitalSingles32X3293"]
+position = Vector2( 0, 141 )
+texture = ExtResource( 27 )
+
+[node name="HospitalSingles32X32199" type="Sprite" parent="YSort"]
+position = Vector2( 570, 126 )
+texture = ExtResource( 48 )
+
+[node name="HospitalSingles32X32209" type="Sprite" parent="YSort"]
+position = Vector2( 350, 538 )
+texture = ExtResource( 52 )
+
+[node name="HospitalSingles32X32210" type="Sprite" parent="YSort"]
+position = Vector2( 63, 318 )
+texture = ExtResource( 47 )
+
+[node name="HospitalSingles32X32213" type="Sprite" parent="YSort"]
+position = Vector2( 541, -3 )
+texture = ExtResource( 26 )
+
+[node name="HospitalSingles32X32244" type="Sprite" parent="YSort"]
+position = Vector2( 915, -47 )
+texture = ExtResource( 30 )
+
+[node name="HospitalSingles32X32246Flip2" type="Sprite" parent="YSort"]
+position = Vector2( 195, 710 )
+texture = ExtResource( 29 )
+
+[node name="HospitalSingles32X32247" type="Sprite" parent="YSort"]
+position = Vector2( 290, 697 )
+texture = ExtResource( 33 )
+
+[node name="HospitalSingles32X32246Flip" type="Sprite" parent="YSort"]
+position = Vector2( 492, 680 )
+texture = ExtResource( 29 )
+
+[node name="HospitalSingles32X32254" type="Sprite" parent="YSort"]
+position = Vector2( 50, 808 )
+texture = ExtResource( 19 )
+
+[node name="HospitalSingles32X32255" type="Sprite" parent="YSort"]
+position = Vector2( 434, 131 )
+texture = ExtResource( 19 )
+
+[node name="HospitalSingles32X32257" type="Sprite" parent="YSort"]
+position = Vector2( 1385, 611 )
+scale = Vector2( 0.6875, 0.705128 )
+texture = ExtResource( 19 )
+
+[node name="HospitalSingles32X32256" type="Sprite" parent="YSort"]
+position = Vector2( 1077, 206 )
+texture = ExtResource( 19 )
+
+[node name="HospitalSingles32X32315" type="Sprite" parent="YSort"]
+position = Vector2( 966, 156 )
+texture = ExtResource( 20 )
+
+[node name="HospitalSingles32X32322" type="Sprite" parent="YSort"]
+position = Vector2( 392, 115 )
+texture = ExtResource( 61 )
+
+[node name="HospitalSingles32X32328" type="Sprite" parent="YSort"]
+position = Vector2( 774, 0 )
+texture = ExtResource( 40 )
+
+[node name="HospitalSingles32X32332" type="Sprite" parent="YSort"]
+position = Vector2( 766, 141 )
+texture = ExtResource( 34 )
+
+[node name="HospitalSingles32X32338" type="Sprite" parent="YSort"]
+position = Vector2( 98, 522 )
+texture = ExtResource( 10 )
+
+[node name="HospitalSingles32X32363" type="Sprite" parent="YSort"]
+position = Vector2( 299, 635 )
+texture = ExtResource( 54 )
+
+[node name="HospitalSingles32X32364" type="Sprite" parent="YSort"]
+position = Vector2( 298, 749 )
+texture = ExtResource( 54 )
+
+[node name="HospitalSingles32X32361" type="Sprite" parent="YSort"]
+position = Vector2( 305, 801 )
+rotation = -0.240111
+texture = ExtResource( 37 )
+
+[node name="HospitalSingles32X32368" type="Sprite" parent="YSort"]
+position = Vector2( 904, 791 )
+rotation = 0.132145
+texture = ExtResource( 24 )
+
+[node name="HospitalSingles32X32387" type="Sprite" parent="YSort"]
+position = Vector2( 1140, 16 )
+texture = ExtResource( 63 )
+
+[node name="HospitalSingles32X32412" type="Sprite" parent="YSort"]
+position = Vector2( 1272, 92 )
+texture = ExtResource( 35 )
+
+[node name="HospitalSingles32X32450" type="Sprite" parent="YSort"]
+position = Vector2( 986, 369 )
+texture = ExtResource( 64 )
+
+[node name="HospitalSingles32X32420" type="Sprite" parent="YSort"]
+position = Vector2( 986, 403 )
+texture = ExtResource( 11 )
+
+[node name="HospitalSingles32X32449" type="Sprite" parent="YSort"]
+position = Vector2( 956, 398 )
+texture = ExtResource( 36 )
+
+[node name="HospitalSingles32X32451" type="Sprite" parent="YSort"]
+position = Vector2( 986, 439 )
+texture = ExtResource( 58 )
+
+[node name="ArtSingles32X3220" type="Sprite" parent="YSort"]
+position = Vector2( 1255, 424 )
+texture = ExtResource( 72 )
+
+[node name="HospitalSingles32X32452" type="Sprite" parent="YSort"]
+position = Vector2( 1040, 403 )
+texture = ExtResource( 31 )
+
+[node name="HospitalSingles32X32533" type="Sprite" parent="YSort"]
+position = Vector2( 625, -3 )
+texture = ExtResource( 21 )
+
+[node name="HospitalSingles32X32544" type="Sprite" parent="YSort"]
+position = Vector2( 331, -4 )
+texture = ExtResource( 59 )
+
+[node name="HospitalSingles32X32206" type="Sprite" parent="YSort/HospitalSingles32X32544"]
+position = Vector2( 16, -1 )
+texture = ExtResource( 25 )
+
+[node name="HospitalSingles32X32545" type="Sprite" parent="YSort"]
+position = Vector2( 1036, 7 )
+texture = ExtResource( 42 )
+
+[node name="Shelf2" type="Sprite" parent="YSort"]
+position = Vector2( 192, 520 )
+texture = ExtResource( 57 )
+
+[node name="Shelf3" type="Sprite" parent="YSort"]
+position = Vector2( 89, -23 )
+texture = ExtResource( 60 )
+
+[node name="HospitalSingles32X32129" type="Sprite" parent="YSort"]
+position = Vector2( 1035, 613 )
+texture = ExtResource( 74 )
+
+[node name="Shelf4" type="Sprite" parent="YSort"]
+position = Vector2( 108, 109 )
+texture = ExtResource( 62 )
+
+[node name="Shelf5" type="Sprite" parent="YSort"]
+position = Vector2( 493, 532 )
+texture = ExtResource( 12 )
+
+[node name="Shelf6" type="Sprite" parent="YSort"]
+position = Vector2( 952, 5 )
+texture = ExtResource( 13 )
+
+[node name="HospitalSingles32X32547" type="Sprite" parent="YSort"]
+position = Vector2( 438, 43 )
+texture = ExtResource( 14 )
+
+[node name="HospitalSingles32X32353" type="Sprite" parent="YSort"]
+position = Vector2( 197, 644 )
+texture = ExtResource( 44 )
+
+[node name="HospitalSingles32X32366" type="Sprite" parent="YSort"]
+position = Vector2( 197, 774 )
+texture = ExtResource( 44 )
+
+[node name="HospitalSingles32X32354" type="Sprite" parent="YSort"]
+position = Vector2( 490, 619 )
+texture = ExtResource( 44 )
+
+[node name="HospitalSingles32X32355" type="Sprite" parent="YSort"]
+position = Vector2( 488, 742 )
+texture = ExtResource( 44 )
+
+[node name="HospitalSingles32X32356" type="Sprite" parent="YSort"]
+position = Vector2( 1464, 66 )
+texture = ExtResource( 44 )
+
+[node name="HospitalSingles32X32358" type="Sprite" parent="YSort"]
+position = Vector2( 1464, 172 )
+texture = ExtResource( 44 )
+
+[node name="HospitalSingles32X32359" type="Sprite" parent="YSort"]
+position = Vector2( 1464, 269 )
+texture = ExtResource( 44 )
+
+[node name="HospitalSingles32X32360" type="Sprite" parent="YSort"]
+position = Vector2( 1464, 368 )
+texture = ExtResource( 44 )
+
+[node name="HospitalSingles32X32464" type="Sprite" parent="YSort"]
+position = Vector2( 1200, 122 )
+scale = Vector2( 1.10938, 1.05208 )
+texture = ExtResource( 15 )
+
+[node name="HospitalSingles32X32466" type="Sprite" parent="YSort"]
+position = Vector2( 1269, -66 )
+texture = ExtResource( 22 )
+
+[node name="Doll" type="Sprite" parent="YSort"]
+position = Vector2( 1306, 129 )
+scale = Vector2( 0.65625, 0.75 )
+texture = ExtResource( 67 )
+
+[node name="Train" type="Sprite" parent="YSort"]
+position = Vector2( 1224, 195 )
+texture = ExtResource( 69 )
+
+[node name="Books2" type="Sprite" parent="YSort"]
+position = Vector2( 1227, 110 )
+texture = ExtResource( 70 )
+
+[node name="Window07" type="Sprite" parent="YSort"]
+position = Vector2( 1441, -51 )
+texture = ExtResource( 66 )
+
+[node name="Window08" type="Sprite" parent="YSort"]
+position = Vector2( 1184, -50 )
+texture = ExtResource( 66 )
+
+[node name="HospitalSingles32X32474" type="Sprite" parent="YSort"]
+position = Vector2( 1308, 405 )
+texture = ExtResource( 55 )
+
+[node name="HospitalSingles32X32476" type="Sprite" parent="YSort"]
+position = Vector2( 1239, 361 )
+texture = ExtResource( 65 )
+
+[node name="HospitalSingles32X32390Full" type="Sprite" parent="YSort"]
+position = Vector2( 1337, -6 )
+texture = ExtResource( 68 )
+
+[node name="HospitalSingles32X32206" type="Sprite" parent="YSort"]
+position = Vector2( 1340, -6 )
+texture = ExtResource( 25 )
+
+[node name="BoxesLg2" type="Sprite" parent="YSort"]
+position = Vector2( 180, 14 )
+texture = ExtResource( 16 )
+
+[node name="Chair2" type="Sprite" parent="YSort"]
+position = Vector2( 1061, 321 )
+texture = ExtResource( 43 )
+
+[node name="Chair3" type="Sprite" parent="YSort"]
+position = Vector2( 1238, -1 )
+texture = ExtResource( 43 )
+
+[node name="Shelf7" type="Sprite" parent="YSort"]
+position = Vector2( 206, 109 )
+texture = ExtResource( 60 )
+
+[node name="HospitalSingles32X32365" type="Sprite" parent="YSort"]
+position = Vector2( 1145, 209 )
+texture = ExtResource( 37 )
+
+[node name="HospitalSingles32X3266" type="Sprite" parent="YSort"]
+position = Vector2( 55, 67 )
+texture = ExtResource( 73 )
+
+[node name="HospitalSingles32X32150" type="Sprite" parent="YSort"]
+position = Vector2( 1485, 612 )
+texture = ExtResource( 77 )
+
+[node name="HospitalSingles32X32211" type="Sprite" parent="YSort/HospitalSingles32X32150"]
+position = Vector2( -1363, -291 )
+texture = ExtResource( 76 )
+
+[node name="HospitalSingles32X32239" type="Sprite" parent="YSort"]
+position = Vector2( 861, 13 )
+texture = ExtResource( 75 )
+
+[node name="HospitalSingles32X32240" type="Sprite" parent="YSort/HospitalSingles32X32239"]
+position = Vector2( 0, 33 )
+texture = ExtResource( 49 )
+
+[node name="Exit" parent="." instance=ExtResource( 2 )]
+position = Vector2( -240, -114 )
+
+[node name="CollisionShape2D" parent="Exit" index="0"]
+position = Vector2( 1007.5, 960.875 )
+shape = SubResource( 14 )
+
+[node name="FloorShadow" type="Sprite" parent="Exit"]
+position = Vector2( 1006, 962 )
+scale = Vector2( 4.125, 1.23077 )
+texture = ExtResource( 4 )
+
+[node name="Barriers" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 795.5, 875.5 )
+shape = SubResource( 17 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Barriers"]
+polygon = PoolVector2Array( 871, 621, 872, 663, 871, 675, 833, 677, 830, 693, 808, 693, 804, 678, 679, 675, 678, 667, 678, 624, 708, 622, 709, 652, 839, 652, 840, 621 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 999.75, 626.5 )
+shape = SubResource( 22 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 1111, 625.5 )
+shape = SubResource( 23 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 902, 801 )
+shape = SubResource( 24 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Barriers"]
+polygon = PoolVector2Array( 34, 568, 33, 800, 65, 801, 64, 817, 56, 831, 236, 831, 237, 790, 163, 785, 165, 766, 236, 766, 236, 727, 165, 725, 165, 706, 233, 704, 235, 662, 164, 656, 164, 633, 236, 636, 236, 607, 253, 607, 254, 621, 333, 626, 333, 647, 253, 645, 253, 690, 319, 690, 320, 709, 270, 707, 254, 719, 255, 735, 269, 741, 333, 740, 333, 759, 255, 759, 255, 830, 531, 832, 532, 761, 454, 755, 454, 735, 514, 735, 529, 724, 530, 707, 513, 697, 462, 695, 462, 674, 528, 672, 526, 634, 457, 635, 457, 610, 530, 609, 531, 531, 509, 533, 508, 547, 476, 547, 476, 532, 446, 532, 447, 448, 548, 448, 548, 548, 576, 549, 577, 708, 552, 706, 551, 826, 701, 830, 703, 859, 82, 854, -1, 854, -1, -102, 1554, -95, 1574, 866, 835, 855, 833, 831, 1216, 830, 1216, 799, 1234, 799, 1235.69, 830.397, 1501, 830, 1502, 742, 1476, 741, 1477, 730, 1502, 729, 1502, 597, 1486, 597, 1484, 635, 1452, 635, 1445, 657, 1402, 653, 1397, 617, 1377, 615, 1373, 597, 1344, 600, 1344, 627, 1315, 626, 1307, 611, 1300, 625, 1237, 625, 1233, 737, 1217, 735, 1216, 725, 1187, 724, 1187, 717, 1216, 712, 1216, 697, 1187, 692, 1187, 684, 1216, 681, 1214, 627, 1185, 631, 1179, 601, 1144, 602, 1136, 622, 1111, 623, 1103, 618, 1093, 625, 1073.62, 622.153, 1065, 618, 1055, 634, 1015, 630, 1009, 614, 999, 622, 978.236, 622.625, 969, 619, 963, 623, 938, 621, 935, 600, 927, 600, 927, 511, 1499.76, 509.446, 1500.07, 377.896, 1430, 377, 1430, 358, 1500.11, 359.884, 1500.31, 278.884, 1431, 277, 1430, 262, 1500, 260, 1500.54, 182.647, 1429, 179, 1430, 164, 1500.59, 160.401, 1500, 76, 1430, 78, 1430, 60, 1500.84, 56.0437, 1501, -12, 1399, -10, 1398, 14, 1277, 12, 1273.54, -13.8492, 1255, -14, 1253, 13, 1223, 10, 1220.57, -13.6257, 1156, -14, 1156, 26, 1123, 25, 1122, 314, 1077.04, 312.518, 1074, 336, 1048, 333, 1045.75, 311.486, 940, 308, 941, 397, 963, 397, 976, 376, 998, 375, 1009, 389, 1017, 401, 1052, 399, 1052, 412, 1008, 410, 997, 425, 998, 444, 975, 444, 976, 422, 964, 409, 940.735, 412.362, 941, 450, 922, 449, 921, 309, 863, 312, 864, 223, 1060, 224, 1063, 206, 1090, 204, 1088, 223, 1106, 223, 1104.91, -9.23013, 1072, -9, 1066, 33, 1003, 33, 999, -10, 967, -10, 966, 20, 935, 19, 933.806, -12, 892, -12, 892.058, 40.7814, 878, 42, 874, 75, 849, 75, 844, 37, 829, 38, 829.449, -12, 807, -12, 807, 4, 795, 19, 792, 30, 757, 27, 740.456, -11.0481, 702, -11, 702, 223, 800, 223, 801, 309, 574, 312, 576, 224, 686, 223, 686.068, -10.0387, 670, -10, 666, 18, 593, 19, 592, -10, 555, -11, 551.993, 9.54607, 532, 10, 530.329, -11.147, 363, -11, 361.863, 21.087, 296, 23, 294, -11, 282, -12, 281, 224, 482, 224, 481, 311, 256, 310, 256, 224, 265, 222, 263.979, 9.93637, 204, 11, 194, 18, 182.525, 31.4879, 167, 32, 156, 22, 147, 29, 129, 29, 126, 19, 125, 5, 119.817, 0.451717, 59, 1, 59, -14, 34, -16, 33.5385, 39.1531, 55, 40, 54, 98, 36, 99, 32, 223, 161, 225, 163, 312, 34, 311, 32, 447, 387, 447, 385, 544, 379, 555, 323, 553, 321, 530, 224, 528, 223, 548, 162, 547, 162, 528, 128, 527, 127, 538, 70, 538, 61, 559, 43, 560 )
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Barriers"]
+position = Vector2( 0, -227 )
+polygon = PoolVector2Array( 79, 331, 138, 329, 139, 359, 96, 359, 95, 372, 103, 375, 104, 387, 71, 390, 72, 380, 77, 378 )
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Barriers"]
+position = Vector2( 44, -252 )
+polygon = PoolVector2Array( 320, 356, 376, 357, 375, 370, 406, 377, 403, 390, 377, 388, 375, 375, 320, 375 )
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="Barriers"]
+position = Vector2( 210, -242 )
+polygon = PoolVector2Array( 336, 352, 384, 353, 384, 389, 378, 397, 342, 398, 336, 388 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 306, 807 )
+shape = SubResource( 27 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 496, 801 )
+shape = SubResource( 28 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 1254, 814 )
+shape = SubResource( 29 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 207, 119 )
+shape = SubResource( 30 )
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 439, 56 )
+shape = SubResource( 31 )
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 767, 144 )
+shape = SubResource( 32 )
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 963, 170.5 )
+shape = SubResource( 33 )
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 1144, 213 )
+shape = SubResource( 34 )
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 1310, 686 )
+shape = SubResource( 35 )
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 1381, 759.5 )
+shape = SubResource( 36 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Barriers"]
+polygon = PoolVector2Array( 1215, 365, 1264, 366, 1264, 380, 1285, 405, 1333, 408, 1335, 424, 1282, 426, 1267, 436, 1226, 423, 1228, 408, 1262, 401, 1258, 381, 1212, 380 )
+
+[node name="SceneTransition" parent="." instance=ExtResource( 1 )]
+visible = false
+
+[node name="MoreWalls" type="TileMap" parent="."]
+tile_set = ExtResource( 23 )
+cell_size = Vector2( 14, 16 )
+format = 1
+tile_data = PoolIntArray( -393197, 1, 0, -393167, 1, 0, -393137, 1, 0, -327661, 2, 0, -327631, 2, 0, -327601, 2, 0, -262125, 2, 0, -262095, 2, 0, -262065, 2, 0, -196589, 2, 0, -196559, 2, 0, -196529, 2, 0, -131053, 2, 0, -131023, 2, 0, -130993, 2, 0, -65517, 2, 0, -65487, 2, 0, -65457, 2, 0, 19, 2, 0, 49, 2, 0, 79, 2, 0, 65555, 2, 0, 65585, 2, 0, 65615, 2, 0, 131091, 2, 0, 131121, 2, 0, 131151, 2, 0, 196627, 2, 0, 196657, 2, 0, 196687, 2, 0, 262163, 2, 0, 262193, 2, 0, 262223, 2, 0, 327699, 2, 0, 327729, 2, 0, 327759, 2, 0, 393235, 2, 0, 393265, 2, 0, 393295, 2, 0, 458771, 2, 0, 458801, 2, 0, 458831, 2, 0, 524307, 2, 0, 524337, 2, 0, 524367, 2, 0, 589843, 2, 0, 589873, 2, 0, 589903, 2, 0, 655379, 2, 0, 655409, 2, 0, 655439, 2, 0, 720915, 2, 0, 720945, 2, 0, 720975, 2, 0, 786451, 2, 0, 786481, 2, 0, 786511, 2, 0, 851987, 2, 0, 852017, 2, 0, 852047, 2, 0, 917570, 1, 0, 983106, 2, 0, 1048642, 2, 0, 1114178, 2, 0, 1179714, 2, 0, 1245250, 2, 0, 1310786, 2, 0, 1376322, 2, 0, 1441858, 2, 0, 1507394, 2, 0, 1572930, 2, 0, 1638466, 2, 0, 1704002, 2, 0, 1769538, 2, 0, 1835046, 1, 0, 1900582, 2, 0, 1966118, 2, 0, 2031654, 2, 0, 2097190, 2, 0, 2097239, 1, 0, 2162726, 2, 0, 2162775, 2, 0, 2228262, 2, 0, 2228311, 2, 0, 2293798, 2, 0, 2293847, 2, 0, 2359334, 2, 0, 2359383, 2, 0, 2424870, 2, 0, 2424919, 2, 0, 2490385, 1, 0, 2490406, 2, 0, 2490455, 2, 0, 2555921, 2, 0, 2555942, 2, 0, 2555991, 2, 0, 2621457, 2, 0, 2621478, 2, 0, 2621527, 2, 0, 2686993, 2, 0, 2687014, 2, 0, 2687063, 2, 0, 2752529, 2, 0, 2752550, 2, 0, 2752599, 2, 0, 2818065, 2, 0, 2818086, 2, 0, 2818135, 2, 0, 2883601, 2, 0, 2883622, 2, 0, 2883671, 2, 0, 2949137, 2, 0, 2949158, 2, 0, 2949207, 2, 0, 3014673, 2, 0, 3014694, 2, 0, 3080209, 2, 0, 3080230, 2, 0, 3145745, 2, 0, 3145766, 2, 0, 3211281, 2, 0, 3211302, 2, 0, 3276817, 2, 0, 3276838, 2, 0, 3276887, 2, 0, 3342353, 2, 0, 3342374, 2, 0, 3342423, 2, 0 )
+
+[editable path="YSort/Player"]
+[editable path="YSort/Player/Carlos"]
+[editable path="YSort/Player/Camera2D/HUD/FriendsMenu"]
+[editable path="YSort/Player/Camera2D/HUD/FriendsMenu/FileOverlay1/Node2D"]
+[editable path="YSort/Player/Camera2D/HUD/Dictionary"]
+[editable path="YSort/Player/Camera2D/HUD/Dictionary/FileOverlay2/Buttons"]
+[editable path="YSort/Player/Camera2D/HUD/Inventory"]
+[editable path="YSort/Player/Camera2D/HUD/Inventory/FileOverlay3/ColorRect/CenterContainer/InventoryDisplay"]
+[editable path="YSort/Player/Camera2D/HUD/Inventory/FileOverlay3/ColorRect/CenterContainer/InventoryDisplay/InventorySlotDisplay"]
+[editable path="YSort/Player/Camera2D/HUD/Inventory/FileOverlay3/ColorRect/CenterContainer/InventoryDisplay/InventorySlotDisplay2"]
+[editable path="YSort/Player/Camera2D/HUD/Inventory/FileOverlay3/ColorRect/CenterContainer/InventoryDisplay/InventorySlotDisplay6"]
+[editable path="YSort/Player/Camera2D/HUD/Inventory/FileOverlay3/Buttons"]
+[editable path="YSort/Player/Camera2D/HUD/QuestMenu"]
+[editable path="YSort/Player/Camera2D/HUD/QuestMenu/FileOverlay4/Buttons"]
+[editable path="YSort/Player/Camera2D/HUD/GameMenu"]
+[editable path="YSort/Player/Camera2D/HUD/GameMenu/FileOverlay5/Buttons"]
+[editable path="YSort/Alvaro"]
+[editable path="YSort/Calista"]
+[editable path="YSort/Clara"]
+[editable path="YSort/Martin"]
+[editable path="YSort/Silvia"]
+[editable path="YSort/Aitana"]
+[editable path="YSort/Oscar"]
+[editable path="YSort/HospitalSingles32X32200/Chicharito"]
+[editable path="Exit"]

@@ -1,0 +1,51 @@
+{
+	"apt_friends": {
+		"sprite_path": "res://NPCs/Portraits/Carlos.png",
+		"reminder_text": "Carlos quiere conocer a más amigos. Habla con cinco (5) personas más en los apartamentos."
+	}, "park_friends": {
+		"sprite_path": "res://NPCs/Portraits/Carlos.png",
+		"reminder_text": "Carlos quiere conocer a más amigos. Habla con siete (7) personas más en el parque."
+	}, "french_connection": {
+		"sprite_path": "res://NPCs/Portraits/Carlos.png",
+		"reminder_text": "Carlos quiere conocer a un amigo de Francia. Busca un amigo de Francia."
+	}, "tomatoes_for_antonio": {
+		"sprite_path": "res://NPCs/Portraits/Chef Antonio.png",
+		"reminder_text": "Ve al mercado y compra diez (10) tomates. Trae los tomates a Chef Antonio en el restaurante."
+	}, "swim": {
+		"sprite_path": "res://NPCs/Portraits/Carlos.png",
+		"reminder_text": "Carlos quiere nadar en el océano. Habla con Rafa para nadar."
+	}, "seashells_for_marisol": {
+		"sprite_path": "res://NPCs/Portraits/Marisol.png",
+		"reminder_text": "Marisol quiere hacer un proyecto de arte con las conchas. Busca diez (10) conchas y regresa a Marisol en la tienda de helado."
+	}, "sunblock_for_mosquito": {
+		"sprite_path": "res://NPCs/Portraits/Livia.png", 
+		"reminder_text": "Mosquito necesita el bloqueador solar. Ve al mercado y compra el bloqueador. Trae el bloqueador a Livia y Mosquito en la playa."
+	}, "lunch_for_enzo": {
+		"sprite_path": "res://NPCs/Portraits/Enzo.png", 
+		"reminder_text": "Enzo esta muy triste porque no tiene su almuerzo. Busca una bolsa roja en el museo y trae la bolsa a Enzo."
+	}, "oldest_painting": {
+		"sprite_path": "res://NPCs/Portraits/Bonita.png", 
+		"reminder_text": "Busca el cuadro más viejo en el museo. Lee la información y busca el año de producción. Cuando sabes cuál es el cuadro más viejo, regresa a Bonita para recibir un premio."
+	}, "flowers_for_juan": {
+		"sprite_path": "res://NPCs/Portraits/Juan.png", 
+		"reminder_text": "Juan quiere flores para Mercedes. Hay flores bonitas en el parque y en el mercado. Busca diez (10) flores o más y trae las flores a Juan en su apartamento."
+	}, "book_for_gilda": {
+		"sprite_path": "res://NPCs/Portraits/Gilda.png", 
+		"reminder_text": "Busca el libro perdido. Es azul. Cuando tienes el libro perdido, trae el libro a Gilda en la biblioteca."
+	}, "india_for_lucas": {
+		"sprite_path": "res://NPCs/Portraits/Lucas.png", 
+		"reminder_text": "¡India se escapó! Busca la gata de Lucas."
+	}, "jersey_for_chicharito": {
+		"sprite_path": "res://NPCs/Portraits/Chicharito.png", 
+		"reminder_text": "Chicharito necesita la ayuda. Busca un jersey amarillo con el número catorce (14)."
+	}, "clara_pain": {
+		"sprite_path": "res://NPCs/Portraits/Clara.png", 
+		"reminder_text": "Clara tiene muchos pacientes y necesita la ayuda. Habla con cinco (5) pacientes y pregunta qué les duele."
+	}, "activity_for_martin" : {
+		"sprite_path": "res://NPCs/Portraits/Martín.png", 
+		"reminder_text": "Martín está aburrido. Busca una actividad para él."
+	}, "ham_for_chicharito": {
+		"sprite_path": "res://NPCs/Portraits/Chicharito.png", 
+		"reminder_text": "A Chicharito no le gusta la comida en el hospital. Ve al mercado y compra un jamón para Chicharito."
+	}
+}

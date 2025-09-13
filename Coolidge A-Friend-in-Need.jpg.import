@@ -1,0 +1,35 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Coolidge A-Friend-in-Need.jpg-a304d8389b3f1ca2136cd05a487ea698.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://World/Museum/Art/Coolidge A-Friend-in-Need.jpg"
+dest_files=[ "res://.import/Coolidge A-Friend-in-Need.jpg-a304d8389b3f1ca2136cd05a487ea698.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+process/normal_map_invert_y=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

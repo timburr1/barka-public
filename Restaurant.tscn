@@ -1,0 +1,1116 @@
+[gd_scene load_steps=79 format=2]
+
+[ext_resource path="res://SceneTransition.tscn" type="PackedScene" id=1]
+[ext_resource path="res://World/PlayerDetectionZone.tscn" type="PackedScene" id=2]
+[ext_resource path="res://World/_Resources/Room_Builder/ArgyleWalls.tres" type="TileSet" id=4]
+[ext_resource path="res://World/_Resources/Room_Builder/RestaurantFloor.png" type="Texture" id=5]
+[ext_resource path="res://World/_Resources/Room_Builder/RestaurantTile.png" type="Texture" id=6]
+[ext_resource path="res://World/Apartment/301/Floor.png" type="Texture" id=7]
+[ext_resource path="res://NPCs/NPC.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=9]
+[ext_resource path="res://World/_Resources/Room_Builder/RedRug.tres" type="TileSet" id=10]
+[ext_resource path="res://World/_Resources/Room_Builder/BrickWalls.tres" type="TileSet" id=11]
+[ext_resource path="res://World/_Resources/01_Generic/Table5.png" type="Texture" id=12]
+[ext_resource path="res://World/_Resources/02_Living_Room/Plant3.png" type="Texture" id=13]
+[ext_resource path="res://World/_Resources/02_Living_Room/CouchRight.png" type="Texture" id=14]
+[ext_resource path="res://World/_Resources/02_Living_Room/Couch.png" type="Texture" id=15]
+[ext_resource path="res://World/_Resources/01_Generic/Chair2Left.png" type="Texture" id=16]
+[ext_resource path="res://World/_Resources/01_Generic/Table3.png" type="Texture" id=17]
+[ext_resource path="res://World/_Resources/12_Kitchen/PlateEmpty.png" type="Texture" id=18]
+[ext_resource path="res://World/_Resources/12_Kitchen/TableClothLeft.png" type="Texture" id=20]
+[ext_resource path="res://World/_Resources/12_Kitchen/Glass.png" type="Texture" id=21]
+[ext_resource path="res://World/_Resources/01_Generic/Table4.png" type="Texture" id=23]
+[ext_resource path="res://World/_Resources/06_Music_and_Sport/Piano2.png" type="Texture" id=24]
+[ext_resource path="res://World/_Resources/01_Generic/Chair2Right.png" type="Texture" id=25]
+[ext_resource path="res://World/_Resources/12_Kitchen/TableClothRight.png" type="Texture" id=26]
+[ext_resource path="res://World/_Resources/12_Kitchen/TableClothSmall.png" type="Texture" id=27]
+[ext_resource path="res://World/_Resources/06_Music_and_Sport/MicStand.png" type="Texture" id=28]
+[ext_resource path="res://World/_Resources/02_Living_Room/Plant2.png" type="Texture" id=29]
+[ext_resource path="res://World/_Resources/12_Kitchen/TableClothMid.png" type="Texture" id=30]
+[ext_resource path="res://World/_Resources/02_Living_Room/CouchRightMid.png" type="Texture" id=31]
+[ext_resource path="res://World/_Resources/06_Music_and_Sport/PianoBench.png" type="Texture" id=32]
+[ext_resource path="res://World/_Resources/12_Kitchen/CounterPiece1.png" type="Texture" id=33]
+[ext_resource path="res://World/_Resources/12_Kitchen/Knife.png" type="Texture" id=34]
+[ext_resource path="res://World/_Resources/12_Kitchen/CounterTop5.png" type="Texture" id=35]
+[ext_resource path="res://World/_Resources/12_Kitchen/Microwave.png" type="Texture" id=36]
+[ext_resource path="res://World/_Resources/12_Kitchen/Fryer1.png" type="Texture" id=37]
+[ext_resource path="res://World/_Resources/12_Kitchen/Sink2.png" type="Texture" id=38]
+[ext_resource path="res://World/_Resources/12_Kitchen/CounterTop6.png" type="Texture" id=39]
+[ext_resource path="res://World/_Resources/12_Kitchen/StoveOn.png" type="Texture" id=40]
+[ext_resource path="res://World/_Resources/12_Kitchen/CounterPiece5.png" type="Texture" id=41]
+[ext_resource path="res://World/_Resources/12_Kitchen/CounterTop1.png" type="Texture" id=42]
+[ext_resource path="res://World/_Resources/12_Kitchen/Utensils.png" type="Texture" id=43]
+[ext_resource path="res://World/_Resources/12_Kitchen/Pot.png" type="Texture" id=44]
+[ext_resource path="res://World/_Resources/12_Kitchen/Kettle.png" type="Texture" id=45]
+[ext_resource path="res://World/_Resources/12_Kitchen/CounterPiece2.png" type="Texture" id=46]
+[ext_resource path="res://World/_Resources/12_Kitchen/Fryer2.png" type="Texture" id=47]
+[ext_resource path="res://World/_Resources/12_Kitchen/CounterTop8.png" type="Texture" id=48]
+[ext_resource path="res://World/_Resources/12_Kitchen/StovePan.png" type="Texture" id=49]
+[ext_resource path="res://World/_Resources/12_Kitchen/CounterPiece6.png" type="Texture" id=50]
+[ext_resource path="res://World/_Resources/12_Kitchen/FumeHood.png" type="Texture" id=51]
+[ext_resource path="res://World/_Resources/12_Kitchen/CounterTop4.png" type="Texture" id=52]
+[ext_resource path="res://World/_Resources/12_Kitchen/Counter4.png" type="Texture" id=53]
+[ext_resource path="res://World/_Resources/12_Kitchen/CounterPiece4.png" type="Texture" id=54]
+[ext_resource path="res://World/_Resources/12_Kitchen/FridgeRight.png" type="Texture" id=55]
+[ext_resource path="res://World/_Resources/12_Kitchen/FridgeRightOpen.png" type="Texture" id=56]
+[ext_resource path="res://World/_Resources/12_Kitchen/StoveOpen.png" type="Texture" id=57]
+[ext_resource path="res://World/_Resources/12_Kitchen/CounterPiece7.png" type="Texture" id=58]
+[ext_resource path="res://World/_Resources/12_Kitchen/Counter3.png" type="Texture" id=59]
+[ext_resource path="res://World/_Resources/Room_Builder/VerticalWalls.tres" type="TileSet" id=60]
+[ext_resource path="res://World/_Resources/Room_Builder/FloorShadow.png" type="Texture" id=61]
+[ext_resource path="res://World/Restaurant/Restaurant.gd" type="Script" id=62]
+[ext_resource path="res://World/ClickableObject.tscn" type="PackedScene" id=63]
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 2
+atlas = ExtResource( 7 )
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=1]
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 41, 11.875 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 17, 395.5 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 639.25, 16.75 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 19.5, 397.25 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 31, 98.5 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 32.5, 98.5 )
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 23, 17 )
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 22.75, 16.5 )
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 23, 16.5 )
+
+[sub_resource type="CircleShape2D" id=15]
+
+[sub_resource type="RectangleShape2D" id=16]
+extents = Vector2( 56, 12 )
+
+[sub_resource type="RectangleShape2D" id=17]
+extents = Vector2( 26, 14.5 )
+
+[sub_resource type="CircleShape2D" id=18]
+radius = 17.1172
+
+[sub_resource type="RectangleShape2D" id=19]
+extents = Vector2( 29.5, 34.5 )
+
+[sub_resource type="RectangleShape2D" id=20]
+extents = Vector2( 35, 40 )
+
+[sub_resource type="CapsuleShape2D" id=21]
+radius = 12.0
+height = 13.9875
+
+[node name="Restaurant" type="Node2D"]
+script = ExtResource( 62 )
+
+[node name="Floor" type="Sprite" parent="."]
+position = Vector2( 638, 589 )
+texture = ExtResource( 5 )
+normal_map = SubResource( 2 )
+region_enabled = true
+region_rect = Rect2( -600, -107.238, 1273.27, 777.238 )
+
+[node name="Tiles" type="Sprite" parent="."]
+position = Vector2( 991, 468 )
+texture = ExtResource( 6 )
+region_enabled = true
+region_rect = Rect2( 160, -256, 515.01, 438.039 )
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( 752, 480 )
+tile_set = ExtResource( 10 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 589802, 0, 0, 589803, 2, 0, 589804, 2, 0, 589805, 2, 0, 589806, 2, 0, 589807, 1, 0, 655338, 3, 0, 655339, 5, 0, 655340, 5, 0, 655341, 5, 0, 655342, 5, 0, 655343, 4, 0, 720874, 3, 0, 720875, 5, 0, 720876, 5, 0, 720877, 5, 0, 720878, 5, 0, 720879, 4, 0, 786410, 3, 0, 786411, 5, 0, 786412, 5, 0, 786413, 5, 0, 786414, 5, 0, 786415, 4, 0, 851946, 3, 0, 851947, 5, 0, 851948, 5, 0, 851949, 5, 0, 851950, 5, 0, 851951, 4, 0, 917482, 7, 0, 917483, 8, 0, 917484, 8, 0, 917485, 8, 0, 917486, 8, 0, 917487, 6, 0 )
+
+[node name="KitchenWalls" type="TileMap" parent="."]
+tile_set = ExtResource( 4 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 393239, 1, 0, 393240, 1, 0, 393241, 1, 0, 393242, 1, 0, 393243, 1, 0, 393244, 1, 0, 393245, 1, 0, 393246, 1, 0, 393247, 1, 0, 393248, 1, 0, 393249, 1, 0, 393250, 1, 0, 393251, 1, 0, 393252, 1, 0, 393253, 1, 0, 393254, 1, 0, 393255, 3, 0, 524327, 4, 0, 589863, 4, 0, 655399, 4, 0, 720935, 4, 0, 786471, 4, 0, 852007, 4, 0, 917543, 4, 0, 983079, 4, 0, 1048615, 4, 0, 1114151, 4, 0, 1179687, 4, 0, 1245223, 4, 0, 1310759, 4, 0 )
+
+[node name="TileMap" type="TileMap" parent="KitchenWalls"]
+tile_set = ExtResource( 11 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 393216, 0, 0, 393217, 1, 0, 393218, 1, 0, 393219, 1, 0, 393220, 1, 0, 393221, 1, 0, 393222, 1, 0, 393225, 1, 0, 393226, 1, 0, 393227, 1, 0, 393228, 1, 0, 393229, 1, 0, 393230, 1, 0, 393231, 1, 0, 393232, 1, 0, 393233, 1, 0, 393234, 1, 0, 393235, 1, 0, 393236, 1, 0, 393237, 1, 0, 393238, 1, 0 )
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="VerticalWalls" type="TileMap" parent="YSort"]
+tile_set = ExtResource( 60 )
+cell_size = Vector2( 14, 16 )
+format = 1
+tile_data = PoolIntArray( 786484, 1, 0, 852020, 2, 0, 917556, 2, 0, 983092, 2, 0, 1048628, 2, 0, 1114164, 2, 0, 1179700, 2, 0, 1245236, 2, 0, 1310772, 2, 0, 1376308, 2, 0, 1441844, 2, 0, 1507380, 2, 0, 1572916, 2, 0, 1638452, 2, 0, 1703988, 2, 0, 1769524, 2, 0, 2097204, 1, 0, 2162740, 2, 0, 2228276, 2, 0, 2293812, 2, 0, 2359348, 2, 0, 2424884, 2, 0, 2490420, 2, 0, 2555956, 2, 0, 2621492, 2, 0, 2687028, 2, 0, 2752564, 2, 0, 2818100, 2, 0, 2883636, 2, 0, 2949172, 2, 0 )
+
+[node name="BrickWalls" type="TileMap" parent="YSort"]
+tile_set = ExtResource( 11 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 393223, 1, 0, 393224, 1, 0, 1376279, 0, 0, 1376280, 1, 0, 1376281, 1, 0, 1376282, 1, 0, 1376283, 1, 0, 1376284, 1, 0, 1376285, 1, 0, 1376286, 1, 0, 1376287, 1, 0, 1376288, 1, 0, 1376289, 1, 0, 1376290, 1, 0, 1376291, 1, 0, 1376292, 1, 0, 1376293, 1, 0, 1376294, 1, 0, 1376295, 2, 0 )
+
+[node name="Plant3" type="Sprite" parent="YSort"]
+position = Vector2( 210, 239 )
+texture = ExtResource( 13 )
+
+[node name="Player" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 952, 902 )
+
+[node name="AnimationTree" parent="YSort/Player" index="5"]
+parameters/playback = SubResource( 1 )
+
+[node name="PianoBench" type="Sprite" parent="YSort"]
+position = Vector2( 115, 843 )
+texture = ExtResource( 32 )
+
+[node name="MicStand" type="Sprite" parent="YSort"]
+position = Vector2( 160, 775 )
+texture = ExtResource( 28 )
+
+[node name="Piano2" type="Sprite" parent="YSort"]
+position = Vector2( 122, 793 )
+texture = ExtResource( 24 )
+
+[node name="Plant2" type="Sprite" parent="YSort"]
+position = Vector2( 220, 883 )
+texture = ExtResource( 29 )
+
+[node name="Couch" type="Sprite" parent="YSort"]
+position = Vector2( 93, 559 )
+texture = ExtResource( 15 )
+
+[node name="CouchRight2" type="Sprite" parent="YSort"]
+position = Vector2( 36, 620 )
+texture = ExtResource( 14 )
+
+[node name="CouchRight" type="Sprite" parent="YSort"]
+position = Vector2( 36, 680 )
+texture = ExtResource( 14 )
+
+[node name="CouchRightMid" type="Sprite" parent="YSort/CouchRight"]
+position = Vector2( 0, -36 )
+texture = ExtResource( 31 )
+
+[node name="Chair2Left" type="Sprite" parent="YSort"]
+position = Vector2( 150, 691 )
+texture = ExtResource( 16 )
+
+[node name="Table5" type="Sprite" parent="YSort/Chair2Left"]
+position = Vector2( -49, -40 )
+texture = ExtResource( 12 )
+
+[node name="PlateEmpty" type="Sprite" parent="YSort/Chair2Left/Table5"]
+position = Vector2( -18, 35 )
+texture = ExtResource( 18 )
+
+[node name="PlateEmpty2" type="Sprite" parent="YSort/Chair2Left/Table5"]
+position = Vector2( 17, 35 )
+texture = ExtResource( 18 )
+
+[node name="PlateEmpty3" type="Sprite" parent="YSort/Chair2Left/Table5"]
+position = Vector2( -19, 7 )
+texture = ExtResource( 18 )
+
+[node name="PlateEmpty4" type="Sprite" parent="YSort/Chair2Left/Table5"]
+position = Vector2( 17, 8 )
+texture = ExtResource( 18 )
+
+[node name="PlateEmpty5" type="Sprite" parent="YSort/Chair2Left/Table5"]
+position = Vector2( -19, -23 )
+texture = ExtResource( 18 )
+
+[node name="PlateEmpty6" type="Sprite" parent="YSort/Chair2Left/Table5"]
+position = Vector2( -20, -51 )
+texture = ExtResource( 18 )
+
+[node name="PlateEmpty7" type="Sprite" parent="YSort/Chair2Left/Table5"]
+position = Vector2( 20, -50 )
+texture = ExtResource( 18 )
+
+[node name="PlateEmpty8" type="Sprite" parent="YSort/Chair2Left/Table5"]
+position = Vector2( 18, -22 )
+texture = ExtResource( 18 )
+
+[node name="Chair2Left2" type="Sprite" parent="YSort"]
+position = Vector2( 150, 605 )
+texture = ExtResource( 16 )
+
+[node name="Chair2Left3" type="Sprite" parent="YSort"]
+position = Vector2( 147, 634 )
+texture = ExtResource( 16 )
+
+[node name="Chair2Left4" type="Sprite" parent="YSort"]
+position = Vector2( 150, 660 )
+texture = ExtResource( 16 )
+
+[node name="Couch2" type="Sprite" parent="YSort"]
+position = Vector2( 93, 330 )
+texture = ExtResource( 15 )
+
+[node name="CouchRight3" type="Sprite" parent="YSort"]
+position = Vector2( 36, 391 )
+texture = ExtResource( 14 )
+
+[node name="CouchRight4" type="Sprite" parent="YSort"]
+position = Vector2( 36, 451 )
+texture = ExtResource( 14 )
+
+[node name="CouchRightMid" type="Sprite" parent="YSort/CouchRight4"]
+position = Vector2( 0, -36 )
+texture = ExtResource( 31 )
+
+[node name="Chair2Left5" type="Sprite" parent="YSort"]
+position = Vector2( 150, 462 )
+texture = ExtResource( 16 )
+
+[node name="Table5" type="Sprite" parent="YSort/Chair2Left5"]
+position = Vector2( -49, -40 )
+texture = ExtResource( 12 )
+
+[node name="PlateEmpty" type="Sprite" parent="YSort/Chair2Left5/Table5"]
+position = Vector2( -18, 35 )
+texture = ExtResource( 18 )
+
+[node name="PlateEmpty2" type="Sprite" parent="YSort/Chair2Left5/Table5"]
+position = Vector2( 17, 35 )
+texture = ExtResource( 18 )
+
+[node name="PlateEmpty3" type="Sprite" parent="YSort/Chair2Left5/Table5"]
+position = Vector2( -19, 7 )
+texture = ExtResource( 18 )
+
+[node name="PlateEmpty4" type="Sprite" parent="YSort/Chair2Left5/Table5"]
+position = Vector2( 17, 8 )
+texture = ExtResource( 18 )
+
+[node name="PlateEmpty5" type="Sprite" parent="YSort/Chair2Left5/Table5"]
+position = Vector2( -19, -23 )
+texture = ExtResource( 18 )
+
+[node name="PlateEmpty6" type="Sprite" parent="YSort/Chair2Left5/Table5"]
+position = Vector2( -20, -51 )
+texture = ExtResource( 18 )
+
+[node name="PlateEmpty7" type="Sprite" parent="YSort/Chair2Left5/Table5"]
+position = Vector2( 20, -50 )
+texture = ExtResource( 18 )
+
+[node name="PlateEmpty8" type="Sprite" parent="YSort/Chair2Left5/Table5"]
+position = Vector2( 18, -22 )
+texture = ExtResource( 18 )
+
+[node name="Chair2Left6" type="Sprite" parent="YSort"]
+position = Vector2( 150, 376 )
+texture = ExtResource( 16 )
+
+[node name="Chair2Left7" type="Sprite" parent="YSort"]
+position = Vector2( 147, 405 )
+texture = ExtResource( 16 )
+
+[node name="Chair2Left8" type="Sprite" parent="YSort"]
+position = Vector2( 150, 431 )
+texture = ExtResource( 16 )
+
+[node name="Chair2Left9" type="Sprite" parent="YSort"]
+position = Vector2( 404, 355 )
+texture = ExtResource( 16 )
+
+[node name="Chair2Left10" type="Sprite" parent="YSort/Chair2Left9"]
+position = Vector2( 1, 30 )
+texture = ExtResource( 16 )
+
+[node name="Chair2Right" type="Sprite" parent="YSort/Chair2Left9"]
+position = Vector2( -77, 0 )
+texture = ExtResource( 25 )
+
+[node name="Chair2Right2" type="Sprite" parent="YSort/Chair2Left9/Chair2Right"]
+position = Vector2( -2, 30 )
+texture = ExtResource( 25 )
+
+[node name="Table4" type="Sprite" parent="YSort/Chair2Left9/Chair2Right"]
+position = Vector2( 38, 25 )
+texture = ExtResource( 23 )
+
+[node name="TableClothMid" type="Sprite" parent="YSort/Chair2Left9/Chair2Right/Table4"]
+position = Vector2( -8, 5 )
+texture = ExtResource( 30 )
+
+[node name="TableClothLeft" type="Sprite" parent="YSort/Chair2Left9/Chair2Right/Table4"]
+position = Vector2( -40, 5 )
+texture = ExtResource( 20 )
+
+[node name="TableClothRight" type="Sprite" parent="YSort/Chair2Left9/Chair2Right/Table4"]
+position = Vector2( 40, 5 )
+texture = ExtResource( 26 )
+
+[node name="TableClothMid2" type="Sprite" parent="YSort/Chair2Left9/Chair2Right/Table4"]
+position = Vector2( 16, 5 )
+texture = ExtResource( 30 )
+
+[node name="Glass" type="Sprite" parent="YSort/Chair2Left9/Chair2Right/Table4"]
+position = Vector2( -9, -60 )
+texture = ExtResource( 21 )
+
+[node name="Glass2" type="Sprite" parent="YSort/Chair2Left9/Chair2Right/Table4"]
+position = Vector2( 22, -60 )
+texture = ExtResource( 21 )
+
+[node name="Glass3" type="Sprite" parent="YSort/Chair2Left9/Chair2Right/Table4"]
+position = Vector2( -7, -27 )
+texture = ExtResource( 21 )
+
+[node name="Glass4" type="Sprite" parent="YSort/Chair2Left9/Chair2Right/Table4"]
+position = Vector2( 21, -26 )
+texture = ExtResource( 21 )
+
+[node name="Chair2Left10" type="Sprite" parent="YSort"]
+position = Vector2( 405, 511 )
+texture = ExtResource( 16 )
+
+[node name="Chair2Left10" type="Sprite" parent="YSort/Chair2Left10"]
+position = Vector2( 1, 30 )
+texture = ExtResource( 16 )
+
+[node name="Chair2Right" type="Sprite" parent="YSort/Chair2Left10"]
+position = Vector2( -77, 0 )
+texture = ExtResource( 25 )
+
+[node name="Chair2Right2" type="Sprite" parent="YSort/Chair2Left10/Chair2Right"]
+position = Vector2( -2, 30 )
+texture = ExtResource( 25 )
+
+[node name="Table4" type="Sprite" parent="YSort/Chair2Left10/Chair2Right"]
+position = Vector2( 38, 25 )
+texture = ExtResource( 23 )
+
+[node name="TableClothMid" type="Sprite" parent="YSort/Chair2Left10/Chair2Right/Table4"]
+position = Vector2( -8, 5 )
+texture = ExtResource( 30 )
+
+[node name="TableClothLeft" type="Sprite" parent="YSort/Chair2Left10/Chair2Right/Table4"]
+position = Vector2( -40, 5 )
+texture = ExtResource( 20 )
+
+[node name="TableClothRight" type="Sprite" parent="YSort/Chair2Left10/Chair2Right/Table4"]
+position = Vector2( 40, 5 )
+texture = ExtResource( 26 )
+
+[node name="TableClothMid2" type="Sprite" parent="YSort/Chair2Left10/Chair2Right/Table4"]
+position = Vector2( 16, 5 )
+texture = ExtResource( 30 )
+
+[node name="Chair2Left11" type="Sprite" parent="YSort"]
+position = Vector2( 418, 684 )
+texture = ExtResource( 16 )
+
+[node name="Chair2Left10" type="Sprite" parent="YSort/Chair2Left11"]
+position = Vector2( 1, 30 )
+texture = ExtResource( 16 )
+
+[node name="Chair2Right" type="Sprite" parent="YSort/Chair2Left11"]
+position = Vector2( -77, 0 )
+texture = ExtResource( 25 )
+
+[node name="Chair2Right2" type="Sprite" parent="YSort/Chair2Left11/Chair2Right"]
+position = Vector2( -2, 30 )
+texture = ExtResource( 25 )
+
+[node name="Table4" type="Sprite" parent="YSort/Chair2Left11/Chair2Right"]
+position = Vector2( 38, 25 )
+texture = ExtResource( 23 )
+
+[node name="TableClothMid" type="Sprite" parent="YSort/Chair2Left11/Chair2Right/Table4"]
+position = Vector2( -8, 5 )
+texture = ExtResource( 30 )
+
+[node name="TableClothLeft" type="Sprite" parent="YSort/Chair2Left11/Chair2Right/Table4"]
+position = Vector2( -40, 5 )
+texture = ExtResource( 20 )
+
+[node name="TableClothRight" type="Sprite" parent="YSort/Chair2Left11/Chair2Right/Table4"]
+position = Vector2( 40, 5 )
+texture = ExtResource( 26 )
+
+[node name="TableClothMid2" type="Sprite" parent="YSort/Chair2Left11/Chair2Right/Table4"]
+position = Vector2( 16, 5 )
+texture = ExtResource( 30 )
+
+[node name="Glass" type="Sprite" parent="YSort/Chair2Left11/Chair2Right/Table4"]
+position = Vector2( -9, -60 )
+texture = ExtResource( 21 )
+
+[node name="Glass2" type="Sprite" parent="YSort/Chair2Left11/Chair2Right/Table4"]
+position = Vector2( 22, -60 )
+texture = ExtResource( 21 )
+
+[node name="Glass3" type="Sprite" parent="YSort/Chair2Left11/Chair2Right/Table4"]
+position = Vector2( -7, -27 )
+texture = ExtResource( 21 )
+
+[node name="Glass4" type="Sprite" parent="YSort/Chair2Left11/Chair2Right/Table4"]
+position = Vector2( 21, -26 )
+texture = ExtResource( 21 )
+
+[node name="Chair2Left12" type="Sprite" parent="YSort"]
+position = Vector2( 615, 356 )
+texture = ExtResource( 16 )
+
+[node name="Chair2Left10" type="Sprite" parent="YSort/Chair2Left12"]
+position = Vector2( 1, 30 )
+texture = ExtResource( 16 )
+
+[node name="Chair2Right" type="Sprite" parent="YSort/Chair2Left12"]
+position = Vector2( -77, 0 )
+texture = ExtResource( 25 )
+
+[node name="Chair2Right2" type="Sprite" parent="YSort/Chair2Left12/Chair2Right"]
+position = Vector2( -2, 30 )
+texture = ExtResource( 25 )
+
+[node name="Table4" type="Sprite" parent="YSort/Chair2Left12/Chair2Right"]
+position = Vector2( 38, 25 )
+texture = ExtResource( 23 )
+
+[node name="TableClothMid" type="Sprite" parent="YSort/Chair2Left12/Chair2Right/Table4"]
+position = Vector2( -8, 5 )
+texture = ExtResource( 30 )
+
+[node name="TableClothLeft" type="Sprite" parent="YSort/Chair2Left12/Chair2Right/Table4"]
+position = Vector2( -40, 5 )
+texture = ExtResource( 20 )
+
+[node name="TableClothRight" type="Sprite" parent="YSort/Chair2Left12/Chair2Right/Table4"]
+position = Vector2( 40, 5 )
+texture = ExtResource( 26 )
+
+[node name="TableClothMid2" type="Sprite" parent="YSort/Chair2Left12/Chair2Right/Table4"]
+position = Vector2( 16, 5 )
+texture = ExtResource( 30 )
+
+[node name="Glass" type="Sprite" parent="YSort/Chair2Left12/Chair2Right/Table4"]
+position = Vector2( -9, -60 )
+texture = ExtResource( 21 )
+
+[node name="Glass2" type="Sprite" parent="YSort/Chair2Left12/Chair2Right/Table4"]
+position = Vector2( 22, -60 )
+texture = ExtResource( 21 )
+
+[node name="Glass3" type="Sprite" parent="YSort/Chair2Left12/Chair2Right/Table4"]
+position = Vector2( -7, -27 )
+texture = ExtResource( 21 )
+
+[node name="Glass4" type="Sprite" parent="YSort/Chair2Left12/Chair2Right/Table4"]
+position = Vector2( 21, -26 )
+texture = ExtResource( 21 )
+
+[node name="Chair2Left13" type="Sprite" parent="YSort"]
+position = Vector2( 616, 517 )
+texture = ExtResource( 16 )
+
+[node name="Chair2Left10" type="Sprite" parent="YSort/Chair2Left13"]
+position = Vector2( 1, 30 )
+texture = ExtResource( 16 )
+
+[node name="Chair2Right" type="Sprite" parent="YSort/Chair2Left13"]
+position = Vector2( -77, 0 )
+texture = ExtResource( 25 )
+
+[node name="Chair2Right2" type="Sprite" parent="YSort/Chair2Left13/Chair2Right"]
+position = Vector2( -2, 30 )
+texture = ExtResource( 25 )
+
+[node name="Table4" type="Sprite" parent="YSort/Chair2Left13/Chair2Right"]
+position = Vector2( 38, 25 )
+texture = ExtResource( 23 )
+
+[node name="TableClothMid" type="Sprite" parent="YSort/Chair2Left13/Chair2Right/Table4"]
+position = Vector2( -8, 5 )
+texture = ExtResource( 30 )
+
+[node name="TableClothLeft" type="Sprite" parent="YSort/Chair2Left13/Chair2Right/Table4"]
+position = Vector2( -40, 5 )
+texture = ExtResource( 20 )
+
+[node name="TableClothRight" type="Sprite" parent="YSort/Chair2Left13/Chair2Right/Table4"]
+position = Vector2( 40, 5 )
+texture = ExtResource( 26 )
+
+[node name="TableClothMid2" type="Sprite" parent="YSort/Chair2Left13/Chair2Right/Table4"]
+position = Vector2( 16, 5 )
+texture = ExtResource( 30 )
+
+[node name="Glass" type="Sprite" parent="YSort/Chair2Left13/Chair2Right/Table4"]
+position = Vector2( -9, -60 )
+texture = ExtResource( 21 )
+
+[node name="Glass2" type="Sprite" parent="YSort/Chair2Left13/Chair2Right/Table4"]
+position = Vector2( 22, -60 )
+texture = ExtResource( 21 )
+
+[node name="Glass3" type="Sprite" parent="YSort/Chair2Left13/Chair2Right/Table4"]
+position = Vector2( -7, -27 )
+texture = ExtResource( 21 )
+
+[node name="Glass4" type="Sprite" parent="YSort/Chair2Left13/Chair2Right/Table4"]
+position = Vector2( 21, -26 )
+texture = ExtResource( 21 )
+
+[node name="Chair2Left14" type="Sprite" parent="YSort"]
+position = Vector2( 639, 699 )
+texture = ExtResource( 16 )
+
+[node name="Chair2Right" type="Sprite" parent="YSort/Chair2Left14"]
+position = Vector2( -88, -1 )
+texture = ExtResource( 25 )
+
+[node name="Table3" type="Sprite" parent="YSort/Chair2Left14"]
+position = Vector2( -44, 6 )
+texture = ExtResource( 17 )
+
+[node name="TableClothSmall" type="Sprite" parent="YSort/Chair2Left14/Table3"]
+position = Vector2( 0, -7 )
+scale = Vector2( 1.25, 1 )
+texture = ExtResource( 27 )
+
+[node name="Glass" type="Sprite" parent="YSort/Chair2Left14/Table3"]
+position = Vector2( -5.99994, -46 )
+texture = ExtResource( 21 )
+
+[node name="Glass2" type="Sprite" parent="YSort/Chair2Left14/Table3"]
+position = Vector2( 25, -42 )
+texture = ExtResource( 21 )
+
+[node name="Chair2Left15" type="Sprite" parent="YSort"]
+position = Vector2( 422, 835 )
+texture = ExtResource( 16 )
+
+[node name="Chair2Right" type="Sprite" parent="YSort/Chair2Left15"]
+position = Vector2( -88, -1 )
+texture = ExtResource( 25 )
+
+[node name="Table3" type="Sprite" parent="YSort/Chair2Left15"]
+position = Vector2( -44, 6 )
+texture = ExtResource( 17 )
+
+[node name="TableClothSmall" type="Sprite" parent="YSort/Chair2Left15/Table3"]
+position = Vector2( 0, -7 )
+scale = Vector2( 1.25, 1 )
+texture = ExtResource( 27 )
+
+[node name="Glass" type="Sprite" parent="YSort/Chair2Left15/Table3"]
+position = Vector2( -5.99994, -46 )
+texture = ExtResource( 21 )
+
+[node name="Glass2" type="Sprite" parent="YSort/Chair2Left15/Table3"]
+position = Vector2( 25, -42 )
+texture = ExtResource( 21 )
+
+[node name="Chair2Left16" type="Sprite" parent="YSort"]
+position = Vector2( 642, 835 )
+texture = ExtResource( 16 )
+
+[node name="Chair2Right" type="Sprite" parent="YSort/Chair2Left16"]
+position = Vector2( -88, -1 )
+texture = ExtResource( 25 )
+
+[node name="Table3" type="Sprite" parent="YSort/Chair2Left16"]
+position = Vector2( -44, 6 )
+texture = ExtResource( 17 )
+
+[node name="TableClothSmall" type="Sprite" parent="YSort/Chair2Left16/Table3"]
+position = Vector2( 0, -7 )
+scale = Vector2( 1.25, 1 )
+texture = ExtResource( 27 )
+
+[node name="Fryer1" type="Sprite" parent="YSort"]
+position = Vector2( 879, 618 )
+texture = ExtResource( 37 )
+
+[node name="Fryer2" type="Sprite" parent="YSort"]
+position = Vector2( 1110, 616 )
+texture = ExtResource( 37 )
+
+[node name="Fryer3" type="Sprite" parent="YSort"]
+position = Vector2( 999, 617 )
+texture = ExtResource( 47 )
+
+[node name="FridgeRight" type="Sprite" parent="YSort"]
+position = Vector2( 775, 539 )
+texture = ExtResource( 55 )
+
+[node name="FridgeRightOpen" type="Sprite" parent="YSort"]
+position = Vector2( 776, 570 )
+texture = ExtResource( 56 )
+
+[node name="FridgeRight2" type="Sprite" parent="YSort"]
+position = Vector2( 775, 601 )
+texture = ExtResource( 55 )
+
+[node name="FridgeRightOpen2" type="Sprite" parent="YSort"]
+position = Vector2( 776, 312 )
+texture = ExtResource( 56 )
+
+[node name="FridgeRight3" type="Sprite" parent="YSort"]
+position = Vector2( 776, 344 )
+texture = ExtResource( 55 )
+
+[node name="FridgeRight4" type="Sprite" parent="YSort"]
+position = Vector2( 775, 375 )
+texture = ExtResource( 55 )
+
+[node name="CounterPiece2" type="Sprite" parent="YSort"]
+position = Vector2( 774, 231 )
+texture = ExtResource( 46 )
+
+[node name="CounterPiece4" type="Sprite" parent="YSort/CounterPiece2"]
+position = Vector2( 17, 0 )
+texture = ExtResource( 54 )
+
+[node name="CounterPiece5" type="Sprite" parent="YSort/CounterPiece2"]
+position = Vector2( 51, 0 )
+texture = ExtResource( 54 )
+
+[node name="CounterPiece6" type="Sprite" parent="YSort/CounterPiece2"]
+position = Vector2( 100, 0 )
+texture = ExtResource( 50 )
+
+[node name="CounterPiece1" type="Sprite" parent="YSort/CounterPiece2"]
+position = Vector2( 162, 0 )
+texture = ExtResource( 33 )
+
+[node name="StoveOpen" type="Sprite" parent="YSort/CounterPiece2/CounterPiece1"]
+position = Vector2( 16, 15 )
+texture = ExtResource( 57 )
+
+[node name="CounterPiece1" type="Sprite" parent="YSort/CounterPiece2/CounterPiece1"]
+position = Vector2( 64, 0 )
+texture = ExtResource( 33 )
+
+[node name="StoveOn" type="Sprite" parent="YSort/CounterPiece2"]
+position = Vector2( 115, 12 )
+texture = ExtResource( 40 )
+
+[node name="CounterTop4" type="Sprite" parent="YSort/CounterPiece2"]
+position = Vector2( 0, -28 )
+texture = ExtResource( 52 )
+
+[node name="CounterTop5" type="Sprite" parent="YSort/CounterPiece2/CounterTop4"]
+position = Vector2( 31, 0 )
+texture = ExtResource( 35 )
+
+[node name="CounterTop6" type="Sprite" parent="YSort/CounterPiece2/CounterTop4"]
+position = Vector2( 62, 0 )
+texture = ExtResource( 35 )
+
+[node name="CounterTop7" type="Sprite" parent="YSort/CounterPiece2/CounterTop4"]
+position = Vector2( 94, 0 )
+texture = ExtResource( 35 )
+
+[node name="CounterTop8" type="Sprite" parent="YSort/CounterPiece2/CounterTop4"]
+position = Vector2( 99, 0 )
+texture = ExtResource( 39 )
+
+[node name="CounterTop5" type="Sprite" parent="YSort/CounterPiece2"]
+position = Vector2( 288, -32 )
+texture = ExtResource( 52 )
+
+[node name="CounterTop9" type="Sprite" parent="YSort/CounterPiece2/CounterTop5"]
+position = Vector2( 32, 0 )
+texture = ExtResource( 35 )
+
+[node name="CounterTop10" type="Sprite" parent="YSort/CounterPiece2/CounterTop5"]
+position = Vector2( 64, 0 )
+texture = ExtResource( 35 )
+
+[node name="CounterTop11" type="Sprite" parent="YSort/CounterPiece2/CounterTop5"]
+position = Vector2( 96, 0 )
+texture = ExtResource( 35 )
+
+[node name="CounterTop12" type="Sprite" parent="YSort/CounterPiece2/CounterTop5"]
+position = Vector2( 127, 0 )
+texture = ExtResource( 35 )
+
+[node name="CounterTop13" type="Sprite" parent="YSort/CounterPiece2/CounterTop5"]
+position = Vector2( 159, 0 )
+texture = ExtResource( 35 )
+
+[node name="CounterTop14" type="Sprite" parent="YSort/CounterPiece2/CounterTop5"]
+position = Vector2( 190, 0 )
+texture = ExtResource( 39 )
+
+[node name="StovePan" type="Sprite" parent="YSort/CounterPiece2/CounterTop5"]
+position = Vector2( -40, 45 )
+texture = ExtResource( 49 )
+
+[node name="CounterPiece3" type="Sprite" parent="YSort"]
+position = Vector2( 1062, 231 )
+texture = ExtResource( 46 )
+
+[node name="CounterPiece4" type="Sprite" parent="YSort/CounterPiece3"]
+position = Vector2( 49, 0 )
+texture = ExtResource( 54 )
+
+[node name="CounterPiece7" type="Sprite" parent="YSort/CounterPiece3"]
+position = Vector2( 32, 0 )
+texture = ExtResource( 58 )
+
+[node name="CounterPiece5" type="Sprite" parent="YSort/CounterPiece3"]
+position = Vector2( 81, 0 )
+texture = ExtResource( 54 )
+
+[node name="CounterPiece10" type="Sprite" parent="YSort/CounterPiece3"]
+position = Vector2( 192, 0 )
+texture = ExtResource( 41 )
+
+[node name="CounterPiece8" type="Sprite" parent="YSort/CounterPiece3"]
+position = Vector2( 113, 0 )
+texture = ExtResource( 54 )
+
+[node name="CounterPiece9" type="Sprite" parent="YSort/CounterPiece3"]
+position = Vector2( 160, 0 )
+texture = ExtResource( 58 )
+
+[node name="CounterTop1" type="Sprite" parent="YSort"]
+position = Vector2( 1236, 284 )
+texture = ExtResource( 42 )
+
+[node name="CounterTop8" type="Sprite" parent="YSort/CounterTop1"]
+position = Vector2( 16, 26 )
+texture = ExtResource( 48 )
+
+[node name="CounterTop9" type="Sprite" parent="YSort/CounterTop1"]
+position = Vector2( 16, 58 )
+texture = ExtResource( 48 )
+
+[node name="CounterTop10" type="Sprite" parent="YSort/CounterTop1"]
+position = Vector2( 16, 90 )
+texture = ExtResource( 48 )
+
+[node name="CounterTop11" type="Sprite" parent="YSort/CounterTop1"]
+position = Vector2( 16, 121 )
+texture = ExtResource( 48 )
+
+[node name="CounterTop12" type="Sprite" parent="YSort/CounterTop1"]
+position = Vector2( 16, 152 )
+texture = ExtResource( 48 )
+
+[node name="CounterTop13" type="Sprite" parent="YSort/CounterTop1"]
+position = Vector2( 16, 184 )
+texture = ExtResource( 48 )
+
+[node name="CounterTop14" type="Sprite" parent="YSort/CounterTop1"]
+position = Vector2( 16, 216 )
+texture = ExtResource( 48 )
+
+[node name="CounterTop15" type="Sprite" parent="YSort/CounterTop1"]
+position = Vector2( 16, 248 )
+texture = ExtResource( 48 )
+
+[node name="CounterTop16" type="Sprite" parent="YSort/CounterTop1"]
+position = Vector2( 16, 280 )
+texture = ExtResource( 48 )
+
+[node name="CounterTop17" type="Sprite" parent="YSort/CounterTop1"]
+position = Vector2( 16, 312 )
+texture = ExtResource( 48 )
+
+[node name="CounterTop18" type="Sprite" parent="YSort/CounterTop1"]
+position = Vector2( 16, 344 )
+texture = ExtResource( 48 )
+
+[node name="Sink2" type="Sprite" parent="YSort/CounterTop1"]
+position = Vector2( -94, -51 )
+texture = ExtResource( 38 )
+
+[node name="Knife" type="Sprite" parent="YSort/CounterTop1"]
+position = Vector2( 17, 129 )
+texture = ExtResource( 34 )
+
+[node name="Microwave" type="Sprite" parent="YSort/CounterTop1"]
+position = Vector2( -437, -54 )
+texture = ExtResource( 36 )
+
+[node name="Pot" type="Sprite" parent="YSort/CounterTop1"]
+position = Vector2( 16, 193 )
+texture = ExtResource( 44 )
+
+[node name="Pot2" type="Sprite" parent="YSort/CounterTop1"]
+position = Vector2( -330, -84 )
+texture = ExtResource( 44 )
+
+[node name="Counter3" type="Sprite" parent="YSort"]
+position = Vector2( 920, 432 )
+texture = ExtResource( 59 )
+
+[node name="Counter4" type="Sprite" parent="YSort"]
+position = Vector2( 1090, 431 )
+texture = ExtResource( 53 )
+
+[node name="CounterTop5" type="Sprite" parent="YSort"]
+position = Vector2( 937, 201 )
+texture = ExtResource( 35 )
+
+[node name="CounterTop6" type="Sprite" parent="YSort"]
+position = Vector2( 999, 200 )
+texture = ExtResource( 35 )
+
+[node name="Utensils" type="Sprite" parent="YSort"]
+position = Vector2( 1081, 214 )
+texture = ExtResource( 43 )
+
+[node name="Kettle" type="Sprite" parent="YSort"]
+position = Vector2( 1256, 311 )
+texture = ExtResource( 45 )
+
+[node name="Chair2Left17" type="Sprite" parent="YSort"]
+position = Vector2( 911, 746 )
+texture = ExtResource( 16 )
+
+[node name="Chair2Right" type="Sprite" parent="YSort/Chair2Left17"]
+position = Vector2( -88, -1 )
+texture = ExtResource( 25 )
+
+[node name="Table3" type="Sprite" parent="YSort/Chair2Left17"]
+position = Vector2( -44, 6 )
+texture = ExtResource( 17 )
+
+[node name="TableClothSmall" type="Sprite" parent="YSort/Chair2Left17/Table3"]
+position = Vector2( 0, -7 )
+scale = Vector2( 1.25, 1 )
+texture = ExtResource( 27 )
+
+[node name="Glass" type="Sprite" parent="YSort/Chair2Left17/Table3"]
+position = Vector2( -5.99994, -46 )
+texture = ExtResource( 21 )
+
+[node name="Glass2" type="Sprite" parent="YSort/Chair2Left17/Table3"]
+position = Vector2( 25, -42 )
+texture = ExtResource( 21 )
+
+[node name="Chair2Left18" type="Sprite" parent="YSort"]
+position = Vector2( 1122, 746 )
+texture = ExtResource( 16 )
+
+[node name="Chair2Right" type="Sprite" parent="YSort/Chair2Left18"]
+position = Vector2( -88, -1 )
+texture = ExtResource( 25 )
+
+[node name="Table3" type="Sprite" parent="YSort/Chair2Left18"]
+position = Vector2( -44, 6 )
+texture = ExtResource( 17 )
+
+[node name="TableClothSmall" type="Sprite" parent="YSort/Chair2Left18/Table3"]
+position = Vector2( 0, -7 )
+scale = Vector2( 1.25, 1 )
+texture = ExtResource( 27 )
+
+[node name="Glass" type="Sprite" parent="YSort/Chair2Left18/Table3"]
+position = Vector2( -5.99994, -46 )
+texture = ExtResource( 21 )
+
+[node name="Glass2" type="Sprite" parent="YSort/Chair2Left18/Table3"]
+position = Vector2( 25, -42 )
+texture = ExtResource( 21 )
+
+[node name="Antonio" parent="YSort" instance=ExtResource( 8 )]
+position = Vector2( 804, 452 )
+dialogue_name = "antonio"
+
+[node name="AnimatedSprite" parent="YSort/Antonio" index="1"]
+animation = "AntonioIdleDown"
+
+[node name="Exit" parent="." instance=ExtResource( 2 )]
+
+[node name="CollisionShape2D" parent="Exit" index="0"]
+position = Vector2( 984, 960.875 )
+shape = SubResource( 4 )
+
+[node name="FloorShadow" type="Sprite" parent="Exit"]
+position = Vector2( 984.5, 962 )
+scale = Vector2( 2.78125, 1.23077 )
+texture = ExtResource( 61 )
+
+[node name="Barriers" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( -17, 576.5 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 633, 991 )
+shape = SubResource( 8 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 1288, 582.25 )
+shape = SubResource( 9 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Barriers"]
+polygon = PoolVector2Array( 1267, 724, 1134, 725, 1134, 759, 1020, 758, 1019, 726, 924, 726, 924, 759, 809, 759, 807, 727, 728, 726, 729, 513, 742, 513, 743, 526, 769, 526, 770, 649, 743, 662, 746, 684, 1220, 684, 1220, 257, 744, 258, 744, 311, 769, 311, 770, 412, 743, 411, 743, 441, 727, 441, 728, 238, 227, 240, 221, 254, 218, 268, 200, 268, 197, 245, 1, 246, 5, 164, 1269, 166 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 921, 430.5 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 1090.5, 430.5 )
+shape = SubResource( 11 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 880, 627 )
+shape = SubResource( 12 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 999.75, 626.5 )
+shape = SubResource( 13 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 1111, 625.5 )
+shape = SubResource( 14 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 220, 902 )
+shape = SubResource( 15 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Barriers"]
+polygon = PoolVector2Array( 90, 794, 147, 796, 159, 822, 145, 823, 144, 833, 132, 833, 130, 850, 97, 849, 96, 832, 89, 831 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Barriers"]
+polygon = PoolVector2Array( 46, 550, 141, 549, 140, 597, 162, 602, 162, 703, 137, 703, 133, 711, 66, 711, 58, 716, 9, 717, 10, 597, 46, 597 )
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Barriers"]
+position = Vector2( 0, -227 )
+polygon = PoolVector2Array( 46, 550, 141, 549, 140, 597, 162, 602, 162, 703, 137, 703, 133, 711, 66, 711, 58, 716, 9, 717, 10, 597, 46, 597 )
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Barriers"]
+polygon = PoolVector2Array( 314, 349, 416, 349, 417, 398, 402, 398, 400, 408, 328, 408, 325, 399, 314, 399 )
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="Barriers"]
+position = Vector2( 212, 0 )
+polygon = PoolVector2Array( 314, 349, 416, 349, 417, 398, 402, 398, 400, 408, 328, 408, 325, 399, 314, 399 )
+
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="Barriers"]
+position = Vector2( 213, 159 )
+polygon = PoolVector2Array( 314, 349, 416, 349, 417, 398, 402, 398, 400, 408, 328, 408, 325, 399, 314, 399 )
+
+[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="Barriers"]
+position = Vector2( 1, 149 )
+polygon = PoolVector2Array( 314, 349, 416, 349, 417, 398, 402, 398, 400, 408, 328, 408, 325, 399, 314, 399 )
+
+[node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="Barriers"]
+position = Vector2( 14, 327 )
+polygon = PoolVector2Array( 314, 349, 416, 349, 417, 398, 402, 398, 400, 408, 328, 408, 325, 399, 314, 399 )
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 595, 703 )
+shape = SubResource( 16 )
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 598, 837 )
+shape = SubResource( 16 )
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Barriers"]
+position = Vector2( 378, 838 )
+shape = SubResource( 16 )
+
+[node name="SceneTransition" parent="." instance=ExtResource( 1 )]
+visible = false
+
+[node name="FumeHood" type="Sprite" parent="."]
+position = Vector2( 906, 163 )
+texture = ExtResource( 51 )
+
+[node name="FumeHood2" type="Sprite" parent="."]
+position = Vector2( 967, 163 )
+texture = ExtResource( 51 )
+
+[node name="FumeHood3" type="Sprite" parent="."]
+position = Vector2( 1032, 163 )
+texture = ExtResource( 51 )
+
+[node name="ClickableObject" parent="." instance=ExtResource( 63 )]
+position = Vector2( 1142, 230 )
+item_name = "El fregadero"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickableObject/ClickableArea" index="0"]
+position = Vector2( 0, -0.5 )
+shape = SubResource( 17 )
+
+[node name="ClickableObject2" parent="." instance=ExtResource( 63 )]
+position = Vector2( 935, 402 )
+item_name = "El cuchillo"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickableObject2/ClickableArea" index="0"]
+shape = SubResource( 18 )
+
+[node name="ClickableObject3" parent="." instance=ExtResource( 63 )]
+position = Vector2( 115, 816 )
+item_name = "El piano"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickableObject3/ClickableArea" index="0"]
+position = Vector2( 4.5, -11.5 )
+shape = SubResource( 19 )
+
+[node name="ClickableObject4" parent="." instance=ExtResource( 63 )]
+position = Vector2( 369, 523 )
+item_name = "La mesa"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickableObject4/ClickableArea" index="0"]
+position = Vector2( -4, 8 )
+shape = SubResource( 20 )
+
+[node name="ClickableObject5" parent="." instance=ExtResource( 63 )]
+position = Vector2( 1018, 235 )
+item_name = "La sartén"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickableObject5/ClickableArea" index="0"]
+position = Vector2( 9, 0 )
+rotation = 1.54522
+shape = SubResource( 21 )
+
+[node name="CollisionShape2D2" parent="ClickableObject5/PlayerDetectionZone" index="1"]
+position = Vector2( 0, 1 )
+
+[connection signal="input_event" from="ClickableObject/ClickableArea" to="ClickableObject" method="_on_ClickableArea_input_event"]
+[connection signal="input_event" from="ClickableObject2/ClickableArea" to="ClickableObject2" method="_on_ClickableArea_input_event"]
+[connection signal="input_event" from="ClickableObject3/ClickableArea" to="ClickableObject3" method="_on_ClickableArea_input_event"]
+[connection signal="input_event" from="ClickableObject4/ClickableArea" to="ClickableObject4" method="_on_ClickableArea_input_event"]
+[connection signal="input_event" from="ClickableObject5/ClickableArea" to="ClickableObject5" method="_on_ClickableArea_input_event"]
+
+[editable path="YSort/Player"]
+[editable path="YSort/Player/Carlos"]
+[editable path="YSort/Player/Camera2D/HUD/FriendsMenu"]
+[editable path="YSort/Player/Camera2D/HUD/FriendsMenu/FileOverlay1/Node2D"]
+[editable path="YSort/Player/Camera2D/HUD/Dictionary"]
+[editable path="YSort/Player/Camera2D/HUD/Dictionary/FileOverlay2/Buttons"]
+[editable path="YSort/Player/Camera2D/HUD/Inventory"]
+[editable path="YSort/Player/Camera2D/HUD/Inventory/FileOverlay3/ColorRect/CenterContainer/InventoryDisplay"]
+[editable path="YSort/Player/Camera2D/HUD/Inventory/FileOverlay3/ColorRect/CenterContainer/InventoryDisplay/InventorySlotDisplay"]
+[editable path="YSort/Player/Camera2D/HUD/Inventory/FileOverlay3/ColorRect/CenterContainer/InventoryDisplay/InventorySlotDisplay2"]
+[editable path="YSort/Player/Camera2D/HUD/Inventory/FileOverlay3/ColorRect/CenterContainer/InventoryDisplay/InventorySlotDisplay6"]
+[editable path="YSort/Player/Camera2D/HUD/Inventory/FileOverlay3/Buttons"]
+[editable path="YSort/Player/Camera2D/HUD/QuestMenu"]
+[editable path="YSort/Player/Camera2D/HUD/QuestMenu/FileOverlay4/Buttons"]
+[editable path="YSort/Player/Camera2D/HUD/GameMenu"]
+[editable path="YSort/Player/Camera2D/HUD/GameMenu/FileOverlay5/Buttons"]
+[editable path="YSort/Antonio"]
+[editable path="Exit"]
+[editable path="ClickableObject"]
+[editable path="ClickableObject2"]
+[editable path="ClickableObject3"]
+[editable path="ClickableObject4"]
+[editable path="ClickableObject5"]
